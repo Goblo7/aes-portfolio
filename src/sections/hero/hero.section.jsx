@@ -29,7 +29,7 @@ const heroNameStyle = {
 }
 
 const heroTitleStyle = {
-    fontSize: `clamp(17px, 6vw, 55px)`,
+    fontSize: `clamp(17px, 6vw, 54px)`,
     color: layoutStyles.secandryFontColor,
     fontFamily: layoutStyles.secandryFontFamily,
 }
@@ -40,8 +40,8 @@ const aELogo ={
             xs: "35%",
             sm: "30%",
             md: "35%",
-            lg: "-10%",
-            xl: "-18.2%"
+            lg: "-2%",
+            xl: "-16.1%"
     },bottom:"0", top:"0", height: {
         xs: "68rem",
         sm: "85rem",
@@ -52,8 +52,8 @@ const aELogo ={
         xs: "35%",
         sm: "38%",
         md: "32%",
-        lg: "45%",
-        xl: "55%",
+        lg: "38%",
+        xl: "53%",
     }, 
     color: layoutStyles.lightMainColor,
     strokeWidth: "0.3%",
@@ -97,7 +97,7 @@ export default function HeroSection(){
         <Grid sx={heroContainer}>
             <SvgIcon className="SvgG" sx={aELogo}>
                 <AeLogo />
-            </SvgIcon>
+            </SvgIcon> 
             <Typography variant="inherit" sx={greetingStyle} >
                 Hello, my name is
             </Typography>

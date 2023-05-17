@@ -7,7 +7,7 @@ export const SectionContainer = ({
     return(
         <div id={SectionIdEnum} key={SectionIdEnum}>
             <Container>
-                <Box minHeight="100vh">{Children}</Box>
+                <Box minHeight="100dvh">{Children}</Box>
             </Container>
         </div>
     )

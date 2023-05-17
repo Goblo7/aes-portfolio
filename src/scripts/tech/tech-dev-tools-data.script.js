@@ -1,4 +1,4 @@
-import {React, VsCode, Vs, Mui, GitHubColord} from "../assets/icons.assets"
+import {React, VsCode, Vs, Mui, GitHubColord} from "../../assets/icons.assets"
 
 export const techDevTools = [ 
     {

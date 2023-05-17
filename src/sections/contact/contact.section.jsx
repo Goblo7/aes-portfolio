@@ -51,11 +51,11 @@ const ButtonStyles = {
 export default function ContactSection(){
     return(
           <Grid container sx={{display:"grid", height: "80vh", width: "100%", justifyItems:"center", alignItems:"center", textAlign:"center"}}>
-                <Grid>
-                <SvgIcon sx={{fontSize: "8rem", color: layoutStyles.mainStyleColor,}}> 
+                {/* <Grid >
+                <SvgIcon sx={{ color: layoutStyles.mainStyleColor,width:"100%", height:"100%"}}> 
                     <Satellite />
                 </SvgIcon>
-                </Grid>
+                </Grid> */}
                 <Grid item display="grid" sm={8} sx={{ justifyItems:"center",}} > 
                     <Typography variant="h2" sx={contactTitle}>
                         Contact Me
@@ -68,11 +68,11 @@ export default function ContactSection(){
                     </Typography>
                     <Button href="" disableElevation sx={ButtonStyles}>Say Hello</Button>
                 </Grid>
-                <Grid>
+               {/* <Grid>
                 <SvgIcon sx={{fontSize: "15rem", color: layoutStyles.mainStyleColor,}}> 
                     <Antena />
                 </SvgIcon>
-                </Grid>
+                </Grid>  */}
             </Grid>
     )
 }

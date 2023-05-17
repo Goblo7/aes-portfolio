@@ -1,4 +1,4 @@
-import {Css , Html, Js, Jsx, CPlusPlus} from "../assets/icons.assets"
+import {Css , Html, Js, Jsx, CPlusPlus} from "../../assets/icons.assets"
 
 export const techLanguges = [
     {
