@@ -1,8 +1,80 @@
-import { Grid, Typography, Box} from "@mui/material"
+import { Grid, Typography, SvgIcon} from "@mui/material"
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
-import layoutStyles from "../../styles/layout/main-layout.styles";
- 
+import { layoutStyles } from "../../styles/layout/main-layout.styles";
+import AeLogo from "../../assets/logo/ae-logo.assets";
+
+
+
+const heroContainer = { paddingTop: {
+    xs: "17rem",
+    sm: "21rem",
+    md: "21rem",
+    xl: "21rem",},position:"relative" }
+
+const greetingStyle = {
+    lineHeight: "1.1",
+    fontSize: "1.1rem", 
+    fontFamily: layoutStyles.secandryFontFamily,
+    color: layoutStyles.mainStyleColor
+}
+
+
+const heroNameStyle = {
+    fontWeight: 600,
+    fontSize: `clamp(40px, 8vw, 80px)`,
+    margin: "0",
+    color: layoutStyles.mainFontColor,
+    fontFamily: layoutStyles.mainFontFamily,
+}
+
+const heroTitleStyle = {
+    fontSize: `clamp(17px, 6vw, 55px)`,
+    color: layoutStyles.secandryFontColor,
+    fontFamily: layoutStyles.secandryFontFamily,
+}
+
+
+const aELogo ={
+    position:"absolute", right: {
+            xs: "35%",
+            sm: "30%",
+            md: "35%",
+            lg: "-10%",
+            xl: "-18.2%"
+    },bottom:"0", top:"0", height: {
+        xs: "68rem",
+        sm: "85rem",
+        md: "89rem",
+        lg: "66rem",
+        xl: "66rem",
+    }, width:{
+        xs: "35%",
+        sm: "38%",
+        md: "32%",
+        lg: "45%",
+        xl: "55%",
+    }, 
+    color: layoutStyles.lightMainColor,
+    strokeWidth: "0.3%",
+    strokeDashoffset: "0",
+    strokeDasharray: "0",
+    animation: `dashNeon 5s ease-in-out infinite alternate`,
+    "@keyframes dashNeon": {
+        "0%": {
+            stroke: layoutStyles.paperColor,
+            color: layoutStyles.lightMainColor,
+        },
+        "100%": {
+            stroke: layoutStyles.secandryFontColor,
+            color: layoutStyles.paperColor,
+        }  
+      },
+}
+
+
+
+
 export default function HeroSection(){
 
     const typer = useRef(null);
@@ -22,34 +94,18 @@ export default function HeroSection(){
     }, []);
 
     return(
-        <Grid sx={{ paddingTop: "16rem"}}>
-             <Typography variant="inherit" sx={{
-                lineHeight: "1.1",
-                fontSize: "1.1rem", 
-                fontFamily: layoutStyles.secandryFontFamily,
-                color: layoutStyles.mainStyleColor
-            }} >
+        <Grid sx={heroContainer}>
+            <SvgIcon className="SvgG" sx={aELogo}>
+                <AeLogo />
+            </SvgIcon>
+            <Typography variant="inherit" sx={greetingStyle} >
                 Hello, my name is
             </Typography>
-            <Typography variant="h2" 
-                sx={{
-                    fontWeight: 600,
-                    fontSize: `clamp(40px, 8vw, 80px)`,
-                    margin: "0",
-                    color: layoutStyles.mainFontColor,
-                    fontFamily: layoutStyles.mainFontFamily,
-                }}
-            >
+            <Typography variant="h2" sx={heroNameStyle}>
                 Ahmed Ehab.
             </Typography>
-            <Typography variant="string" sx={{
-                fontSize: `clamp(20px, 6vw, 55px)`,
-                color: layoutStyles.secandryFontColor,
-                fontFamily: layoutStyles.secandryFontFamily,
-            }}>
-                I'm a <Box ref={typer} sx={{
-                    display: "inline-block",
-            }}></Box>
+            <Typography variant="string" sx={heroTitleStyle}>
+                I'm a <span ref={typer}></span>
             </Typography>
         </Grid>
     )

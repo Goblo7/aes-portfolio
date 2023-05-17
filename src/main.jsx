@@ -1,10 +1,13 @@
-import {Layout} from "./components/main-layout/main-layout.components";
 import SectionIdEnum from "./scripts/section-id";
-import HeroSection from "./sections/hero/hero.section"
+import { HeroSection, AboutSection, PortofiloSection, ContactSection } from "./sections/sections";
 import SectionContainer from "./components/section-container/section-container.componets";
-import { createTheme,ThemeProvider, CssBaseline } from "@mui/material";
-import LayoutStyles from "./styles/layout/main-layout.styles";
-import AboutSection from "./sections/about/about.section";
+import { layoutStyles, } from "../src/styles/layout.styles";
+import { createTheme,ThemeProvider, CssBaseline, } from "@mui/material";
+import Layout from "./components/main-layout/main-layout.components";
+import Header from "./components/header/header.componets";
+import Fooder from "./components/fooder/fooder.componets";
+
+
 
 const sections = [
     {
@@ -17,11 +20,11 @@ const sections = [
     },
     {
         sectionId: SectionIdEnum.portofilo,
-        component: <HeroSection />
+        component: <PortofiloSection />
     },
     {
         sectionId: SectionIdEnum.contacts,
-        component: <HeroSection />
+        component: <ContactSection />
     },
 ]
 
@@ -36,14 +39,14 @@ const LayoutTheme = createTheme({
     palette: {
         mode: "dark",
         background: {
-            default: LayoutStyles.mainColor,
-            paper: LayoutStyles.paperColor,
+            default: layoutStyles.mainColor,
+            paper: layoutStyles.paperColor,
         }
     },
     typography: {
-        fontFamily: LayoutStyles.mainFontFamily,
+        fontFamily: layoutStyles.mainFontFamily,
         button: {
-            fontFamily: LayoutStyles.secandryFontFamily,
+            fontFamily: layoutStyles.secandryFontFamily,
             textTransform: "none"
         }
     },
@@ -54,9 +57,13 @@ export default function Main(){
     return(
         <ThemeProvider theme={LayoutTheme}>
              <CssBaseline/>
-            <Layout>
-                {section}
-            </Layout>
+                <Layout>
+                    <Header />
+                        <main>
+                            {section}
+                        </main>
+                    <Fooder />
+                </Layout>
         </ThemeProvider>
     )
 }

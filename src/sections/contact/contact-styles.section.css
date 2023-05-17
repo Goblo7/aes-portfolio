@@ -1,0 +1,31 @@
+#contacts{
+    max-height: 90vh ;
+}
+
+#wave1{
+    animation: wave 4s linear infinite 1.5s;
+}
+
+#wave2{
+    animation: wave 4s linear infinite 2.5s;
+}
+
+#wave3{
+    animation: wave 4s linear infinite 3.5s;
+}
+
+#wave4{
+    animation: wave 4s linear infinite 4.5s;
+}
+
+@keyframes wave {
+    0% {
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%  {
+        opacity: 1;
+    }
+}

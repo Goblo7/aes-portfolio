@@ -1,36 +1,9 @@
-import { Typography, ImageListItem, Box, ListItem, ListItemIcon, ListItemText, List } from "@mui/material";
+import { Typography, ImageListItem, Box, ListItem, ListItemIcon, ListItemText, List, Divider, Hidden } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 import HeroPfp from "../../assets/pfp/main-hero-pfp.assets.jpg";
-import layoutStyles from "../../styles/layout/main-layout.styles";
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import FolderIcon from '@mui/icons-material/Folder';
-
-
-const HeaderSectionStyle = {
-    display: "flex", 
-    alignItems: "center",
-    position: "relative",
-    margin: "7px 0px 25px",
-    fontSize: `clamp(26px,5vw,35px)`,
-    whiteSpace: "nowrap",
-    fontFamily: layoutStyles.mainFontFamily,
-    color: layoutStyles.mainStyleColor,
-    fontWeight: "669",
-    "&:after":{
-        content: `""`,
-        display: "inline",
-        top: "5px",
-        width: {
-            xs: "11rem",
-            sm: "25rem",
-            md: "42rem",
-            xl: "50rem"
-        },
-        height: "1px",
-        marginLeft: "20px",
-        backgroundColor: layoutStyles.lineMainColor,
-    }
-}
+import {layoutStyles, headerSectionStyle} from "../../styles/layout.styles";
+import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import {techLanguges ,techDevTools} from "../../scripts/tech.scripts";
 
 
 const heroPfpStyle = {
@@ -55,188 +28,129 @@ const heroPfpStyle = {
       },
 }
 
-
-const center = {
-    justifyContent:"center", alignContent: "center", justifyItems: "center"
+const skillsContainer = {
+    display: "grid", alignItems:"center", justifyItems:"center" ,alignContent:"center", justifyContent:"center", boxSizing:"border-box", boxShadow: {xs: "none", sm: "0 10px 30px -15px rgba(2,12,27,0.9)"}, marginTop:"2rem", padding:"15px",borderRadius:"1.7rem",backgroundColor:{xs:"none", sm: layoutStyles.lightPaperColor}
 }
+
+const skillTitle = { 
+    textAlign: "center",
+    color: layoutStyles.mainFontColor,
+    fontFamily: layoutStyles.secandryFontFamilyUi,
+
+}
+
+const skillTools = {
+    gridTemplateColumns: `repeat (2 ,1fr)`,  alignContent:"center" ,justifyContent:"center" ,alignItems:"center", justifyItems:"center",
+}
+
+const languagesAndDevTitle = { textAlign: "center" ,marginTop: "1rem",
+fontFamily: layoutStyles.secandryFontFamily,
+color: layoutStyles.mainFontColor,
+"&:after":{
+    content: `""`,
+    display: "block",
+    width: "4rem",
+    height: "0.3rem",
+    margin:"auto",
+    marginTop: "0.3rem",
+    backgroundColor: layoutStyles.lineMainColor,
+    }
+}
+
+
+const horizontalDivider = {
+    borderWidth: "0px 4px 0px 0px", borderStyle: "solid", alignSelf: "stretch" , borderColor: layoutStyles.lineMainColor , right:"50%", left: "50%", margin: "20px 0px 0px;"
+}
+
+const heroPfpContainer = {
+     display: "grid", alignItems:"center", justifyContent:"center", flexGrow: 1,width: "10%", 
+}
+
+
+const techLangugesAndSkillsStyle = [
+    {
+        maxHeight: "60%",
+    },
+    {
+        color: layoutStyles.mainFontColor,
+    }
+]
+
+const TechLanguges = techLanguges.map(({langugeName,langugeLogo}) => {
+    return(
+        <ListItem dense= "true" key={langugeName} >
+            <ListItemIcon sx={techLangugesAndSkillsStyle[0]}>
+                {langugeLogo}
+            </ListItemIcon>
+            <ListItemText sx={techLangugesAndSkillsStyle[1]}
+            primary={langugeName}/>
+        </ListItem>
+    )
+})
+
+const TechDevTools = techDevTools.map(({devToolName, devToolLogo}) => {
+    return(
+        <ListItem key={devToolName}>
+            <ListItemIcon  sx={techLangugesAndSkillsStyle[0]}>
+                {devToolLogo}
+            </ListItemIcon>
+            <ListItemText sx={techLangugesAndSkillsStyle[1]}
+            primary={devToolName}/>
+        </ListItem>
+    )
+})
 
 
 export default function AboutSection(){
     return(
-        <Grid margin="0 auto" paddingTop="10rem" container spacing={2} maxWidth="65rem">
+        <Grid margin="0 auto" paddingTop="7rem" container  maxWidth="68rem">
             <Box display="flex" alignItems="center" justifyContent="center" >
-                <Typography variant="h2" sx={HeaderSectionStyle} >About Me
+                <Typography variant="h2" sx={headerSectionStyle} >About Me
                 </Typography>
             </Box>
-            <Grid container spacing={2} maxWidth="65rem" >
+            <Grid container spacing={2}  >
                 <Grid item sm={8}>
                     <Typography variant="h5" sx={{ 
                     fontFamily: layoutStyles.mainFontFamily,
                     color: layoutStyles.mainFontColor,
                     fontWeight: "500", marginBottom: "1rem"
                     }}>
-                        Hi there! Nice to meet you, I'm a dedicated Front-end Developer based in Cairo, Egypt
+                        Hi there! Nice to meet you, I'm a dedicated Front-end Developer based in Cairo, Egypt.
                         < LocationOnOutlinedIcon sx={{marginLeft: "0.5rem", color: layoutStyles.mainStyleColor}}/>
                     </Typography>
                     <Typography variant="p" color={layoutStyles.secandryFontColor}>
-                        I am a self-learner, self-motivated, diligent and persevering Junior Front-End Developer, I'm perpetually working on improving and educating myself to achieve efficacy and effectiveness in whatever i craft, I possese the ability to gather informations and identify key resources to execute an effective plan to produce outstanding web applications.
+                        I am a self-learner, self-motivated, diligent and persevering Junior Front-End Developer, I'm perpetually working on improving and educating myself to achieve efficacy and effectiveness in whatever i craft, I possese the ability to analyze, gather informations and identify key resources to execute an effective plan to produce outstanding web applications.
                     </Typography>
                     <Box  width="100%" display="grid" justifyItems="center">
-                        <Grid display="grid" alignItems="center" justifyItems="center" alignContent="center" justifyContent="center" boxSizing="border-box" boxShadow=" 2px 2px 15px #8892b0;" marginTop="1.5rem" maxWidth="90%" padding="20px" >
-                                <Typography variant="h4" sx={{"&:after":{
-                                content: `""`,
-                                display: "block",
-                                width: "9rem",
-                                height: "0.3rem",
-                                marginLeft: "20px",
-                                backgroundColor: layoutStyles.lineMainColor,
-                                }}}>
-                                    &lt;techStack&gt;
+                        <Grid sx={skillsContainer} >
+                                <Typography variant="h4" sx={skillTitle}>
+                                    &lt;TechStack/&gt;
                                 </Typography>
-                                <Grid container  >
-                                    <Grid display="grid" sx={center} item maxWidth="50%">
-                                        <Typography >
+                                <Grid container sx={skillTools}  >
+                                    <Grid item>
+                                        <Typography variant="h5"  sx={languagesAndDevTitle} >
                                             Languages
                                         </Typography>
-                                        <Grid container direction="column" maxWidth="250px" >
-                                            <Grid container sx={center} >
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem >
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                            </Grid>
-                                        </Grid>
+                                            <List sx={{display: "grid", gridTemplateColumns: `repeat(2, 1fr)`,}} >
+                                                {TechLanguges}
+                                            </List>
                                     </Grid>
-                                    <Grid item display="grid" sx={center} direction="column" maxWidth="50%" >
-                                        <Typography>
+                                    <Hidden lgDown>
+                                    <Divider sx={horizontalDivider} />
+                                    </Hidden>
+                                    <Grid item>
+                                        <Typography variant="h5" textAlign="center" sx={languagesAndDevTitle}>
                                             Dev Tools
                                         </Typography>
-                                        <Grid container direction="column" maxWidth="250px" >
-                                            <Grid container sx={center} >
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                                <Grid >
-                                                    <List >
-                                                        <ListItem>
-                                                            <ListItemIcon sx={{minWidth:"35px"}}>
-                                                            <FolderIcon />
-                                                            </ListItemIcon>
-                                                            <ListItemText
-                                                            primary="JS"
-                                                            />
-                                                        </ListItem>
-                                                    </List>
-                                                </Grid>
-                                            </Grid>
-                                        </Grid>
+                                        <List sx={{display: "grid", gridTemplateColumns: `repeat(2, 1fr)`, }} >
+                                                {TechDevTools}
+                                            </List>
                                     </Grid>
                                 </Grid>
                         </Grid>
                     </Box>
                 </Grid>
-                <Grid item sx={{ display: "grid", alignItems:"center", justifyContent:"center", flexGrow: 1,width: "10%", }} >
+                <Grid item sx={heroPfpContainer} >
                     <ImageListItem sx={heroPfpStyle}>
                             <img src={HeroPfp} alt="" style={heroPfpStyle}/>
                     </ImageListItem>
