@@ -1,3 +1,44 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+  
+:root{
+    --clr-1: rgba(18,8,126,1);
+    --clr-2: rgba(136,136,255,1);
+    --clr-3: rgba(26,6,56,1);
+
+}
+
+/* svg styles */
+
+
+#dish{
+    -webkit-transform-origin-x: 7% ;
+    transform-box: fill-box ;
+}
+
+#dishWaves{
+    animation: dishMoving 15s ease-in-out infinite;
+}
+
+@keyframes dishMoving {
+    0%{
+        transform: rotate(0deg)    
+    }
+    30%{
+        transform: rotate(7deg)
+    }
+    70%{
+        transform: rotate(-7deg)
+    }
+    100%{
+        transform: rotate(0deg)
+    }
+
+}
+
 #contacts{
     max-height: 90dvh ;
 }
@@ -29,3 +70,48 @@
         opacity: 1;
     }
 }
+
+#satellite{
+    fill: url(#linear-gradient-stata);
+}
+#dish{
+    fill: url(#linear-gradient-dish);
+}
+
+/* svg styles */
+
+
+/* button styles */
+
+#contact-button::after, #contact-button::before{
+
+    content: "";
+    position: absolute;
+    inset: -0.2rem;
+    border-radius: inherit;
+    background: conic-gradient(from var(--rotate), var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-2), var(--clr-1));
+    animation: spin 15s linear infinite;
+    z-index: -1;
+}
+
+
+#contact-button::after{
+    filter: blur(0.2rem);
+}
+
+#contact-button:hover {
+    background: #14233d;
+}
+
+@keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+
+
+
+/* button styles */

@@ -5,6 +5,7 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from "react";
 import layoutStyles from "../../../styles/layout/main-layout.styles";
 
+
 const naviagtionItems = [
     {
         text: "About",
@@ -36,12 +37,12 @@ export default function Navigation(){
 
     const buttonStyleHover = {
         color:layoutStyles.mainFontColor,
-        transition: "all .2s ease-in-out;" ,
         "&:hover":{
             color: layoutStyles.mainStyleColor,
             backgroundColor: layoutStyles.paperColor
-        }
+        }, 
     }
+        
 
     const naviagtionItem = naviagtionItems.map(({text, to}) => {
         return (
@@ -93,6 +94,9 @@ export default function Navigation(){
     function navDrawerTouggle () {
         setNavDrawer(prevNabDrawer => !prevNabDrawer)
     }
+
+
+
 
     return(
         <Box>

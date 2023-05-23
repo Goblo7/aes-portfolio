@@ -1,0 +1,67 @@
+._hidden{
+    background-color: #020c1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0px;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+
+
+
+#preloader-border{  
+    animation: dash 2s linear forwards, rotate-border 1s ease-in-out 1.5s;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#preloader-AE{
+    animation: fadingIn 1s linear forwards 2s;
+}
+
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1000;
+        fill: #020c1b;
+    }
+    70% {
+        stroke-dashoffset: 0;
+        fill: #020c1b;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #8888ff;
+    }    
+}
+
+
+  @keyframes rotate-border {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: -360deg
+    }
+  }
+
+  @keyframes fadingIn {
+    0% {
+        stroke-dashoffset: 0;
+         fill:  #020c1b;
+         opacity: 0; 
+        }
+    50% {
+        stroke-dashoffset: 0;
+        fill:  #020c1b;
+        opacity: 1; 
+        }
+    100% {
+        stroke-dashoffset: 0;
+        fill:  #8888ff;
+        opacity: 1; 
+        }
+    }

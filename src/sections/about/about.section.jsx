@@ -4,6 +4,10 @@ import HeroPfp from "../../assets/pfp/main-hero-pfp.assets.jpg";
 import {layoutStyles, headerSectionStyle} from "../../styles/layout.styles";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import {techLanguges ,techDevTools} from "../../scripts/tech.scripts";
+import { useInView, } from "framer-motion";
+import { useRef } from "react";
+
+
 
 
 const heroPfpStyle = {
@@ -14,8 +18,8 @@ const heroPfpStyle = {
     borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
     position: "relative",
     transition: "all 1s ease-in-out",
-    animation: `goblo 8s ease-in-out infinite`,
-    "@keyframes goblo": {
+    animation: `gobloPfp 8s ease-in-out infinite`,
+    "@keyframes gobloPfp": {
         "0%": {
           borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
         },
@@ -35,7 +39,7 @@ const skillsContainer = {
 const skillTitle = { 
     textAlign: "center",
     color: layoutStyles.mainFontColor,
-    fontFamily: layoutStyles.secandryFontFamilyUi,
+    fontFamily: layoutStyles.secandryFontFamily,
 
 }
 
@@ -67,68 +71,99 @@ const heroPfpContainer = {
 }
 
 
-const techLangugesAndSkillsStyle = [
-    {
-        maxHeight: "60%",
-    },
-    {
-        color: layoutStyles.mainFontColor,
-    }
-]
 
-const TechLanguges = techLanguges.map(({langugeName,langugeLogo}) => {
-    return(
-        <ListItem dense= "true" key={langugeName} >
-            <ListItemIcon sx={techLangugesAndSkillsStyle[0]}>
-                {langugeLogo}
-            </ListItemIcon>
-            <ListItemText sx={techLangugesAndSkillsStyle[1]}
-            primary={langugeName}/>
-        </ListItem>
-    )
-})
 
-const TechDevTools = techDevTools.map(({devToolName, devToolLogo}) => {
-    return(
-        <ListItem key={devToolName}>
-            <ListItemIcon  sx={techLangugesAndSkillsStyle[0]}>
-                {devToolLogo}
-            </ListItemIcon>
-            <ListItemText sx={techLangugesAndSkillsStyle[1]}
-            primary={devToolName}/>
-        </ListItem>
-    )
-})
+
 
 
 export default function AboutSection(){
+
+    const langTool= useRef(null);
+    const header = useRef(null)
+    const Para = useRef(null)
+    const isInViewLagTool = useInView(langTool, {once: true});
+    const isInViewHeader = useInView(header, {once: true});
+    const isInViewPara = useInView(Para, {once: true});
+
+
+    const techLangugesAndSkillsStyle = [
+        {
+            maxHeight: "60%",
+            transform: isInViewLagTool ? "none" : "translateX(-30px)",
+            opacity: isInViewLagTool ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1s"
+        },
+        {
+            color: layoutStyles.mainFontColor,
+            transform: isInViewLagTool ? "none" : "translateX(30px)",
+            opacity: isInViewLagTool ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1s"
+        }
+    ]
+    
+
+    const TechLanguges = techLanguges.map(({langugeName,langugeLogo}) => {
+        return(
+            <ListItem  key={langugeName} >
+                <ListItemIcon sx={techLangugesAndSkillsStyle[0]}>
+                    {langugeLogo}
+                </ListItemIcon>
+                <ListItemText sx={techLangugesAndSkillsStyle[1]}
+                primary={langugeName}/>
+            </ListItem>
+        )
+    })
+    
+    const TechDevTools = techDevTools.map(({devToolName, devToolLogo}) => {
+        return(
+            <ListItem key={devToolName}>
+                <ListItemIcon  sx={techLangugesAndSkillsStyle[0]}>
+                    {devToolLogo}
+                </ListItemIcon>
+                <ListItemText sx={techLangugesAndSkillsStyle[1]}
+                primary={devToolName}/>
+            </ListItem>
+        )
+    })
+    
+
+
+
+
+
     return(
-        <Grid margin="0 auto" paddingTop="7rem" container  maxWidth="68rem">
+        <Grid  margin="0 auto" paddingTop="7rem" container  maxWidth="68rem">
             <Box display="flex" alignItems="center" justifyContent="center" >
                 <Typography variant="h2" sx={headerSectionStyle} >About Me
                 </Typography>
             </Box>
             <Grid container spacing={2}  >
                 <Grid item sm={8}>
-                    <Typography variant="h5" sx={{ 
+                    <Typography ref={header} variant="h5" sx={{ 
                     fontFamily: layoutStyles.mainFontFamily,
                     color: layoutStyles.mainFontColor,
-                    fontWeight: "500", marginBottom: "1rem"
+                    fontWeight: "500", marginBottom: "1.5rem",fontSize:`clamp(19px,5vw, 35px)`,  transform: isInViewHeader ? "none" : "translateY(30px)",
+                    opacity: isInViewHeader ? 1 : 0,
+                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s"
                     }}>
                         Hi there! Nice to meet you, I'm a dedicated Front-end Developer based in Cairo, Egypt.
                         < LocationOnOutlinedIcon sx={{marginLeft: "0.5rem", color: layoutStyles.mainStyleColor}}/>
                     </Typography>
-                    <Typography variant="p" color={layoutStyles.secandryFontColor}>
+                    <Typography ref={Para} variant="p" color={layoutStyles.secandryFontColor}  sx={{
+                    transform: isInViewPara ? "none" : "translateY(50px)",
+                   opacity: isInViewPara ? 1 : 0,
+                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.7s"
+                    }}>
                         I am a self-learner, self-motivated, diligent and persevering Junior Front-End Developer, I'm perpetually working on improving and educating myself to achieve efficacy and effectiveness in whatever i craft, I possese the ability to analyze, gather informations and identify key resources to execute an effective plan to produce outstanding web applications.
                     </Typography>
-                    <Box  width="100%" display="grid" justifyItems="center">
-                        <Grid sx={skillsContainer} >
+                    <Box width="100%" display="grid" justifyItems="center">
+                        <Grid ref={langTool} sx={skillsContainer} >
                                 <Typography variant="h4" sx={skillTitle}>
                                     &lt;TechStack/&gt;
                                 </Typography>
                                 <Grid container sx={skillTools}  >
                                     <Grid item>
-                                        <Typography variant="h5"  sx={languagesAndDevTitle} >
+                                        <Typography  variant="h5"  sx={languagesAndDevTitle} >
                                             Languages
                                         </Typography>
                                             <List sx={{display: "grid", gridTemplateColumns: `repeat(2, 1fr)`,}} >

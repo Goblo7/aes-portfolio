@@ -1,7 +1,14 @@
 function SatelliteSvg(){
     return(
         <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 96.000000 96.000000" preserveAspectRatio="xMidYMid meet">
-
+      <defs>
+            <linearGradient id="linear-gradient-stata"
+            gradientUnits="userSpaceOnUse" x1="291.918" y1="922.489" x2="185.899" y2="366.627"  >
+            <stop offset="0" stopColor="#202079" />
+            <stop offset=".5" stopColor="#6666AD"/>
+            <stop offset="1" stopColor="#8888ff"/>
+            </linearGradient>
+        </defs>
         <g transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="currenColor" stroke="none">
         <path d="M750 915 l-34 -35 37 -38 37 -37 35 35 35 36 -38 37 -38 37 -34 -35z"/>
         <path d="M665 830 l-29 -30 37 -38 37 -37 32 33 32 32 -34 35 c-19 19 -37 35 -40 35 -3 0 -19 -14 -35 -30z"/>

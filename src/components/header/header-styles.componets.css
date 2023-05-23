@@ -1,0 +1,66 @@
+#border{
+    transform-origin: center ;
+    transform-box: fill-box ;
+    transition: all 1.5s;
+    stroke: #3333FF;
+    stroke-width: 2px;
+}
+
+#AE{
+    stroke: #3333FF;
+    stroke-width: 1px;
+}
+
+#logo:hover #border{  
+    transform: rotate(-360deg);
+}
+
+
+
+/* .cls-1 {
+    fill: url(#linear-gradient-11);
+  }
+
+  .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls-2 {
+    fill: url(#linear-gradient-3);
+  }
+
+  .cls-3 {
+    fill: url(#linear-gradient-7);
+  }
+
+  .cls-4 {
+    fill: url(#linear-gradient-5);
+  }
+
+  .cls-5 {
+    fill: url(#linear-gradient-6);
+  }
+
+  .cls-6 {
+    fill: url(#linear-gradient-8);
+  }
+
+  .cls-7 {
+    fill: url(#linear-gradient);
+  }
+
+  .cls-8 {
+    fill: url(#linear-gradient-10);
+  }
+
+  .cls-9 {
+    fill: url(#linear-gradient-4);
+  }
+
+  .cls-10 {
+    fill: url(#linear-gradient-2);
+  }
+
+  .cls-11 {
+    fill: url(#linear-gradient-9);
+  } */

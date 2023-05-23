@@ -3,12 +3,11 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import {layoutStyles, headerSectionStyle } from "../../styles/layout.styles";
 import { restaurant } from "../../assets/img"
 import {WebBuild, ExternalLink, GitHub} from "../../assets/icons.assets";
+import { useRef, } from "react";
+import { useInView, } from "framer-motion";
 
 /* styles start*/
 
-const aboutProject = {
-    display:"flex", margin:"0 auto", alignItems:"center", gap:"1rem",justifyContent:"center", flexWrap:"wrap", marginBottom:"-3rem",
-}
 
 const aboutProjectTitle =[
     {
@@ -20,12 +19,14 @@ const aboutProjectTitle =[
 ] 
 
 const projectContainerStyles = {
-     boxSizing:"border-box",boxShadow: "0 10px 30px -15px rgba(2,12,27,0.9)", backgroundColor:"#14233d", marginTop:"3rem", padding:"15px", width:"95%", margin:"3rem auto", borderRadius:"1.7rem", 
-    }
+    boxSizing:"border-box",boxShadow: "0 10px 30px -15px rgba(2,12,27,0.9)", backgroundColor:"#14233d", marginTop:"3rem", padding:"15px", width:"95%", margin:"3rem auto", borderRadius:"1.7rem",
+   }
 
-const projectContainerDirections = { 
-    display:"flex",overflow: "hidden",flexDirection:{lg: "row", xs:"column"},
+
+   const projectContainerDirections = { 
+    display:"flex",overflow: "hidden",flexDirection:{lg: "row", xs:"column"},     
 }
+
 
 const projectImgContainerBackground = {
     overflow: "hidden", borderRadius: "1rem", boxShadow:"0 10px 40px -15px rgba(2,12,27,0.9)", maxHeight:{xs:"15rem" , sm:"24rem"},
@@ -81,9 +82,24 @@ const projectIconStyles = {
 
 
 export default function PortofiloSection(){
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, {once: true});
+
+    const aboutProject = {
+        display:"flex", margin:"0 auto", alignItems:"center", gap:"1rem",justifyContent:"center", flexWrap:"wrap", marginBottom:"-3rem",
+        transform: isInView ? "none" : "translateY(25px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s"
+        
+    }
+    
+
+
+
     return(
-        <Grid margin="0 auto" paddingTop="7rem" container  maxWidth="68rem">
-            <Typography variant="h2" sx={headerSectionStyle}>Portofilo</Typography>
+        <Grid  margin="0 auto" paddingTop="7rem" container  maxWidth="68rem">
+            <Typography ref={ref} variant="h2" sx={headerSectionStyle}>Portofilo</Typography>
             <Box sx={aboutProject}>
                 <Typography variant="h5" sx={aboutProjectTitle[0]}>
                     Some Things I've Built.
@@ -92,9 +108,10 @@ export default function PortofiloSection(){
                     <WebBuild/>
                 </SvgIcon>
             </Box>
-            <Grid item sx={projectContainerStyles}>
 
-                <Grid item sx={projectContainerDirections}>
+            <Grid  item sx={projectContainerStyles}>
+
+                <Grid item  sx={projectContainerDirections}>
 
                     <Grid item sx={projectImgContainerBackground}>
                         <Link href="#" >
@@ -133,7 +150,8 @@ export default function PortofiloSection(){
                             </Box>
                     </Grid>
                 </Grid>
-           </Grid>
+                
+            </Grid>
         </Grid>
     )
 }

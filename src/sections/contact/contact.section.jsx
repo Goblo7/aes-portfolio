@@ -1,8 +1,11 @@
 import { Button, SvgIcon, Typography,} from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import {Antena, Satellite} from "../../assets/icons.assets"
+import {Dish, Satellite} from "../../assets/icons.assets"
 import { layoutStyles } from "../../styles/layout.styles";
-import "./contact-styles.section.css"
+import "./contact-styles.section.css";
+import { useRef, } from "react";
+import { useInView, } from "framer-motion";
+
 
 const contactTitle = {
     display: "flex", 
@@ -20,43 +23,103 @@ const contactDescriptionHeader = {
 }
 
 const ButtonStyles = { 
-    width:"11rem", marginTop:"3rem", padding:"1rem 1rem",background:layoutStyles.paperColor, color:layoutStyles.mainStyleColor, fontSize:"1.1rem",position: "relative",borderRadius:"1rem",         
-    "&:after,&:before":{
-        content: `""`,
-        position: "absolute",
-        inset: "-0.2rem",
-        borderRadius: "inherit",
-        background: `radial-gradient(circle, rgba(18,8,126,1) 0%, rgba(136,136,255,1) 50%, rgba(26,6,56,1) 100%)`,
-        animtation: `rotation 20s linear infinite`,
-        zIndex: "-1",
-    },
-    "&:after":{
-        filter:`blur(0.2rem)`
-    },
-    "&:hover":{
-        background: "#14233d",
-    },
-    "@keyframes rotation": {
-        "0%" : {
-            circle: "0deg",
-        },
-        "100%":{
-            circle: "360deg",
-        }
-    },
+    width:{md:"11rem", sm:"10rem", xs:"9rem"}, marginTop:"3rem", padding:"1rem 1rem",background:layoutStyles.paperColor, color:layoutStyles.mainStyleColor, fontSize:"1.1rem",position: "relative",borderRadius:"1rem",
 }
 
 
-
 export default function ContactSection(){
+
+
+
+    const ref= useRef(null);
+    const isInView = useInView(ref, {once: true});
+
+
+
+    const satelliteStyles = {  
+        width:{lg:"5.5rem", md:"5rem", sm:"4.5rem", xs:"3rem"}, height:"100%",
+        animation:  {xl:"xlMovingSatellite 90s ease-in-out infinite 0s", 
+        md:"mdMovingSatellite 90s ease-in-out infinite 0s", 
+        sm:"smMovingSatellite 90s ease-in-out infinite 0s",
+        xs: "xsMovingSatellite 90s ease-in-out infinite 0s"},
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+        "@keyframes xlMovingSatellite": {
+            "0%":{
+                transform: `translateX(0%) rotateZ(45deg)`     
+            },
+            "30%":{
+                transform: `translateX(700%) rotateZ(90deg)`
+            },
+           " 70%":{
+                transform: `translateX(-700%) rotateZ(0deg)`
+            },
+            "100%":{
+                transform: `translateX(0%) rotateZ(45deg)`
+            },
+        },
+        "@keyframes mdMovingSatellite": {
+            "0%":{
+                transform: `translateX(0%) rotateZ(45deg)`     
+            },
+            "30%":{
+                transform: `translateX(500%) rotateZ(90deg)`
+            },
+           " 70%":{
+                transform: `translateX(-500%) rotateZ(0deg)`
+            },
+            "100%":{
+                transform: `translateX(0%) rotateZ(45deg)`
+            },
+        },
+        "@keyframes smMovingSatellite": {
+            "0%":{
+                transform: `translateX(0%) rotateZ(45deg)`     
+            },
+            "30%":{
+                transform: `translateX(360%) rotateZ(90deg)`
+            },
+           " 70%":{
+                transform: `translateX(-360%) rotateZ(0deg)`
+            },
+            "100%":{
+                transform: `translateX(0%) rotateZ(45deg)`
+            },
+        },
+        "@keyframes xsMovingSatellite": {
+            "0%":{
+                transform: `translateX(0%) rotateZ(45deg)`     
+            },
+            "30%":{
+                transform: `translateX(230%) rotateZ(90deg)`
+            },
+           " 70%":{
+                transform: `translateX(-230%) rotateZ(0deg)`
+            },
+            "100%":{
+                transform: `translateX(0%) rotateZ(45deg)`
+            },
+        }, 
+
+    }
+
+
+    const dishStyle = {
+        fontSize:{lg:"5rem", sm:"4rem", xs:"3rem"}, color: layoutStyles.mainStyleColor, opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s", 
+    }
+    
+
+
+
     return(
-          <Grid container sx={{display:"grid", height: "80vh", width: "100%", justifyItems:"center", alignItems:"center", textAlign:"center"}}>
-                {/* <Grid >
-                <SvgIcon sx={{ color: layoutStyles.mainStyleColor,width:"100%", height:"100%"}}> 
-                    <Satellite />
+          <Grid container sx={{display:"grid", height: "90dvh", width: "100%", justifyItems:"center", alignItems:"center", textAlign:"center"}}>
+                <Grid paddingBottom="1rem">
+                <SvgIcon ref={ref} id="satellite" sx={satelliteStyles}> 
+                    <Satellite   />
                 </SvgIcon>
-                </Grid> */}
-                <Grid item display="grid" sm={8} sx={{ justifyItems:"center",}} > 
+                </Grid>
+                <Grid item display="grid" sm={8} sx={{ justifyItems:"center",paddingBottom:"3rem"}} > 
                     <Typography variant="h2" sx={contactTitle}>
                         Contact Me
                     </Typography>
@@ -66,13 +129,15 @@ export default function ContactSection(){
                     <Typography variant="p" sx={{color: layoutStyles.secandryFontColor, fontSize: `clamp(15px, 4vw, 18px)`}}>
                         It is always a most delightful moment for me when meeting new people, Every great network starts with a simple Hello.
                     </Typography>
-                    <Button href="" disableElevation sx={ButtonStyles}>Say Hello</Button>
+                    <Button id="contact-button" href="" disableElevation sx={ButtonStyles}>
+                        Say Hello
+                    </Button>
                 </Grid>
-               {/* <Grid>
-                <SvgIcon sx={{fontSize: "15rem", color: layoutStyles.mainStyleColor,}}> 
-                    <Antena />
+               <Grid>
+                <SvgIcon id="dish" ref={ref} sx={dishStyle}> 
+                    <Dish />
                 </SvgIcon>
-                </Grid>  */}
+                </Grid> 
             </Grid>
     )
 }
