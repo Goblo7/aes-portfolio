@@ -22,10 +22,17 @@ function HideOnScroll(props) {
     );
   }
 
+// start styles
 
 const LogoStyle = {
     display: "flex", alignItems: "center",marginTop: "0.5rem", fontSize: "420%", strokeLinecap: "round",
 }
+
+const linkLogoStyles = {
+    textDecoration: "none", color: layoutStyles.mainStyleColor
+}
+
+// end styles
 
 export const Header = ({
     props: Props,
@@ -34,17 +41,17 @@ export const Header = ({
     const ref= useRef(null);
     const isInView = useInView(ref, {once: true});
 
-
+    const headerContianerstyles = {
+        transform: isInView ? "none" : "translateY(-75px)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
+   }
+    
     return(
         <HideOnScroll {...Props}>
-            <AppBar ref={ref} elevation={0} sx={{
-                 transform: isInView ? "none" : "translateY(-75px)",
-                 opacity: isInView ? 1 : 0,
-                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
-            }}>
-                <Toolbar sx={{justifyContent: "space-between", }}>
-                        <Link id="logo" href="#" sx={{
-                        textDecoration: "none", color: layoutStyles.mainStyleColor}} >
+            <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
+                <Toolbar  sx={{justifyContent: "space-between",}}>
+                        <Link id="logo" href="#" sx={linkLogoStyles} >
                             <SvgIcon sx={LogoStyle}>
                                 <Logo/>
                             </SvgIcon>

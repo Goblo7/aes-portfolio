@@ -7,6 +7,13 @@ import { useRef, } from "react";
 import { useInView, } from "framer-motion";
 
 
+// start styles
+
+
+const contactContainerStyles = {
+    display:"grid", height: "90dvh", width: "100%", justifyItems:"center", alignItems:"center", textAlign:"center"
+}
+
 const contactTitle = {
     display: "flex", 
     alignItems: "center",
@@ -18,13 +25,24 @@ const contactTitle = {
     fontWeight: "669",
 }
 
+const SayHelloContaine = { 
+    justifyItems:"center",paddingBottom:"3rem"
+}
+
+
 const contactDescriptionHeader = { 
     fontFamily: layoutStyles.secandryFontFamily,color: layoutStyles.mainFontColor, fontWeight: "500", fontSize:`clamp(19px,5vw, 35px)`,marginBottom: "1rem",
+}
+
+const contactDescriptionPraragraph = {
+    color: layoutStyles.secandryFontColor, fontSize: `clamp(15px, 4vw, 18px)`
 }
 
 const ButtonStyles = { 
     width:{md:"11rem", sm:"10rem", xs:"9rem"}, marginTop:"3rem", padding:"1rem 1rem",background:layoutStyles.paperColor, color:layoutStyles.mainStyleColor, fontSize:"1.1rem",position: "relative",borderRadius:"1rem",
 }
+
+// end styles
 
 const contact ="mailto:ahmed.ehab632@outlook.com";
 
@@ -36,6 +54,7 @@ export default function ContactSection(){
     const isInView = useInView(ref, {once: true});
 
 
+// start styles
 
     const satelliteStyles = {  
         width:{lg:"5.5rem", md:"5rem", sm:"4.5rem", xs:"3rem"}, height:"100%",
@@ -110,24 +129,24 @@ export default function ContactSection(){
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s", 
     }
     
-
+//end styles
 
 
     return(
-          <Grid container sx={{display:"grid", height: "90dvh", width: "100%", justifyItems:"center", alignItems:"center", textAlign:"center"}}>
+          <Grid container sx={contactContainerStyles}>
                 <Grid paddingBottom="1rem">
                 <SvgIcon ref={ref} id="satellite" sx={satelliteStyles}> 
                     <Satellite   />
                 </SvgIcon>
                 </Grid>
-                <Grid item display="grid" sm={8} sx={{ justifyItems:"center",paddingBottom:"3rem"}} > 
+                <Grid item display="grid" sm={8} sx={SayHelloContaine}SayHelloContaine > 
                     <Typography variant="h2" sx={contactTitle}>
                         Contact Me
                     </Typography>
                     <Typography variant="h5" sx={contactDescriptionHeader}>
                     Please Don't Hesitate To Reach Out
                     </Typography>
-                    <Typography variant="p" sx={{color: layoutStyles.secandryFontColor, fontSize: `clamp(15px, 4vw, 18px)`}}>
+                    <Typography variant="p" sx={contactDescriptionPraragraph}>
                         It is always a most delightful moment for me when meeting new people, Every great network starts with a simple Hello.
                     </Typography>
                     <Button id="contact-button" href={contact} disableElevation sx={ButtonStyles}>

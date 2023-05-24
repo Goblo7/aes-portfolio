@@ -9,6 +9,7 @@ import { useRef } from "react";
 
 
 
+// start styles
 
 const heroPfpStyle = {
     backgroundSize: "cover",
@@ -71,6 +72,16 @@ const heroPfpContainer = {
 }
 
 
+const DevAndlangListContianer = {
+    display: "grid", gridTemplateColumns: `repeat(2, 1fr)`,
+}
+
+const pinLocationIconStyles = {
+    marginLeft: "0.5rem", color: layoutStyles.mainStyleColor
+}
+
+
+// end styles
 
 
 
@@ -85,6 +96,15 @@ export default function AboutSection(){
     const isInViewHeader = useInView(header, {once: true});
     const isInViewPara = useInView(Para, {once: true});
 
+// start styles 
+
+    const aboutHeaderStyles = { 
+        fontFamily: layoutStyles.mainFontFamily,
+        color: layoutStyles.mainFontColor,
+        fontWeight: "500", marginBottom: "1.5rem",fontSize:`clamp(19px,5vw, 35px)`,  transform: isInViewHeader ? "none" : "translateY(30px)",
+        opacity: isInViewHeader ? 1 : 0,
+        transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s"
+        }
 
     const techLangugesAndSkillsStyle = [
         {
@@ -100,7 +120,16 @@ export default function AboutSection(){
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1s"
         }
     ]
-    
+
+    const aboutMeDiscripStyles = {
+        transform: isInViewPara ? "none" : "translateY(50px)",
+       opacity: isInViewPara ? 1 : 0,
+        transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.7s"
+        }
+
+
+
+// end styles
 
     const TechLanguges = techLanguges.map(({langugeName,langugeLogo}) => {
         return(
@@ -139,21 +168,11 @@ export default function AboutSection(){
             </Box>
             <Grid container spacing={2}  >
                 <Grid item sm={8}>
-                    <Typography ref={header} variant="h5" sx={{ 
-                    fontFamily: layoutStyles.mainFontFamily,
-                    color: layoutStyles.mainFontColor,
-                    fontWeight: "500", marginBottom: "1.5rem",fontSize:`clamp(19px,5vw, 35px)`,  transform: isInViewHeader ? "none" : "translateY(30px)",
-                    opacity: isInViewHeader ? 1 : 0,
-                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s"
-                    }}>
+                    <Typography ref={header} variant="h5" sx={aboutHeaderStyles}>
                         Hi there! Nice to meet you, I'm a dedicated Front-end Developer based in Cairo, Egypt.
-                        < LocationOnOutlinedIcon sx={{marginLeft: "0.5rem", color: layoutStyles.mainStyleColor}}/>
+                        < LocationOnOutlinedIcon sx={pinLocationIconStyles}/>
                     </Typography>
-                    <Typography ref={Para} variant="p" color={layoutStyles.secandryFontColor}  sx={{
-                    transform: isInViewPara ? "none" : "translateY(50px)",
-                   opacity: isInViewPara ? 1 : 0,
-                    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.7s"
-                    }}>
+                    <Typography ref={Para} variant="p" color={layoutStyles.secandryFontColor}  sx={aboutMeDiscripStyles}>
                         I am a self-learner, self-motivated, diligent and persevering Junior Front-End Developer, I'm perpetually working on improving and educating myself to achieve efficacy and effectiveness in whatever i craft, I possese the ability to analyze, gather informations and identify key resources to execute an effective plan to produce outstanding web applications.
                     </Typography>
                     <Box width="100%" display="grid" justifyItems="center">
@@ -166,7 +185,7 @@ export default function AboutSection(){
                                         <Typography  variant="h5"  sx={languagesAndDevTitle} >
                                             Languages
                                         </Typography>
-                                            <List sx={{display: "grid", gridTemplateColumns: `repeat(2, 1fr)`,}} >
+                                            <List sx={DevAndlangListContianer} >
                                                 {TechLanguges}
                                             </List>
                                     </Grid>
@@ -177,7 +196,7 @@ export default function AboutSection(){
                                         <Typography variant="h5" textAlign="center" sx={languagesAndDevTitle}>
                                             Dev Tools
                                         </Typography>
-                                        <List sx={{display: "grid", gridTemplateColumns: `repeat(2, 1fr)`, }} >
+                                        <List sx={DevAndlangListContianer} >
                                                 {TechDevTools}
                                             </List>
                                     </Grid>
