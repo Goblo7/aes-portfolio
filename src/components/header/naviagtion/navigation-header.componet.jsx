@@ -83,7 +83,7 @@ export default function Navigation(){
         
     const resumeItem = resumeItems.map(({text, to}) => {
         return (
-            <Button key={to} href={`#${to}`} variant="outlined" color="inherit" sx={buttonSpecialStyleHover}>
+            <Button key={to} href={"https://public.bl.files.1drv.com/y4mNJr4qTfU0urx-oUOez0VqMw6GHrtR1wuI3iRKhA36Cfg2Su9lc7RSQmudOPAJRUCufMiGxa39aciLeURfc5rG1d4rzWr-izxdQej2SH2yiwunxwDCACq7ycAEhgoRBFAtoyzQnb5iW7hERBSyUnLhWVQdHj4DeFlY6ZPTtD2I2NUn1BQI_mIVShcyH9fXl-0WErhufmyAog3XiLSOuLGg7mGB66CQ09CFec4X1GDNGA?AVOverride=1"} variant="outlined" target="_blank" color="inherit" sx={buttonSpecialStyleHover}>
                     {text}
             </Button>
     

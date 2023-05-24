@@ -24,7 +24,7 @@ function HideOnScroll(props) {
 
 
 const LogoStyle = {
-    display: "flex", alignItems: "center",marginTop: "0.5rem", fontSize: "420%", stroke: layoutStyles.mainStrokeColor, strokeLinecap: "round",
+    display: "flex", alignItems: "center",marginTop: "0.5rem", fontSize: "420%", strokeLinecap: "round",
 }
 
 export const Header = ({

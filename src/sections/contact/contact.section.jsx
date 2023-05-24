@@ -26,6 +26,7 @@ const ButtonStyles = {
     width:{md:"11rem", sm:"10rem", xs:"9rem"}, marginTop:"3rem", padding:"1rem 1rem",background:layoutStyles.paperColor, color:layoutStyles.mainStyleColor, fontSize:"1.1rem",position: "relative",borderRadius:"1rem",
 }
 
+const contact ="mailto:ahmed.ehab632@outlook.com";
 
 export default function ContactSection(){
 
@@ -129,7 +130,7 @@ export default function ContactSection(){
                     <Typography variant="p" sx={{color: layoutStyles.secandryFontColor, fontSize: `clamp(15px, 4vw, 18px)`}}>
                         It is always a most delightful moment for me when meeting new people, Every great network starts with a simple Hello.
                     </Typography>
-                    <Button id="contact-button" href="" disableElevation sx={ButtonStyles}>
+                    <Button id="contact-button" href={contact} disableElevation sx={ButtonStyles}>
                         Say Hello
                     </Button>
                 </Grid>

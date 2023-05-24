@@ -137,7 +137,7 @@ export default function PortofiloSection(){
                                 
                             </List>
                             <Box sx={projectIconsContainer}>
-                                <Link href="#">
+                                <Link href="https://github.com/Goblo7/Krusty-restaurant" target="_blank">
                                     <SvgIcon sx={projectIconStyles}>
                                         <GitHub/>
                                     </SvgIcon >

@@ -1,0 +1,22 @@
+{
+    "short_name": "AhmedEhab",
+    "name": "Ahmed Ehab Sabry",
+    "description": "Ahmed Ehab Sabry personal portfolio",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "256x256",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "goblo-icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#1e345b",
+    "theme_color": "#1e345b",
+    "orientation": "portrait",
+    "display": "standalone"
+  }

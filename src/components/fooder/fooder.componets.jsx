@@ -41,28 +41,28 @@ export default function Fooder(){
         <Container sx={fooderContainer} >
             <Grid ref={ref} container sx={fooderGrid}>
                 <Grid container gap={3} sx={{ flexBasis:"33.333%",justifyContent: "center", alignItems:"center" ,justifyItems:"center" , textAlign:"center",marginBottom:{xs:"1rem", lg:"0"}}} >
-                    <Link href="#">
+                    <Link href="https://www.linkedin.com/in/ahmedehab632/" target="_blank">
                         <SvgIcon sx={ContactSvg}>
                             <LinkedIn/>
                         </SvgIcon>
                     </Link>
-                    <Link href="#">
+                    <Link href="https://www.facebook.com/profile.php?id=100007869753482" target="_blank">
                         <SvgIcon sx={ContactSvg}>
                             <Facebook/>
                         </SvgIcon>
                     </Link>
-                    <Link href="#">
+                    <Link href="https://www.instagram.com/goblo.7/" target="_blank">
                         <SvgIcon sx={ContactSvg}>
                             <Insta/>
                         </SvgIcon>
                     </Link>
-                    <Link href="#" sx={ContactSvg}>
-                        <SvgIcon>
+                    <Link href="https://twitter.com/EvWithin"  target="_blank">
+                        <SvgIcon sx={ContactSvg}>
                             <Twitter/>
                         </SvgIcon>
                     </Link>
-                    <Link href="#" sx={ContactSvg}>
-                        <SvgIcon>
+                    <Link href="https://github.com/Goblo7/" target="_blank">
+                        <SvgIcon sx={ContactSvg}>
                             <GitHub/>
                         </SvgIcon>
                     </Link>

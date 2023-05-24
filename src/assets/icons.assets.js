@@ -18,4 +18,4 @@ export {default as Facebook} from "./icons/facebook-icon.assets";
 export {default as Twitter} from "./icons/twitter-icon.assets";
 export {default as Insta} from "./icons/insta-icon.assets";
 export {default as LinkedIn} from "./icons/linkedin-icon.assets";
-export {default as PreloaderLogo} from "./logo/preloader-logo.assets"
+export {default as PreloaderLogo} from "./logo/preloader-logo.assets";
