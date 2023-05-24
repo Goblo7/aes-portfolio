@@ -9,6 +9,8 @@ import { useInView, } from "framer-motion";
 
 
 
+//start styles
+
 const fooderContainer = {
       alignItems:"center", justifyContent:"center",backgroundColor: layoutStyles.paperColor, minWidth:"100%"
 }
@@ -24,23 +26,56 @@ const ContactSvg = {
         color: layoutStyles.mainStyleColor,
     }
 }
+
+const contactSvgContainer = { 
+    flexBasis:"33.333%",justifyContent: "center", alignItems:"center" ,justifyItems:"center" , textAlign:"center",marginBottom:{xs:"1rem", lg:"0"}
+}
+
+const tradeMarkLogoStyle = {
+    display: "grid", justifyContent:"center" , justifyItems:"center" , flexGrow:"1",textAlign:"center",flexBasis:"33.333%",
+}
+
+const tradeMarkDescrpitonStyle = {
+    color: layoutStyles.secandryFontColor, fontWeight:"500", fontFamily:layoutStyles.secandryFontFamily
+}
+
+
+const copyrightsContainer = {
+    flexGrow:"1",justifyContent: "center", alignItems:"center", justifyItems:"center", textAlign:"center",flexBasis:"33.333%",marginTop:{xs: "0.3rem", lg:"0"}
+}
+
+const copyrightsEmail = {
+    color: layoutStyles.mainFontColor, display:"block", 
+}
+
+const copyRights = {
+    color: layoutStyles.secandryFontColor, display:"block" 
+}
+
+// end styles
+
+
+
 export default function Fooder(){
 
     const ref= useRef(null);
     const isInView = useInView(ref, {once: true});
   
+//start styles
+
     const fooderGrid = {
         boxSizing:"border-box",justifyContent: "center", alignItems:"center",backgroundColor: layoutStyles.paperColor, flexDirection:{xs:"column", md:"row"},
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
     }
 
+// end styles
 
 
     return(
         <Container sx={fooderContainer} >
             <Grid ref={ref} container sx={fooderGrid}>
-                <Grid container gap={3} sx={{ flexBasis:"33.333%",justifyContent: "center", alignItems:"center" ,justifyItems:"center" , textAlign:"center",marginBottom:{xs:"1rem", lg:"0"}}} >
+                <Grid container gap={3} sx={contactSvgContainer} >
                     <Link href="https://www.linkedin.com/in/ahmedehab632/" target="_blank">
                         <SvgIcon sx={ContactSvg}>
                             <LinkedIn/>
@@ -67,19 +102,19 @@ export default function Fooder(){
                         </SvgIcon>
                     </Link>
                 </Grid>
-                <Grid  item sx={{display: "grid", justifyContent:"center" , justifyItems:"center" , flexGrow:"1",textAlign:"center",flexBasis:"33.333%",}}>
+                <Grid  item sx={tradeMarkLogoStyle}>
                     <SvgIcon sx={LogoStyle} >
                         <Logo />
                     </SvgIcon>
-                    <Typography variant="subtitle1" sx={{color: layoutStyles.secandryFontColor, fontWeight:"500", fontFamily:layoutStyles.secandryFontFamily}}>
+                    <Typography variant="subtitle1" sx={tradeMarkDescrpitonStyle}>
                         Build & Designed by me
                     </Typography>
                 </Grid >
-                <Grid sx={{flexGrow:"1",justifyContent: "center", alignItems:"center", justifyItems:"center", textAlign:"center",flexBasis:"33.333%",marginTop:{xs: "0.3rem", lg:"0"}}} item>
-                        <Typography variant="subtitle2" sx={{color: layoutStyles.mainFontColor, display:"block", }}>
+                <Grid sx={copyrightsContainer} item>
+                        <Typography variant="subtitle2" sx={copyrightsEmail}>
                             Ahmed.ehab632@outlook.com
                         </Typography>
-                    <Typography variant="caption" sx={{color: layoutStyles.secandryFontColor, display:"block" }}>
+                    <Typography variant="caption" sx={copyRights}>
                     Copyright © 2023. All rights are reserved
                     </Typography>
                 </Grid> 
