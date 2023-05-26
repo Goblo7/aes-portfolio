@@ -167,7 +167,7 @@ export default function ContactSection() {
         <Typography variant="p" sx={contactDescriptionPraragraph}>
           It is always a most delightful moment for me when meeting new people,
           Every great network starts with a simple {""}
-          <Typography variant="button" sx={contactDescriptionHelloWord}>
+          <Typography variant="caption" sx={contactDescriptionHelloWord}>
           Hello
           </Typography>
           .
