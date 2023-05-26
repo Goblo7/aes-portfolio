@@ -148,7 +148,7 @@ export default function Fooder() {
         </Grid>
         <Grid sx={copyrightsContainer} item>
           <Typography variant="subtitle2" sx={copyrightsEmail}>
-            Ahmed.ehab632@outlook.com
+            Ahmedehab.dev@gmail.com
           </Typography>
           <Typography variant="caption" sx={copyRights}>
             Copyright © 2023. All rights are reserved

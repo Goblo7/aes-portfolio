@@ -161,7 +161,15 @@ export default function ContactSection() {
         </Typography>
         <Typography variant="p" sx={contactDescriptionPraragraph}>
           It is always a most delightful moment for me when meeting new people,
-          Every great network starts with a simple Hello.
+          Every great network starts with a simple{" "}
+          <Typography
+            variant="button"
+            fontSize={`clamp(15px, 4vw, 18px)`}
+            color={layoutStyles.mainStyleColor}
+          >
+            Hello
+          </Typography>
+          .
         </Typography>
         <Button
           id="contact-button"
