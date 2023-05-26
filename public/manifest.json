@@ -9,22 +9,22 @@
         "type": "image/x-icon"
       },
       {
-        "src": "goblo-icon.png",
+        "src": "./imgs/goblo-icon.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "goblo-icon1.png",
+        "src": "./imgs/goblo-icon1.png",
         "sizes": "256x256",
         "type": "image/png"
       },
       {
-        "src": "goblo-icon2.png",
+        "src": "./imgs/goblo-icon2.png",
         "sizes": "384x384",
         "type": "image/png"
       },
       {
-        "src": "goblo-icon3.png",
+        "src": "./imgs/goblo-icon3.png",
         "sizes": "512x512",
         "type": "image/png"
       }
