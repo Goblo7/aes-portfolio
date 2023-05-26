@@ -1,14 +1,7 @@
-import { Box,} from "@mui/material"
+import { Box } from "@mui/material";
 
+export const Layout = ({ children: Children }) => {
+  return <Box>{Children}</Box>;
+};
 
-export const Layout = ({
-    children: Children,
-}) => { 
-    return(
-        <Box>
-            {Children}
-        </Box>
-    )
-}
-
-export default Layout
+export default Layout;

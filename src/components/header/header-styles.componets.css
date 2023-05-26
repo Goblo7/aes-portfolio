@@ -1,21 +1,19 @@
-#border{
-    transform-origin: center ;
-    transform-box: fill-box ;
-    transition: all 1.5s;
-    stroke: #3333FF;
-    stroke-width: 2px;
+#border {
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 1.5s;
+  stroke: #3333ff;
+  stroke-width: 2px;
 }
 
-#AE{
-    stroke: #3333FF;
-    stroke-width: 1px;
+#AE {
+  stroke: #3333ff;
+  stroke-width: 1px;
 }
 
-#logo:hover #border{  
-    transform: rotate(-360deg);
+#logo:hover #border {
+  transform: rotate(-360deg);
 }
-
-
 
 /* .cls-1 {
     fill: url(#linear-gradient-11);
