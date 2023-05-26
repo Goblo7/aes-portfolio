@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import SectionIdEnum from "./scripts/section-id";
 import { HeroSection, AboutSection, PortofiloSection, ContactSection } from "./sections/sections";
 import SectionContainer from "./components/section-container/section-container.componets";
-import { layoutStyles, } from "../src/styles/layout.styles";
+import { layoutStyles, } from "./styles/layout.styles";
 import { createTheme,ThemeProvider, CssBaseline, } from "@mui/material";
 import Layout from "./components/main-layout/main-layout.components";
 import Header from "./components/header/header.componets";
@@ -72,7 +72,7 @@ const LayoutTheme = createTheme({
 })
 
 
-export default function Main(){
+export default function App(){
 
     const [preloader, setPreLoader] = useState(false)
     useEffect(() => {
