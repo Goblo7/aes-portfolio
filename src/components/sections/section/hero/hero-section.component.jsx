@@ -1,8 +1,8 @@
 import { Grid, Typography, SvgIcon } from "@mui/material";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
-import { layoutStyles } from "../../styles/layout/main-layout.styles";
-import AeLogo from "../../assets/logo/ae-logo.assets";
+import { layoutStyles } from "../../../../styles/layout.styles";
+import AeLogo from "../../../../assets/logo/ae-logo.assets";
 import { useInView } from "framer-motion";
 
 const heroContainer = {

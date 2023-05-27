@@ -1,4 +1,4 @@
-export const SectionIdEnum = {
+export const sectionIdEnum = {
   hero: "hero",
   about: "about",
   portofilo: "portofilo",
@@ -6,4 +6,4 @@ export const SectionIdEnum = {
   resume: "resume",
 };
 
-export default SectionIdEnum;
+export default sectionIdEnum;

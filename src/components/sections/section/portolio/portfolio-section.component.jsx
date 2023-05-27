@@ -8,9 +8,16 @@ import {
   Link,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { layoutStyles, headerSectionStyle } from "../../styles/layout.styles";
-import { restaurant } from "../../assets/img";
-import { WebBuild, ExternalLink, GitHub } from "../../assets/icons.assets";
+import {
+  layoutStyles,
+  headerSectionStyle,
+} from "../../../../styles/layout.styles";
+import { restaurant } from "../../../../assets/img";
+import {
+  WebBuild,
+  ExternalLink,
+  GitHub,
+} from "../../../../assets/icons.assets";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 

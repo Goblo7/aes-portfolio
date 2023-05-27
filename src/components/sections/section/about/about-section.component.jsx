@@ -11,14 +11,29 @@ import {
   useTheme,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import HeroPfp from "../../assets/pfp/main-hero-pfp.assets.jpg";
-import { layoutStyles, headerSectionStyle } from "../../styles/layout.styles";
+import HeroPfp from "../../../../assets/pfp/main-hero-pfp.assets.jpg";
+import {
+  layoutStyles,
+  headerSectionStyle,
+} from "../../../../styles/layout.styles";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import { techLanguges, techDevTools } from "../../scripts/tech.scripts";
+import { techLanguges, techDevTools } from "../../../../scripts/tech.scripts";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 // start styles
+
+const aboutContianer = {
+  margin: "0 auto",
+  paddingTop: "7rem",
+  maxWidth: "68rem",
+};
+
+const aboutTitleContainer = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+};
 
 const heroPfpStyle = {
   backgroundSize: "cover",
@@ -56,6 +71,12 @@ const skillsContainer = {
   backgroundColor: { xs: "none", sm: layoutStyles.lightPaperColor },
 };
 
+const tecContainer = {
+  width: "100%",
+  display: "grid",
+  justifyItems: "center",
+};
+
 const skillTitle = {
   textAlign: "center",
   color: layoutStyles.mainFontColor,
@@ -86,7 +107,7 @@ const languagesAndDevTitle = {
   },
 };
 
-const horizontalDivider = {
+const verticalDivider = {
   borderWidth: "0px 4px 0px 0px",
   borderStyle: "solid",
   alignSelf: "stretch",
@@ -155,6 +176,7 @@ export default function AboutSection() {
   ];
 
   const aboutMeDiscripStyles = {
+    color: layoutStyles.secandryFontColor,
     transform: isInViewPara ? "none" : "translateY(50px)",
     opacity: isInViewPara ? 1 : 0,
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.7s",
@@ -191,8 +213,8 @@ export default function AboutSection() {
   });
 
   return (
-    <Grid margin="0 auto" paddingTop="7rem" container maxWidth="68rem">
-      <Box display="flex" alignItems="center" justifyContent="center">
+    <Grid container sx={aboutContianer}>
+      <Box sx={aboutTitleContainer}>
         <Typography variant="h2" sx={headerSectionStyle}>
           About Me
         </Typography>
@@ -204,12 +226,7 @@ export default function AboutSection() {
             based in Cairo, Egypt.
             <LocationOnOutlinedIcon sx={pinLocationIconStyles} />
           </Typography>
-          <Typography
-            ref={Para}
-            variant="p"
-            color={layoutStyles.secandryFontColor}
-            sx={aboutMeDiscripStyles}
-          >
+          <Typography ref={Para} variant="p" sx={aboutMeDiscripStyles}>
             I am a self-learner, self-motivated, diligent and persevering Junior
             Front-End Developer, I'm perpetually working on improving and
             educating myself to achieve efficacy and effectiveness in whatever i
@@ -217,7 +234,7 @@ export default function AboutSection() {
             identify key resources to execute an effective plan to produce
             outstanding web applications.
           </Typography>
-          <Box width="100%" display="grid" justifyItems="center">
+          <Box sx={tecContainer}>
             <Grid ref={langTool} sx={skillsContainer}>
               <Typography variant="h4" sx={skillTitle}>
                 &lt;TechStack/&gt;
@@ -229,13 +246,9 @@ export default function AboutSection() {
                   </Typography>
                   <List sx={DevAndlangListContianer}>{TechLanguges}</List>
                 </Grid>
-                {isSamll ? <Divider sx={horizontalDivider} /> : undefined}
+                {isSamll ? <Divider sx={verticalDivider} /> : undefined}
                 <Grid item>
-                  <Typography
-                    variant="h5"
-                    textAlign="center"
-                    sx={languagesAndDevTitle}
-                  >
+                  <Typography variant="h5" sx={languagesAndDevTitle}>
                     Dev Tools
                   </Typography>
                   <List sx={DevAndlangListContianer}>{TechDevTools}</List>

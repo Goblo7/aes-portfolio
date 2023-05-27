@@ -1,10 +1,10 @@
 import { AppBar, Link, Toolbar, SvgIcon } from "@mui/material";
-import Navigation from "./naviagtion/navigation-header.componet";
+import Navigation from "./naviagtion/navigation-header.component";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import Logo from "../../assets/logo/main-logo.assets";
-import layoutStyles from "../../styles/layout/main-layout.styles";
-import "./header-styles.componets.css";
+import layoutStyles from "../../styles/layout-styles/main-layout.styles";
+import "./header-styles.component.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
@@ -54,18 +54,20 @@ export const Header = () => {
   };
 
   return (
-    <HideOnScroll>
-      <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Link id="logo" href="#" sx={linkLogoStyles}>
-            <SvgIcon sx={LogoStyle}>
-              <Logo />
-            </SvgIcon>
-          </Link>
-          <Navigation />
-        </Toolbar>
-      </AppBar>
-    </HideOnScroll>
+    <header className="MuiHeader-root">
+      <HideOnScroll>
+        <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
+          <Toolbar sx={{ justifyContent: "space-between" }}>
+            <Link id="logo" href="#" sx={linkLogoStyles}>
+              <SvgIcon sx={LogoStyle}>
+                <Logo />
+              </SvgIcon>
+            </Link>
+            <Navigation />
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
+    </header>
   );
 };
 

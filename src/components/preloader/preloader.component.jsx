@@ -1,6 +1,6 @@
 import { Box, SvgIcon } from "@mui/material";
 import { PreloaderLogo } from "../../assets/icons.assets";
-import "./preloader-style.componet.css";
+import "./preloader-style.component.css";
 
 const gobloLogoStyles = {
   stroke: "#3333FF",

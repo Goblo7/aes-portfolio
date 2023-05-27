@@ -13,7 +13,7 @@ import {
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from "react";
-import layoutStyles from "../../../styles/layout/main-layout.styles";
+import layoutStyles from "../../../styles/layout-styles/main-layout.styles";
 
 const naviagtionItems = [
   {
@@ -37,8 +37,7 @@ const resumeItems = [
   },
 ];
 
-const heroCV =
-  "https://1drv.ms/b/s!Ai3MmYbty_2bg2EOrSgw-P2FbsFR?e=iPtvfI";
+const heroCV = "https://1drv.ms/b/s!Ai3MmYbty_2bg2EOrSgw-P2FbsFR?e=iPtvfI";
 
 // start styles
 

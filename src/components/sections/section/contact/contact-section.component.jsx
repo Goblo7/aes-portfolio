@@ -1,8 +1,8 @@
 import { Button, SvgIcon, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { Dish, Satellite } from "../../assets/icons.assets";
-import { layoutStyles } from "../../styles/layout.styles";
-import "./contact-styles.section.css";
+import { Dish, Satellite } from "../../../../assets/icons.assets";
+import { layoutStyles } from "../../../../styles/layout.styles";
+import "./contact-styles-section.component.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
@@ -168,7 +168,7 @@ export default function ContactSection() {
           It is always a most delightful moment for me when meeting new people,
           Every great network starts with a simple {""}
           <Typography variant="caption" sx={contactDescriptionHelloWord}>
-          Hello
+            Hello
           </Typography>
           .
         </Typography>

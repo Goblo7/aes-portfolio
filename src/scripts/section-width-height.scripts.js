@@ -1,4 +1,4 @@
-export const SectionWidthHeight = [
+export const sectionWidthHeight = [
   {
     hero: "80%",
     about: "fit-content",
@@ -13,4 +13,4 @@ export const SectionWidthHeight = [
   },
 ];
 
-export default SectionWidthHeight;
+export default sectionWidthHeight;

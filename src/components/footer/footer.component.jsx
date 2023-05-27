@@ -14,7 +14,7 @@ import { useInView } from "framer-motion";
 
 //start styles
 
-const fooderContainer = {
+const footerContainer = {
   alignItems: "center",
   justifyContent: "center",
   backgroundColor: layoutStyles.paperColor,
@@ -35,6 +35,10 @@ const ContactSvg = {
   display: "flex",
   "&:hover": {
     color: layoutStyles.mainStyleColor,
+  },
+  fontSize: {
+    sm: "1.4rem",
+    xs: "1.2rem",
   },
 };
 
@@ -84,13 +88,13 @@ const copyRights = {
 
 // end styles
 
-export default function Fooder() {
+export default function Footer() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   //start styles
 
-  const fooderGrid = {
+  const footerGrid = {
     boxSizing: "border-box",
     justifyContent: "center",
     alignItems: "center",
@@ -103,58 +107,60 @@ export default function Fooder() {
   // end styles
 
   return (
-    <Container sx={fooderContainer}>
-      <Grid ref={ref} container sx={fooderGrid}>
-        <Grid container gap={3} sx={contactSvgContainer}>
-          <Link
-            href="https://www.linkedin.com/in/ahmedehab632/"
-            target="_blank"
-          >
-            <SvgIcon sx={ContactSvg}>
-              <LinkedIn />
+    <footer className="MuiFooter-root">
+      <Container sx={footerContainer}>
+        <Grid ref={ref} container sx={footerGrid}>
+          <Grid container gap={3} sx={contactSvgContainer}>
+            <Link
+              href="https://www.linkedin.com/in/ahmedehab632/"
+              target="_blank"
+            >
+              <SvgIcon sx={ContactSvg}>
+                <LinkedIn />
+              </SvgIcon>
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=100007869753482"
+              target="_blank"
+            >
+              <SvgIcon sx={ContactSvg}>
+                <Facebook />
+              </SvgIcon>
+            </Link>
+            <Link href="https://www.instagram.com/goblo.7/" target="_blank">
+              <SvgIcon sx={ContactSvg}>
+                <Insta />
+              </SvgIcon>
+            </Link>
+            <Link href="https://twitter.com/EvWithin" target="_blank">
+              <SvgIcon sx={ContactSvg}>
+                <Twitter />
+              </SvgIcon>
+            </Link>
+            <Link href="https://github.com/Goblo7/" target="_blank">
+              <SvgIcon sx={ContactSvg}>
+                <GitHub />
+              </SvgIcon>
+            </Link>
+          </Grid>
+          <Grid item sx={tradeMarkLogoStyle}>
+            <SvgIcon sx={LogoStyle}>
+              <Logo />
             </SvgIcon>
-          </Link>
-          <Link
-            href="https://www.facebook.com/profile.php?id=100007869753482"
-            target="_blank"
-          >
-            <SvgIcon sx={ContactSvg}>
-              <Facebook />
-            </SvgIcon>
-          </Link>
-          <Link href="https://www.instagram.com/goblo.7/" target="_blank">
-            <SvgIcon sx={ContactSvg}>
-              <Insta />
-            </SvgIcon>
-          </Link>
-          <Link href="https://twitter.com/EvWithin" target="_blank">
-            <SvgIcon sx={ContactSvg}>
-              <Twitter />
-            </SvgIcon>
-          </Link>
-          <Link href="https://github.com/Goblo7/" target="_blank">
-            <SvgIcon sx={ContactSvg}>
-              <GitHub />
-            </SvgIcon>
-          </Link>
+            <Typography variant="subtitle1" sx={tradeMarkDescrpitonStyle}>
+              Build & Designed by me
+            </Typography>
+          </Grid>
+          <Grid sx={copyrightsContainer} item>
+            <Typography variant="subtitle2" sx={copyrightsEmail}>
+              ahmedehab.json@gmail.com
+            </Typography>
+            <Typography variant="caption" sx={copyRights}>
+              Copyright © 2023. All rights are reserved
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item sx={tradeMarkLogoStyle}>
-          <SvgIcon sx={LogoStyle}>
-            <Logo />
-          </SvgIcon>
-          <Typography variant="subtitle1" sx={tradeMarkDescrpitonStyle}>
-            Build & Designed by me
-          </Typography>
-        </Grid>
-        <Grid sx={copyrightsContainer} item>
-          <Typography variant="subtitle2" sx={copyrightsEmail}>
-            ahmedehab.json@gmail.com
-          </Typography>
-          <Typography variant="caption" sx={copyRights}>
-            Copyright © 2023. All rights are reserved
-          </Typography>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </footer>
   );
 }
