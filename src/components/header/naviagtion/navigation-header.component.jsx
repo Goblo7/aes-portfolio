@@ -37,7 +37,8 @@ const resumeItems = [
   },
 ];
 
-const heroCV = "https://drive.google.com/uc?id=1I4_m4AE5eqNifEhHUi4u8aIYTh8pHwlQ&export=download";
+const heroCV =
+  "https://drive.google.com/uc?id=1I4_m4AE5eqNifEhHUi4u8aIYTh8pHwlQ&export=download";
 
 // start styles
 
