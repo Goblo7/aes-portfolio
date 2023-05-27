@@ -153,7 +153,7 @@ export default function Footer() {
           </Grid>
           <Grid sx={copyrightsContainer} item>
             <Typography variant="subtitle2" sx={copyrightsEmail}>
-              ahmedehab.json@gmail.com
+              ahmedehab.sg@gmail.com
             </Typography>
             <Typography variant="caption" sx={copyRights}>
               Copyright © 2023. All rights are reserved

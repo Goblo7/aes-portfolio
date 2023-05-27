@@ -64,7 +64,7 @@ const contactDescriptionHelloWord = {
 
 // end styles
 
-const contact = "mailto:ahmed.ehab632@outlook.com";
+const contact = "mailto:ahmedehab.sg@gmail.com";
 
 export default function ContactSection() {
   const ref = useRef(null);
