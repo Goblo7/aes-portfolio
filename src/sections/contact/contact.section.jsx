@@ -28,7 +28,7 @@ const contactTitle = {
   fontWeight: "669",
 };
 
-const SayHelloContaine = {
+const sayHelloContainer = {
   justifyItems: "center",
   paddingBottom: "3rem",
 };
@@ -157,7 +157,7 @@ export default function ContactSection() {
           <Satellite />
         </SvgIcon>
       </Grid>
-      <Grid item display="grid" sm={8} sx={SayHelloContaine} SayHelloContaine>
+      <Grid item display="grid" sm={8} sx={sayHelloContainer}>
         <Typography variant="h2" sx={contactTitle}>
           Contact Me
         </Typography>

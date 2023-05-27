@@ -7,7 +7,8 @@ import {
   ListItemText,
   List,
   Divider,
-  Hidden,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import HeroPfp from "../../assets/pfp/main-hero-pfp.assets.jpg";
@@ -116,6 +117,8 @@ const pinLocationIconStyles = {
 // end styles
 
 export default function AboutSection() {
+  const theme = useTheme();
+  const isSamll = useMediaQuery(theme.breakpoints.up("lg"));
   const langTool = useRef(null);
   const header = useRef(null);
   const Para = useRef(null);
@@ -130,7 +133,7 @@ export default function AboutSection() {
     color: layoutStyles.mainFontColor,
     fontWeight: "500",
     marginBottom: "1.5rem",
-    fontSize: `clamp(19px,5vw, 35px)`,
+    fontSize: `clamp(19px,5vw, 28px)`,
     transform: isInViewHeader ? "none" : "translateY(30px)",
     opacity: isInViewHeader ? 1 : 0,
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
@@ -226,9 +229,7 @@ export default function AboutSection() {
                   </Typography>
                   <List sx={DevAndlangListContianer}>{TechLanguges}</List>
                 </Grid>
-                <Hidden lgDown>
-                  <Divider sx={horizontalDivider} />
-                </Hidden>
+                {isSamll ? <Divider sx={horizontalDivider} /> : undefined}
                 <Grid item>
                   <Typography
                     variant="h5"

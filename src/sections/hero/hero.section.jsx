@@ -80,7 +80,7 @@ export default function HeroSection() {
 
   const greetingStyle = {
     lineHeight: "1.1",
-    fontSize: "1.1rem",
+    fontSize: `clamp(13px,3vw,22px)`,
     fontFamily: layoutStyles.secandryFontFamily,
     color: layoutStyles.mainStyleColor,
     transform: isInView ? "none" : "translateY(75px)",

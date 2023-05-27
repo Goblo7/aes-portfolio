@@ -43,7 +43,7 @@ const linkLogoStyles = {
 
 // end styles
 
-export const Header = ({ props: Props }) => {
+export const Header = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -54,7 +54,7 @@ export const Header = ({ props: Props }) => {
   };
 
   return (
-    <HideOnScroll {...Props}>
+    <HideOnScroll>
       <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Link id="logo" href="#" sx={linkLogoStyles}>
