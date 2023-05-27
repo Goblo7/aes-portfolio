@@ -4,7 +4,7 @@ import {
   PortofiloSection,
   ContactSection,
 } from "./section/section.component";
-import SectionContainer from "./section-container/section-container.component";
+import SectionContainer from "./sections-container/sections-container.component";
 import SectionWidthHeight from "../../scripts/section-width-height.scripts";
 import SectionIdEnum from "../../scripts/section-id";
 

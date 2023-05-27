@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Layout from "./layout/layout.components";
 import Preloader from "./components/preloader/preloader.component";
 import Header from "./components/header/header.component";
-import Sections from "./components/sections//section-map.component";
+import Sections from "./components/sections//sections-map.component";
 import Footer from "./components/footer/footer.component";
 
 export default function App() {
