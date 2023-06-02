@@ -1,3 +1,5 @@
 # My Personal Portfolio
 
-<img align="center" src="./public/imgs/icon512.png" alt="">
+<h1 align="center" >
+<img src="./public/imgs/icon512.png" alt="">
+</h1>
