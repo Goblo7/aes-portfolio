@@ -9,8 +9,14 @@
   -webkit-box-pack: center;
 }
 
+#preloader-border-diffColor{
+  animation: dash2 2s linear forwards
+}
+
+
+
 #preloader-border {
-  animation: dash 2s linear forwards, rotate-border 1s ease-in-out 1.5s;
+  animation: dash1 2s linear forwards, rotate-border 1s ease-in-out 1.5s;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -19,9 +25,9 @@
   animation: fadingIn 1s linear forwards 2s;
 }
 
-@keyframes dash {
+@keyframes dash1 {
   0% {
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 1300;
     fill: #020c1b;
   }
   70% {
@@ -31,6 +37,20 @@
   100% {
     stroke-dashoffset: 0;
     fill: #8888ff;
+  }
+}
+@keyframes dash2 {
+  0% {
+    stroke-dashoffset: 1300;
+    fill: #020c1b;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: #020c1b;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #6666cc;
   }
 }
 

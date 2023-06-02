@@ -2,15 +2,18 @@
   transform-origin: center;
   transform-box: fill-box;
   transition: all 1.5s;
-  stroke: #3333ff;
+  stroke: #8633fc;
   stroke-width: 2px;
 }
 
 #AE {
-  stroke: #3333ff;
+  stroke: #8633fc;
   stroke-width: 1px;
 }
 
+#border-diffColor{
+  color: #6666cc;
+}
 #logo:hover #border {
   transform: rotate(-360deg);
 }
