@@ -54,7 +54,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="MuiHeader-root">
+    <header>
       <HideOnScroll>
         <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
           <Toolbar sx={{ justifyContent: "space-between" }}>

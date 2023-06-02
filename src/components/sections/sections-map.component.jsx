@@ -49,5 +49,5 @@ const section = sections.map(({ component, sectionId, width, height }) => {
 });
 
 export default function Sections() {
-  return <main className="MuiMain-root">{section}</main>;
+  return <main>{section}</main>;
 }

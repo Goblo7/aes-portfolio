@@ -107,7 +107,7 @@ export default function Footer() {
   // end styles
 
   return (
-    <footer className="MuiFooter-root">
+    <footer>
       <Container sx={footerContainer}>
         <Grid ref={ref} container sx={footerGrid}>
           <Grid container gap={3} sx={contactSvgContainer}>
