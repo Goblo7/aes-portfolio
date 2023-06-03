@@ -68,16 +68,16 @@ const demoBox = {
   "&:hover .project-title": {
     color: layoutStyles.mainStyleColor,
   },
- " @keyframes inAnimation": {
+  " @keyframes inAnimation": {
     "0%": {
       opacity: "0",
-      visibility: "hidden,"
+      visibility: "hidden,",
     },
-    "100%":{
+    "100%": {
       opacity: "1",
-      visibility: "visible"
-    }
-  }
+      visibility: "visible",
+    },
+  },
 };
 
 const itemHeader = {
@@ -232,7 +232,7 @@ const ProjectDemo = () => {
     margin: "30px 0 30px ",
     transform: isInView ? "none" : "translateY(25px)",
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.7s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
   };
 
   return (
