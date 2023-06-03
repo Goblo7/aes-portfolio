@@ -8,6 +8,7 @@ import { WebBuild } from "../../../../assets/icons.assets";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import Project from "./projects/project-protolio.component";
+import ProjectDemo from "./projects/porject-demo-protolio.component";
 
 /* styles start*/
 
@@ -58,6 +59,7 @@ export default function PortofiloSection() {
         </SvgIcon>
       </Box>
       <Project />
+      <ProjectDemo/>
     </Grid>
   );
 }

@@ -206,7 +206,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
                   <GitHub />
                 </SvgIcon>
               </Link>
-              <Link href={projectsData[i].liveLink}>
+              <Link target="_blank" href={projectsData[i].liveLink}>
                 <SvgIcon sx={projectIconStyles}>
                   <ExternalLink />
                 </SvgIcon>
