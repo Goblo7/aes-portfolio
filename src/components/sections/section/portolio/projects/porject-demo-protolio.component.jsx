@@ -19,7 +19,6 @@ import demoProjectsData from "../../../../../scripts/projects-data/demo-projects
 import { useState } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
 // start Styles
 
 const DemoContianter = {
@@ -60,14 +59,25 @@ const demoBox = {
   borderRadius: "1rem",
   backgroundColor: "#14233d",
   overFlow: "auto",
-  maxWidth:"24rem",
+  maxWidth: "24rem",
   transition: `all 0.25s cubic-bezier(0.645,0.045,0.355,1)`,
+  animation: "inAnimation 0.3s ease-in",
   "&:hover ": {
     transform: "translateY(-8px)",
   },
   "&:hover .project-title": {
     color: layoutStyles.mainStyleColor,
   },
+ " @keyframes inAnimation": {
+    "0%": {
+      opacity: "0",
+      visibility: "hidden,"
+    },
+    "100%":{
+      opacity: "1",
+      visibility: "visible"
+    }
+  }
 };
 
 const itemHeader = {
@@ -107,7 +117,7 @@ const DemoProjectsToolsList = {
   display: "flex",
   flexWrap: "wrap",
   marginTop: "4%",
-  width:"70%"
+  width: "70%",
 };
 
 const DemoProjectToolStyle = {
@@ -121,8 +131,8 @@ const isShownBtn = {
   transition: "all .2s ease-in-out;",
   backgroundColor: layoutStyles.paperColor,
   marginBottom: "4rem",
-  width: {sm:"8rem", xs:"7rem"},
-  height: {sm:"3.1rem", xs:"3rem"},
+  width: { sm: "8rem", xs: "7rem" },
+  height: { sm: "3.1rem", xs: "3rem" },
   "&:hover": {
     background: "#14233d",
   },
@@ -236,7 +246,7 @@ const ProjectDemo = () => {
       <Grid item sx={ListConitner}>
         <List ref={ref} sx={projectListContainer}>
           {constDemo}
-          {isShown ? hiddenDemo : undefined}
+          {isShown && hiddenDemo}
         </List>
       </Grid>
       <Box>

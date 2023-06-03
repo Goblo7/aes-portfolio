@@ -34,7 +34,7 @@ export default function PortofiloSection() {
 
   const aboutProject = {
     display: "flex",
-    margin: "0 auto",
+    margin: "1.5rem auto",
     alignItems: "center",
     gap: "1rem",
     justifyContent: "center",

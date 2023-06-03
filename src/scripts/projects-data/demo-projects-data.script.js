@@ -5,7 +5,7 @@ const demoProjectsData = [
       "A Simple Tracker made React to add Expenses and filter expenses depending on input a good use of props and useState.",
     tools: ["React.js", "", ""],
     codeLink: "https://github.com/Goblo7/Expenses-Tracker",
-    liveLink: "#",
+    liveLink: "https://github.com/Goblo7/meme-generator",
   },
   {
     title: "Meme Generator",
@@ -13,7 +13,7 @@ const demoProjectsData = [
       "A website generate a random meme picture from API and allow the Useer to type context on the top of the picture and the bottom",
     tools: ["React.js", "API", ""],
     codeLink: "https://github.com/Goblo7/meme-generator",
-    liveLink: "#",
+    liveLink: "https://github.com/Goblo7/meme-generator",
   },
   {
     title: "Travel jouranl",
@@ -21,7 +21,7 @@ const demoProjectsData = [
       "A journal static website has a good use of props to easy add new element from database.",
     tools: ["React.js", "", ""],
     codeLink: "https://github.com/Goblo7/travel-journal",
-    liveLink: "#",
+    liveLink: "https://github.com/Goblo7/meme-generator",
   },
   {
     title: "Snake Game",
@@ -29,7 +29,7 @@ const demoProjectsData = [
       "A simple snake game using C++ a good use of OOP and Classes.",
     tools: ["C++", "", ""],
     codeLink: "https://github.com/Goblo7/Snake-Game-v1.3",
-    liveLink: "#",
+    liveLink: "https://github.com/Goblo7/meme-generator",
   },
 ];
 
