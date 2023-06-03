@@ -81,6 +81,7 @@ const skillTitle = {
   textAlign: "center",
   color: layoutStyles.mainFontColor,
   fontFamily: layoutStyles.secandryFontFamily,
+  fontSize: `clamp(25px,5vw,30px)`,
 };
 
 const skillTools = {
@@ -96,6 +97,7 @@ const languagesAndDevTitle = {
   marginTop: "1rem",
   fontFamily: layoutStyles.secandryFontFamily,
   color: layoutStyles.mainFontColor,
+  fontSize: `clamp(20px,5vw,23px)`,
   "&:after": {
     content: `""`,
     display: "block",
