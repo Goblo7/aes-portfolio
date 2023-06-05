@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AhmedEhab/static/css/main.fda12136.css",
+    "main.js": "/AhmedEhab/static/js/main.56774a12.js",
+    "static/media/restaurant-img.assets.png": "/AhmedEhab/static/media/restaurant-img.assets.6f24a726bda6a8067f15.png",
+    "static/media/main-hero-pfp.assets.jpg": "/AhmedEhab/static/media/main-hero-pfp.assets.9149840cb512ec021c24.jpg",
+    "index.html": "/AhmedEhab/index.html",
+    "main.fda12136.css.map": "/AhmedEhab/static/css/main.fda12136.css.map",
+    "main.56774a12.js.map": "/AhmedEhab/static/js/main.56774a12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fda12136.css",
+    "static/js/main.56774a12.js"
+  ]
+}
