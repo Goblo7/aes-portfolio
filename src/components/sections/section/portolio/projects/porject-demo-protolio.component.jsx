@@ -256,7 +256,7 @@ const ProjectDemo = () => {
           color="inherit"
           sx={isShownBtn}
         >
-          {isShown ? "Hide Items" : "Show More"}
+          {isShown ? "Hide" : "Show More"}
         </Button>
       </Box>
     </Grid>
