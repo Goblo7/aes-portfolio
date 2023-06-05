@@ -5,7 +5,7 @@ const demoProjectsData = [
       "A Simple Tracker made React to add Expenses and filter expenses depending on input a good use of props and useState.",
     tools: ["React.js", "", ""],
     codeLink: "https://github.com/Goblo7/Expenses-Tracker",
-    liveLink: "https://gitname.github.io/expenses-tracker",
+    liveLink: "https://goblo7.github.io/Expenses-Tracker",
   },
   {
     title: "Meme Generator",
