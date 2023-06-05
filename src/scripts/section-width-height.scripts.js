@@ -6,9 +6,9 @@ export const sectionWidthHeight = [
     contacts: "fit-content",
   },
   {
-    hero: "100dvh",
-    about: "100dvh",
-    portofilo: "100dvh",
+    hero: "100vh",
+    about: "100vh",
+    portofilo: "100vh",
     contacts: "90dvh",
   },
 ];

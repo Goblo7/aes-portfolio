@@ -10,7 +10,7 @@ import { useInView } from "framer-motion";
 
 const contactContainerStyles = {
   display: "grid",
-  height: "90dvh",
+  height: "90vh",
   width: "100%",
   justifyItems: "center",
   alignItems: "center",
