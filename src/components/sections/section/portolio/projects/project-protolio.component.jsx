@@ -116,7 +116,7 @@ const projectElement = [];
 for (let i = 0; i < projectsData.length; i += 1) {
   if (i % 2 === 0) {
     projectElement.push(
-      <Grid item sx={projectContainerStyles}>
+      <Grid key={projectsData[i].title} item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsEven}>
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[i].liveLink} target="_blank">
@@ -167,7 +167,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
     );
   } else {
     projectElement.push(
-      <Grid item sx={projectContainerStyles}>
+      <Grid key={projectsData[i].title} item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsOdd}>
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[i].liveLink} target="_blank">
