@@ -119,7 +119,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
       <Grid item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsEven}>
           <Grid item sx={projectImgContainerBackground}>
-            <Link target="_blank" href={projectsData[i].liveLink}>
+            <Link href={projectsData[i].liveLink} target="_blank">
               <ImageListItem sx={projectImgStyles}>
                 <img src={restaurant} alt="" />
               </ImageListItem>
@@ -155,7 +155,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
                   <GitHub />
                 </SvgIcon>
               </Link>
-              <Link href={projectsData[i].liveLink}>
+              <Link href={projectsData[i].liveLink} target="_blank">
                 <SvgIcon sx={projectIconStyles}>
                   <ExternalLink />
                 </SvgIcon>
@@ -170,7 +170,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
       <Grid item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsOdd}>
           <Grid item sx={projectImgContainerBackground}>
-            <Link target="_blank" href={projectsData[i].liveLink}>
+            <Link href={projectsData[i].liveLink} target="_blank">
               <ImageListItem sx={projectImgStyles}>
                 <img src={restaurant} alt="" />
               </ImageListItem>
@@ -206,7 +206,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
                   <GitHub />
                 </SvgIcon>
               </Link>
-              <Link target="_blank" href={projectsData[i].liveLink}>
+              <Link href={projectsData[i].liveLink} target="_blank">
                 <SvgIcon sx={projectIconStyles}>
                   <ExternalLink />
                 </SvgIcon>
