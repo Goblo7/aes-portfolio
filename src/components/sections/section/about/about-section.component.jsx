@@ -44,6 +44,7 @@ const heroPfpStyle = {
   position: "relative",
   transition: "all 1s ease-in-out",
   animation: `gobloPfp 8s ease-in-out infinite`,
+  maxWidth:{sm:"fit-content",xs:"12rem"},
   "@keyframes gobloPfp": {
     "0%": {
       borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
