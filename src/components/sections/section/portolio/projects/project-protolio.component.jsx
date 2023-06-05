@@ -119,7 +119,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
       <Grid item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsEven}>
           <Grid item sx={projectImgContainerBackground}>
-            <Link href={projectsData[i].liveLink}>
+            <Link target="_blank" href={projectsData[i].liveLink}>
               <ImageListItem sx={projectImgStyles}>
                 <img src={restaurant} alt="" />
               </ImageListItem>
@@ -170,7 +170,7 @@ for (let i = 0; i < projectsData.length; i += 1) {
       <Grid item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsOdd}>
           <Grid item sx={projectImgContainerBackground}>
-            <Link href={projectsData[i].liveLink}>
+            <Link target="_blank" href={projectsData[i].liveLink}>
               <ImageListItem sx={projectImgStyles}>
                 <img src={restaurant} alt="" />
               </ImageListItem>
