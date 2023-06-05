@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import { layoutStyles } from "../styles/layout.styles";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 
@@ -33,7 +33,7 @@ export const Layout = ({ children: Children }) => {
   return (
     <ThemeProvider theme={LayoutTheme}>
       <CssBaseline />
-      <Box>{Children}</Box>
+      <Grid>{Children}</Grid>
     </ThemeProvider>
   );
 };
