@@ -8,17 +8,18 @@ import { useInView } from "framer-motion";
 const heroContainer = {
   paddingTop: {
     xs: "17rem",
-    sm: "21rem",
+    sm: "19rem",
     md: "15rem",
     xl: "15rem",
     overSize: "12rem",
   },
   display: "flex",
-  flexDirection: "row",
+  flexDirection: { xs: "column", md: "row" },
   flexWrap: "wrap",
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
+  width: "100%",
 };
 
 const aELogo = {
@@ -40,26 +41,25 @@ const aELogo = {
   //     xl: "66rem",
   // },
   width: {
-    xs: "6rem",
-    sm: "11rem",
-    md: "21.8rem",
+    xs: "6.5rem",
+    sm: "12rem",
+    md: "15rem",
     lg: "21.8rem",
     xl: "22.9rem",
     overSize: "31.8rem",
   },
-
   //{    xs: "35%",
   //     sm: "38%",
   //     md: "32%",
   //     lg: "38%",
   //     xl: "53%",
   // },
-  paddingTop: "4rem",
-  color: layoutStyles.lightMainColor,
+  paddingTop: "6rem",
+  color: layoutStyles.paperColor,
   strokeWidth: "0.3%",
   strokeDashoffset: "0",
   strokeDasharray: "0",
-  animation: `dashNeon 5s ease-in-out infinite alternate`,
+  animation: `dashNeon 5s ease-in-out infinite alternate 2.2s, show 2.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s`,
   "@keyframes dashNeon": {
     "0%": {
       stroke: layoutStyles.paperColor,
@@ -68,6 +68,38 @@ const aELogo = {
     "100%": {
       stroke: layoutStyles.secandryFontColor,
       color: layoutStyles.paperColor,
+    },
+  },
+  "@keyframes show": {
+    "0%": {
+      opacity: "0",
+      transform: `translateY(20%)`,
+    },
+    "70%": {
+      opacity: "0",
+      transform: `translateY(7%)`,
+    },
+    "100%": {
+      opacity: "1",
+      transform: `translateY(0%)`,
+    },
+  },
+};
+
+const heroTitleStyle = {
+  fontSize: `clamp(16px, 3.5vw, 54px)`,
+  color: layoutStyles.secandryFontColor,
+  fontFamily: layoutStyles.secandryFontFamily,
+  animation: `showTitle 2.3s cubic-bezier(0.17, 0.55, 0.55, 1)`,
+  "@keyframes showTitle": {
+    "0%": {
+      opacity: "0",
+    },
+    "70%": {
+      opacity: "0",
+    },
+    "100%": {
+      opacity: "1",
     },
   },
 };
@@ -83,9 +115,8 @@ export default function HeroSection() {
     fontSize: `clamp(13px,3vw,22px)`,
     fontFamily: layoutStyles.secandryFontFamily,
     color: layoutStyles.mainStyleColor,
-    transform: isInView ? "none" : "translateY(75px)",
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.3s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
   };
 
   const heroNameStyle = {
@@ -94,17 +125,8 @@ export default function HeroSection() {
     margin: "0",
     color: layoutStyles.mainFontColor,
     fontFamily: layoutStyles.mainFontFamily,
-    transform: isInView ? "none" : "translateY(75px)",
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
-  };
-
-  const heroTitleStyle = {
-    fontSize: `clamp(16px, 5vw, 54px)`,
-    color: layoutStyles.secandryFontColor,
-    fontFamily: layoutStyles.secandryFontFamily,
-    opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1s",
+    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)1.2s",
   };
 
   useEffect(() => {
@@ -123,7 +145,15 @@ export default function HeroSection() {
 
   return (
     <Grid ref={ref} sx={heroContainer}>
-      <Grid item sx={{ width: { xs: "100%", lg: "fit-content" } }} flexGrow={1}>
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: { xs: "center", md: "flex-start" },
+        }}
+        flexGrow={1}
+      >
         <Typography variant="inherit" sx={greetingStyle}>
           Hello, my name is
         </Typography>
@@ -134,7 +164,7 @@ export default function HeroSection() {
           I'm a <span ref={typer}></span>
         </Typography>
       </Grid>
-      <Grid item alignSelf="center" justifySelf="center">
+      <Grid item>
         <SvgIcon className="SvgG" sx={aELogo}>
           <AeLogo />
         </SvgIcon>
