@@ -7,8 +7,8 @@ import { useInView } from "framer-motion";
 
 const heroContainer = {
   paddingTop: {
-    xs: "15rem",
-    sm: "15rem",
+    xs: "16rem",
+    sm: "16rem",
     md: "15rem",
     xl: "15rem",
     overSize: "12rem",
