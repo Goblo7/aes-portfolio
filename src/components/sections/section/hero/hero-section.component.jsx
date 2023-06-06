@@ -7,59 +7,36 @@ import { useInView } from "framer-motion";
 
 const heroContainer = {
   paddingTop: {
-    xs: "17rem",
-    sm: "19rem",
+    xs: "15rem",
+    sm: "15rem",
     md: "15rem",
     xl: "15rem",
     overSize: "12rem",
   },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
-  flexWrap: "wrap",
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
-  width: "100%",
 };
 
 const aELogo = {
   display: "inline-block",
-  // right: {
-  //         xs: "35%",
-  //        sm: "30%",
-  //         md: "35%",
-  //         lg: "-2%",
-  //         xl: "-16.1%"
-  // },
-  //bottom:"0", top:"0",
   height: "100%",
-
-  //{    xs: "68rem",
-  //     sm: "85rem",
-  //     md: "89rem",
-  //     lg: "66rem",
-  //     xl: "66rem",
-  // },
   width: {
-    xs: "6.5rem",
+    xs: "8rem",
     sm: "12rem",
     md: "15rem",
     lg: "21.8rem",
     xl: "22.9rem",
     overSize: "31.8rem",
   },
-  //{    xs: "35%",
-  //     sm: "38%",
-  //     md: "32%",
-  //     lg: "38%",
-  //     xl: "53%",
-  // },
   paddingTop: "6rem",
   color: layoutStyles.paperColor,
   strokeWidth: "0.3%",
   strokeDashoffset: "0",
   strokeDasharray: "0",
-  animation: `dashNeon 5s ease-in-out infinite alternate 2.2s, show 2.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s`,
+  animation: `dashNeon 5s ease-in-out infinite alternate 2.2s, show 2.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s`,
   "@keyframes dashNeon": {
     "0%": {
       stroke: layoutStyles.paperColor,
@@ -73,33 +50,36 @@ const aELogo = {
   "@keyframes show": {
     "0%": {
       opacity: "0",
-      transform: `translateY(20%)`,
+      transform: `translateX(20%)`,
     },
     "70%": {
       opacity: "0",
-      transform: `translateY(7%)`,
+      transform: `translateX(20%)`,
     },
     "100%": {
       opacity: "1",
-      transform: `translateY(0%)`,
+      transform: `translateX(0%)`,
     },
   },
 };
 
 const heroTitleStyle = {
   fontSize: `clamp(16px, 3.5vw, 54px)`,
-  color: layoutStyles.secandryFontColor,
+  color: layoutStyles.paperColor,
   fontFamily: layoutStyles.secandryFontFamily,
-  animation: `showTitle 2.3s cubic-bezier(0.17, 0.55, 0.55, 1)`,
+  animation: `showTitle 2s cubic-bezier(0.17, 0.55, 0.55, 1) forwards 0.3s`,
   "@keyframes showTitle": {
     "0%": {
       opacity: "0",
+      color: layoutStyles.secandryFontColor,
     },
     "70%": {
       opacity: "0",
+      color: layoutStyles.secandryFontColor,
     },
     "100%": {
       opacity: "1",
+      color: layoutStyles.secandryFontColor,
     },
   },
 };
@@ -116,23 +96,22 @@ export default function HeroSection() {
     fontFamily: layoutStyles.secandryFontFamily,
     color: layoutStyles.mainStyleColor,
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
+    transition: "all 0.7s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
   };
 
   const heroNameStyle = {
     fontWeight: 600,
     fontSize: `clamp(40px, 8vw, 80px)`,
-    margin: "0",
     color: layoutStyles.mainFontColor,
     fontFamily: layoutStyles.mainFontFamily,
     opacity: isInView ? 1 : 0,
-    transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)1.2s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1.2s",
   };
 
   useEffect(() => {
     const typed = new Typed(typer.current, {
       strings: ["Front-End Developer.", "Software Engineer."],
-      typeSpeed: 70,
+      typeSpeed: 60,
       loop: true,
       backSpeed: 70,
       backDelay: 2000,

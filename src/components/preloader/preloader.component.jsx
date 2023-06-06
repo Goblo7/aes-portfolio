@@ -3,7 +3,7 @@ import { PreloaderLogo } from "../../assets/icons.assets";
 import "./preloader-style.component.css";
 
 const gobloLogoStyles = {
-  stroke: "#8633fc",
+  stroke: "#6633ff",
   strokeWidth: "2px",
   fill: "#020c1b",
   width: "100px",
