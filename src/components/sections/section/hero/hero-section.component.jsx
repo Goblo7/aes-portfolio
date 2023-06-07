@@ -7,12 +7,12 @@ import { useInView } from "framer-motion";
 
 const heroContainer = {
   paddingTop: {
-    xs: "33vh",
-    sm: "30vh",
-    md: "33vh",
-    lg: "31vh",
-    xl: "30vh",
-    overSize: "23vh",
+    xs: "32vh",
+    sm: "29vh",
+    md: "32vh",
+    lg: "30vh",
+    xl: "29vh",
+    overSize: "22vh",
   },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
@@ -51,15 +51,12 @@ const aELogo = {
   "@keyframes show": {
     "0%": {
       opacity: "0",
-      transform: `translateX(20%)`,
     },
     "70%": {
       opacity: "0",
-      transform: `translateX(20%)`,
     },
     "100%": {
       opacity: "1",
-      transform: `translateX(0%)`,
     },
   },
 };
