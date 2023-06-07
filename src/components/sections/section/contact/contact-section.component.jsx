@@ -68,7 +68,7 @@ export default function ContactSection() {
   // start styles
 
   const satelliteStyles = {
-    width: { lg: "5.5rem", md: "5rem", sm: "4.5rem", xs: "3rem" },
+    width: { lg: "5.5rem", md: "5rem", sm: "4.5rem", xs: "3.5rem" },
     height: "100%",
     animation: {
       xl: "xlMovingSatellite 90s ease-in-out infinite 0s",
@@ -125,10 +125,10 @@ export default function ContactSection() {
         transform: `translateX(0%) rotateZ(45deg)`,
       },
       "30%": {
-        transform: `translateX(230%) rotateZ(90deg)`,
+        transform: `translateX(195%) rotateZ(90deg)`,
       },
       " 70%": {
-        transform: `translateX(-230%) rotateZ(0deg)`,
+        transform: `translateX(-195%) rotateZ(0deg)`,
       },
       "100%": {
         transform: `translateX(0%) rotateZ(45deg)`,
@@ -137,7 +137,7 @@ export default function ContactSection() {
   };
 
   const dishStyle = {
-    fontSize: { lg: "5rem", sm: "4rem", xs: "3rem" },
+    fontSize: { lg: "5rem", sm: "4rem", xs: "3.5rem" },
     color: layoutStyles.mainStyleColor,
     paddingTop:"",
     opacity: isInView ? 1 : 0,
