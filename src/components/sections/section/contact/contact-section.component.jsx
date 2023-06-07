@@ -13,7 +13,6 @@ const contactContainerStyles = {
   justifyItems: "center",
   alignItems: "center",
   textAlign: "center",
-  paddingTop:"8vh"
 };
 
 const contactTitle = {
@@ -25,7 +24,6 @@ const contactTitle = {
   whiteSpace: "nowrap",
   color: layoutStyles.mainStyleColor,
   fontWeight: "669",
-  paddingTop:"8vh"
 };
 
 const contactDescriptionHeader = {
@@ -148,18 +146,18 @@ export default function ContactSection() {
 
   const sayHelloContainer = {
     justifyItems: "center",
-    paddingBottom: "11vh",
-    paddingTop: "5vh",
     transform: isInViewContact ? "none" : "translateY(20px)",
     opacity: isInViewContact ? 1 : 0,
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
+    marginTop:"14vh",
+    marginBottom:"4vh",
   };
 
   //end styles
 
   return (
     <Grid container sx={contactContainerStyles}>
-      <Grid item >
+      <Grid item marginTop="10vh" >
         <SvgIcon ref={ref} id="satellite" sx={satelliteStyles}>
           <Satellite />
         </SvgIcon>
@@ -188,7 +186,7 @@ export default function ContactSection() {
           Say Hello
         </Button>
       </Grid>
-      <Grid item>
+      <Grid item marginTop="7vh" paddingBottom="1vh">
         <SvgIcon id="dish" ref={ref} sx={dishStyle}>
           <Dish />
         </SvgIcon>

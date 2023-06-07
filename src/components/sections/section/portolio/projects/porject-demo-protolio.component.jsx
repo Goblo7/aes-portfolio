@@ -29,19 +29,6 @@ const DemoContianter = {
   marginTop: "5rem",
 };
 
-const demoTitle = {
-  fontSize: `clamp(20px,5vw,30px)`,
-  margin: "0 0 10px",
-  color: layoutStyles.mainFontColor,
-  fontWeight: "600",
-};
-
-const demoSubTitle = {
-  fontFamily: layoutStyles.secandryFontFamily,
-  color: layoutStyles.mainStyleColor,
-  fontSize: `clamp(10px,4vw,20px)`,
-};
-
 const ListConitner = {
   display: "flex",
   flexDirection: "column",
@@ -216,11 +203,32 @@ const hiddenDemo = demoProject.slice(3);
 
 const ProjectDemo = () => {
   const ref = useRef(null);
+  const demosTitle = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const isViewDemos = useInView(demosTitle, { once: true });
   const [isShown, setIsShown] = useState(false);
 
   const showToggleHandler = () => {
     setIsShown((pevState) => !pevState);
+  };
+
+  // start styles
+
+  const demoTitle = {
+    fontSize: `clamp(20px,5vw,30px)`,
+    margin: "0 0 10px",
+    color: layoutStyles.mainFontColor,
+    fontWeight: "600",
+    opacity: isViewDemos ? 1 : 0,
+    transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)1s",
+  };
+
+  const demoSubTitle = {
+    fontFamily: layoutStyles.secandryFontFamily,
+    color: layoutStyles.mainStyleColor,
+    fontSize: `clamp(10px,4vw,20px)`,
+    opacity: isViewDemos ? 1 : 0,
+    transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)1s",
   };
 
   const projectListContainer = {
@@ -235,9 +243,10 @@ const ProjectDemo = () => {
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
   };
 
+  //end styles
   return (
     <Grid container sx={DemoContianter}>
-      <Typography variant="h2" sx={demoTitle}>
+      <Typography ref={demosTitle} variant="h2" sx={demoTitle}>
         Other Noteworthy Demos.
       </Typography>
       <Typography variant="P" sx={demoSubTitle}>

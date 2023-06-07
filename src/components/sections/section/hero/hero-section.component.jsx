@@ -9,10 +9,10 @@ const heroContainer = {
   paddingTop: {
     xs: "33vh",
     sm: "30vh",
-    md: "28vh",
-    lg:"26vh",
-    xl: "25vh",
-    overSize: "19vh",
+    md: "33vh",
+    lg: "31vh",
+    xl: "30vh",
+    overSize: "23vh",
   },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
@@ -32,7 +32,7 @@ const aELogo = {
     xl: "22.9rem",
     overSize: "31.8rem",
   },
-  paddingTop: "9.5vh",
+
   color: layoutStyles.paperColor,
   strokeWidth: "0.3%",
   strokeDashoffset: "0",
@@ -131,6 +131,7 @@ export default function HeroSection() {
           display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", md: "flex-start" },
+          paddingBottom: {xs:"9.5vh", md:"0"},
         }}
         flexGrow={1}
       >

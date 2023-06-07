@@ -40,17 +40,16 @@ export default function PortofiloSection() {
     justifyContent: "center",
     flexWrap: "wrap",
     marginBottom: "-3rem",
-    transform: isInView ? "none" : "translateY(25px)",
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.5s",
+    transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)0.8s",
   };
 
   return (
     <Grid margin="0 auto" paddingTop="13vh" container maxWidth="68rem">
-      <Typography ref={ref} variant="h2" sx={headerSectionStyle}>
+      <Typography variant="h2" sx={headerSectionStyle}>
         Portofilo
       </Typography>
-      <Box sx={aboutProject}>
+      <Box ref={ref} sx={aboutProject}>
         <Typography variant="h5" sx={aboutProjectTitle[0]}>
           Some Things I've Built.
         </Typography>
@@ -59,7 +58,7 @@ export default function PortofiloSection() {
         </SvgIcon>
       </Box>
       <Project />
-      <ProjectDemo/>
+      <ProjectDemo />
     </Grid>
   );
 }
