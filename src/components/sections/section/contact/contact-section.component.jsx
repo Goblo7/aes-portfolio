@@ -60,9 +60,11 @@ const contactDescriptionHelloWord = {
 const contactMe = "mailto:ahmedehab.sg@gmail.com";
 
 export default function ContactSection() {
-  const ref = useRef(null);
+  const refStat = useRef(null);
+  const refDish = useRef(null);
   const contactView = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInViewSat = useInView(refStat, { once: true });
+  const isInViewDish = useInView(refDish, { once: true });
   const isInViewContact = useInView(contactView, { once: true });
 
   // start styles
@@ -76,8 +78,8 @@ export default function ContactSection() {
       sm: "smMovingSatellite 90s ease-in-out infinite 0s",
       xs: "xsMovingSatellite 90s ease-in-out infinite 0s",
     },
-    opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.2s",
+    opacity: isInViewSat ? 1 : 0,
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
     "@keyframes xlMovingSatellite": {
       "0%": {
         transform: `translateX(0%) rotateZ(45deg)`,
@@ -139,9 +141,9 @@ export default function ContactSection() {
   const dishStyle = {
     fontSize: { lg: "5rem", sm: "4rem", xs: "3.5rem" },
     color: layoutStyles.mainStyleColor,
-    paddingTop:"",
-    opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+    paddingTop: "",
+    opacity: isInViewDish ? 1 : 0,
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.3s",
   };
 
   const sayHelloContainer = {
@@ -149,16 +151,16 @@ export default function ContactSection() {
     transform: isInViewContact ? "none" : "translateY(20px)",
     opacity: isInViewContact ? 1 : 0,
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
-    marginTop:"14vh",
-    marginBottom:"4vh",
+    marginTop: "14vh",
+    marginBottom: "4vh",
   };
 
   //end styles
 
   return (
     <Grid container sx={contactContainerStyles}>
-      <Grid item marginTop="10vh" >
-        <SvgIcon ref={ref} id="satellite" sx={satelliteStyles}>
+      <Grid item marginTop="10vh">
+        <SvgIcon ref={refStat} id="satellite" sx={satelliteStyles}>
           <Satellite />
         </SvgIcon>
       </Grid>
@@ -187,7 +189,7 @@ export default function ContactSection() {
         </Button>
       </Grid>
       <Grid item marginTop="7vh" paddingBottom="1vh">
-        <SvgIcon id="dish" ref={ref} sx={dishStyle}>
+        <SvgIcon id="dish" ref={refDish} sx={dishStyle}>
           <Dish />
         </SvgIcon>
       </Grid>
