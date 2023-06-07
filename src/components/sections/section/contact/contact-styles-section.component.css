@@ -36,10 +36,6 @@
   }
 }
 
-#contacts {
-  max-height: 90dvh;
-}
-
 #wave1 {
   animation: wave 4s linear infinite 1.5s;
 }

@@ -7,11 +7,12 @@ import { useInView } from "framer-motion";
 
 const heroContainer = {
   paddingTop: {
-    xs: "16rem",
-    sm: "16rem",
-    md: "15rem",
-    xl: "15rem",
-    overSize: "12rem",
+    xs: "33vh",
+    sm: "30vh",
+    md: "28vh",
+    lg:"26vh",
+    xl: "25vh",
+    overSize: "19vh",
   },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
@@ -26,12 +27,12 @@ const aELogo = {
   width: {
     xs: "8rem",
     sm: "12rem",
-    md: "15rem",
+    md: "18rem",
     lg: "21.8rem",
     xl: "22.9rem",
     overSize: "31.8rem",
   },
-  paddingTop: "6rem",
+  paddingTop: "9.5vh",
   color: layoutStyles.paperColor,
   strokeWidth: "0.3%",
   strokeDashoffset: "0",

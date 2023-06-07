@@ -10,11 +10,10 @@ import { useInView } from "framer-motion";
 
 const contactContainerStyles = {
   display: "grid",
-  height: "90vh",
-  width: "100%",
   justifyItems: "center",
   alignItems: "center",
   textAlign: "center",
+  paddingTop:"8vh"
 };
 
 const contactTitle = {
@@ -26,11 +25,7 @@ const contactTitle = {
   whiteSpace: "nowrap",
   color: layoutStyles.mainStyleColor,
   fontWeight: "669",
-};
-
-const sayHelloContainer = {
-  justifyItems: "center",
-  paddingBottom: "3rem",
+  paddingTop:"8vh"
 };
 
 const contactDescriptionHeader = {
@@ -64,11 +59,13 @@ const contactDescriptionHelloWord = {
 
 // end styles
 
-const contact = "mailto:ahmedehab.sg@gmail.com";
+const contactMe = "mailto:ahmedehab.sg@gmail.com";
 
 export default function ContactSection() {
   const ref = useRef(null);
+  const contactView = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const isInViewContact = useInView(contactView, { once: true });
 
   // start styles
 
@@ -82,7 +79,7 @@ export default function ContactSection() {
       xs: "xsMovingSatellite 90s ease-in-out infinite 0s",
     },
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.2s",
     "@keyframes xlMovingSatellite": {
       "0%": {
         transform: `translateX(0%) rotateZ(45deg)`,
@@ -144,20 +141,30 @@ export default function ContactSection() {
   const dishStyle = {
     fontSize: { lg: "5rem", sm: "4rem", xs: "3rem" },
     color: layoutStyles.mainStyleColor,
+    paddingTop:"",
     opacity: isInView ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+  };
+
+  const sayHelloContainer = {
+    justifyItems: "center",
+    paddingBottom: "11vh",
+    paddingTop: "5vh",
+    transform: isInViewContact ? "none" : "translateY(20px)",
+    opacity: isInViewContact ? 1 : 0,
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
   };
 
   //end styles
 
   return (
     <Grid container sx={contactContainerStyles}>
-      <Grid paddingBottom="1rem">
+      <Grid item >
         <SvgIcon ref={ref} id="satellite" sx={satelliteStyles}>
           <Satellite />
         </SvgIcon>
       </Grid>
-      <Grid item display="grid" sm={8} sx={sayHelloContainer}>
+      <Grid item display="grid" sm={8} ref={contactView} sx={sayHelloContainer}>
         <Typography variant="h2" sx={contactTitle}>
           Contact Me
         </Typography>
@@ -174,14 +181,14 @@ export default function ContactSection() {
         </Typography>
         <Button
           id="contact-button"
-          href={contact}
+          href={contactMe}
           disableElevation
           sx={ButtonStyles}
         >
           Say Hello
         </Button>
       </Grid>
-      <Grid>
+      <Grid item>
         <SvgIcon id="dish" ref={ref} sx={dishStyle}>
           <Dish />
         </SvgIcon>

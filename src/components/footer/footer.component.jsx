@@ -19,6 +19,7 @@ const footerContainer = {
   justifyContent: "center",
   backgroundColor: layoutStyles.paperColor,
   minWidth: "100%",
+  marginTop:"3vh"
 };
 
 const LogoStyle = {

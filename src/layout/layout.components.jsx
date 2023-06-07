@@ -33,7 +33,7 @@ export const Layout = ({ children: Children }) => {
   return (
     <ThemeProvider theme={LayoutTheme}>
       <CssBaseline />
-      <Grid>{Children}</Grid>
+      <Grid position="relative">{Children}</Grid>
     </ThemeProvider>
   );
 };

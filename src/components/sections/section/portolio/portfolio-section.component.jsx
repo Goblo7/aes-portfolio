@@ -46,7 +46,7 @@ export default function PortofiloSection() {
   };
 
   return (
-    <Grid margin="0 auto" paddingTop="7rem" container maxWidth="68rem">
+    <Grid margin="0 auto" paddingTop="13vh" container maxWidth="68rem">
       <Typography ref={ref} variant="h2" sx={headerSectionStyle}>
         Portofilo
       </Typography>

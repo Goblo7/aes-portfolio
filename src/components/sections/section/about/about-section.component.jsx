@@ -25,7 +25,7 @@ import { useRef } from "react";
 
 const aboutContianer = {
   margin: "0 auto",
-  paddingTop: "7rem",
+  paddingTop: "13vh",
   maxWidth: "68rem",
 };
 
