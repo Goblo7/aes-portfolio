@@ -228,7 +228,7 @@ const ProjectDemo = () => {
     color: layoutStyles.mainStyleColor,
     fontSize: `clamp(10px,4vw,20px)`,
     opacity: isViewDemos ? 1 : 0,
-    transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)1s",
+    transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)1.2s",
   };
 
   const projectListContainer = {

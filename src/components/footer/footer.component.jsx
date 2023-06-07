@@ -2,15 +2,9 @@ import { Container, SvgIcon, Typography, Link } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../styles/layout.styles";
 import Logo from "../../assets/logo/main-logo.assets";
-import {
-  Insta,
-  Facebook,
-  GitHub,
-  Twitter,
-  LinkedIn,
-} from "../../assets/icons.assets";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import contactsFooter from "../../scripts/contacts-footer.scripts";
 
 //start styles
 
@@ -19,7 +13,7 @@ const footerContainer = {
   justifyContent: "center",
   backgroundColor: layoutStyles.paperColor,
   minWidth: "100%",
-  marginTop:"3vh"
+  marginTop: "3vh",
 };
 
 const LogoStyle = {
@@ -89,6 +83,14 @@ const copyRights = {
 
 // end styles
 
+const contactsIcons = contactsFooter.map((contactIcon) => {
+  return (
+    <Link key={contactIcon.id} href={contactIcon.link} target="_blank">
+      <SvgIcon sx={ContactSvg}>{contactIcon.components}</SvgIcon>
+    </Link>
+  );
+});
+
 export default function Footer() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -112,44 +114,14 @@ export default function Footer() {
       <Container sx={footerContainer}>
         <Grid ref={ref} container sx={footerGrid}>
           <Grid container gap={3} sx={contactSvgContainer}>
-            <Link
-              href="https://www.linkedin.com/in/ahmedehab632/"
-              target="_blank"
-            >
-              <SvgIcon sx={ContactSvg}>
-                <LinkedIn />
-              </SvgIcon>
-            </Link>
-            <Link
-              href="https://www.facebook.com/profile.php?id=100007869753482"
-              target="_blank"
-            >
-              <SvgIcon sx={ContactSvg}>
-                <Facebook />
-              </SvgIcon>
-            </Link>
-            <Link href="https://www.instagram.com/goblo.7/" target="_blank">
-              <SvgIcon sx={ContactSvg}>
-                <Insta />
-              </SvgIcon>
-            </Link>
-            <Link href="https://twitter.com/EvWithin" target="_blank">
-              <SvgIcon sx={ContactSvg}>
-                <Twitter />
-              </SvgIcon>
-            </Link>
-            <Link href="https://github.com/Goblo7/" target="_blank">
-              <SvgIcon sx={ContactSvg}>
-                <GitHub />
-              </SvgIcon>
-            </Link>
+            {contactsIcons}
           </Grid>
           <Grid item sx={tradeMarkLogoStyle}>
             <SvgIcon sx={LogoStyle}>
               <Logo />
             </SvgIcon>
             <Typography variant="subtitle1" sx={tradeMarkDescrpitonStyle}>
-              Build & Designed by me
+              Designed & Build by me
             </Typography>
           </Grid>
           <Grid sx={copyrightsContainer} item>
