@@ -79,7 +79,7 @@ export default function ContactSection() {
       xs: "xsMovingSatellite 90s ease-in-out infinite 0s",
     },
     opacity: isInViewSat ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.3s",
     "@keyframes xlMovingSatellite": {
       "0%": {
         transform: `translateX(0%) rotateZ(45deg)`,
@@ -143,7 +143,7 @@ export default function ContactSection() {
     color: layoutStyles.mainStyleColor,
     paddingTop: "",
     opacity: isInViewDish ? 1 : 0,
-    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.3s",
+    transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
   };
 
   const sayHelloContainer = {
