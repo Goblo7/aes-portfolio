@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import Layout from "./layout/layout.components";
 import Preloader from "./components/preloader/preloader.component";
 import Header from "./components/header/header.component";
@@ -15,7 +15,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <Fragment>
       {preloader ? (
         <Preloader />
       ) : (
@@ -25,6 +25,6 @@ export default function App() {
           <Footer />
         </Layout>
       )}
-    </>
+    </Fragment>
   );
 }
