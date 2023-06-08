@@ -19,20 +19,21 @@ import projectsData from "../../../../../data/projects.data";
 import { useState } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import Wrapper from "../../../../../helper/wrapper ";
 // start Styles
 
-const DemoContianter = {
-  display: "grid",
-  justifyContent: "center",
-  width: "100%",
-  textAlign: "center",
-};
+// const DemoContianter = {
+//   display: "grid",
+//   justifyContent: "center",
+//   width: "100%",
+//   textAlign: "center",
+// };
 
-const ListConitner = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-};
+// const ListConitner = {
+//   display: "flex",
+//   flexDirection: "column",
+//   justifyContent: "center",
+// };
 
 const demoBox = {
   boxShadow: "0 10px 30px -15px rgba(2,12,27,0.9)",
@@ -116,7 +117,7 @@ const isShownBtn = {
   color: layoutStyles.mainStyleColor,
   transition: "all .2s ease-in-out;",
   backgroundColor: layoutStyles.paperColor,
-  marginBottom: "4rem",
+  margin: "0 auto 4rem",
   width: { sm: "8rem", xs: "7rem" },
   height: { sm: "3.1rem", xs: "3rem" },
   "&:hover": {
@@ -266,7 +267,7 @@ const ProjectDemo = () => {
 
   const demoTitle = {
     fontSize: `clamp(20px,5vw,30px)`,
-    margin: "0 0 10px",
+    margin: "0 auto 10px",
     color: layoutStyles.mainFontColor,
     fontWeight: "600",
     opacity: isViewDemos ? 1 : 0,
@@ -276,13 +277,19 @@ const ProjectDemo = () => {
   const demoSubTitle = {
     fontFamily: layoutStyles.secandryFontFamily,
     color: layoutStyles.mainStyleColor,
-    fontSize: `clamp(10px,4vw,20px)`,
+    fontSize: `clamp(18px,4vw,24px)`,
     opacity: isViewDemos ? 1 : 0,
     transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)1.2s",
+    textAlign: "center",
+    marginTop: "1rem",
   };
 
   const projectListContainer = {
     display: "grid",
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    justifyItems: "center",
     gridTemplateColumns: {
       md: `repeat(3, minmax(275px, 1fr))`,
     },
@@ -295,30 +302,26 @@ const ProjectDemo = () => {
 
   //end styles
   return (
-    <Grid container sx={DemoContianter}>
+    <Wrapper>
       <Typography ref={demosTitle} variant="h2" sx={demoTitle}>
         Other Noteworthy Demos.
+        <Typography variant="h4" sx={demoSubTitle}>
+          Archive
+        </Typography>
       </Typography>
-      <Typography variant="P" sx={demoSubTitle}>
-        Archive
-      </Typography>
-      <Grid item sx={ListConitner}>
-        <List ref={ref} sx={projectListContainer}>
-          {constDemo}
-          {isShown && hiddenDemo}
-        </List>
-      </Grid>
-      <Box>
-        <Button
-          onClick={showToggleHandler}
-          variant="outlined"
-          color="inherit"
-          sx={isShownBtn}
-        >
-          {isShown ? "Hide" : "Show More"}
-        </Button>
-      </Box>
-    </Grid>
+      <List ref={ref} sx={projectListContainer}>
+        {constDemo}
+        {isShown && hiddenDemo}
+      </List>
+      <Button
+        onClick={showToggleHandler}
+        variant="outlined"
+        color="inherit"
+        sx={isShownBtn}
+      >
+        {isShown ? "Hide" : "Show More"}
+      </Button>
+    </Wrapper>
   );
 };
 
