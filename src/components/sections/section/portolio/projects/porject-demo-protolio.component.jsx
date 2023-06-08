@@ -291,7 +291,7 @@ const ProjectDemo = () => {
     alignItems: "center",
     justifyItems: "center",
     gridTemplateColumns: {
-      md: `repeat(3, minmax(275px, 1fr))`,
+      md: `repeat(3, minmax(265px, 1fr))`,
     },
     gap: "15px",
     margin: "30px 0 30px ",

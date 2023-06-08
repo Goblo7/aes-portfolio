@@ -43,7 +43,7 @@ const projectImgContainerBackground = {
   overflow: "hidden",
   borderRadius: "1rem",
   boxShadow: "0 10px 40px -15px rgba(2,12,27,0.9)",
-  maxHeight: { xs: "15rem", sm: "19rem", md: "18rem", lg: "24rem" },
+  maxHeight: { xs: "15rem", sm: "19rem", md: "21rem", lg: "24rem" },
   background: `radial-gradient(circle, rgba(0,99,255,1) 0%, rgba(18,8,126,1) 50%, rgba(20,6,56,1) 100%)`,
   flex: "1 0 60%",
 };
@@ -58,9 +58,9 @@ const projectImgStyles = {
   WebkitFilter: `grayscale(1)`,
   "&:hover": {
     transform: {
-      xs: `translateY(-56%)`,
-      sm: `translateY(-70%)`,
-      md: `translateY(-73.5%)`,
+      xs: `translateY(-58%)`,
+      sm: `translateY(-71.3%)`,
+      md: `translateY(-69%)`,
       lg: `translateY(-76.9%)`,
     },
     filter: "none",
@@ -88,7 +88,7 @@ const projectDescriptionHeader = {
 
 const projectDescription = {
   color: layoutStyles.secandryFontColor,
-  fontSize: `clamp(16px, 5vw, 19px)`,
+  fontSize: `clamp(16px, 5vw, 18px)`,
 };
 
 const projectDescriptionUsedToolsContainer = {
