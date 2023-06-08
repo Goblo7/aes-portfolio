@@ -6,6 +6,7 @@ import {
   ImageListItem,
   Box,
   Link,
+  ListItem,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
@@ -21,9 +22,9 @@ const projectContainerStyles = {
   backgroundColor: "#14233d",
   marginTop: "3rem",
   padding: "15px",
-  width: "95%",
-  margin: "3rem auto",
   borderRadius: "1.7rem",
+  width: { lg: "auto", md: "85%", sm: "80%" },
+  margin: "0 auto 5%",
 };
 
 const projectContainerDirectionsEven = {
@@ -42,7 +43,7 @@ const projectImgContainerBackground = {
   overflow: "hidden",
   borderRadius: "1rem",
   boxShadow: "0 10px 40px -15px rgba(2,12,27,0.9)",
-  maxHeight: { xs: "15rem", sm: "24rem" },
+  maxHeight: { xs: "15rem", sm: "19rem", md: "18rem", lg: "24rem" },
   background: `radial-gradient(circle, rgba(0,99,255,1) 0%, rgba(18,8,126,1) 50%, rgba(20,6,56,1) 100%)`,
   flex: "1 0 60%",
 };
@@ -56,7 +57,12 @@ const projectImgStyles = {
   opacity: "0.5",
   WebkitFilter: `grayscale(1)`,
   "&:hover": {
-    transform: { xs: `translateY(-56%)`, sm: `translateY(-70.9%)` },
+    transform: {
+      xs: `translateY(-56%)`,
+      sm: `translateY(-70%)`,
+      md: `translateY(-80%)`,
+      lg: `translateY(-76.9%)`,
+    },
     filter: "none",
     WebkitFilter: `grayscale(0)`,
     opacity: "1",
@@ -69,14 +75,14 @@ const projectDescriptionContainer = {
   textAlign: "center",
   margin: "1rem",
   justifyContent: "space-evenly",
-  paddingInline: "1rem",
+  paddingInline: "1%",
   flex: "1 0 40%",
 };
 
 const projectDescriptionHeader = {
   color: layoutStyles.mainFontColor,
   textTransform: "uppercase",
-  marginBottom: "1rem",
+  marginBottom: { lg: "1rem", xs: "0.5rem" },
   fontSize: `clamp(19px, 5vw, 24px)`,
 };
 
@@ -88,7 +94,7 @@ const projectDescription = {
 const projectDescriptionUsedToolsContainer = {
   display: "flex",
   flexWrap: "wrap",
-  marginTop: "4%",
+  marginTop: { lg: "4%", md: "1%", xs: "2%" },
   paddingInline: "10%",
 };
 
@@ -100,7 +106,7 @@ const projectDescriptionToolsItems = {
 const projectIconsContainer = {
   display: "flex",
   justifyContent: "space-evenly",
-  marginTop: "6%",
+  marginTop: { lg: "6%", md: "2%", xs: "4%" },
 };
 
 const projectIconStyles = {
@@ -116,7 +122,7 @@ const projectElement = [];
 for (let i = 0; i < projectsData[0].length; i += 1) {
   if (i % 2 === 0) {
     projectElement.push(
-      <Grid key={projectsData[0][i].title} item sx={projectContainerStyles}>
+      <ListItem key={projectsData[0][i].title} item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsEven}>
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
@@ -163,11 +169,11 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
             </Box>
           </Grid>
         </Grid>
-      </Grid>
+      </ListItem>
     );
   } else {
     projectElement.push(
-      <Grid key={projectsData[0][i].title} item sx={projectContainerStyles}>
+      <ListItem key={projectsData[0][i].title} item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsOdd}>
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
@@ -214,13 +220,13 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
             </Box>
           </Grid>
         </Grid>
-      </Grid>
+      </ListItem>
     );
   }
 }
 
 const Project = () => {
-  return [projectElement];
+  return <List sx={{ margin: "3rem auto" }}>{projectElement}</List>;
 };
 
 export default Project;

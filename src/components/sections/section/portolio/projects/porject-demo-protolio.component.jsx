@@ -26,7 +26,6 @@ const DemoContianter = {
   justifyContent: "center",
   width: "100%",
   textAlign: "center",
-  marginTop: "5rem",
 };
 
 const ListConitner = {
@@ -285,7 +284,7 @@ const ProjectDemo = () => {
   const projectListContainer = {
     display: "grid",
     gridTemplateColumns: {
-      md: `repeat(3, minmax(300px, 1fr))`,
+      md: `repeat(3, minmax(275px, 1fr))`,
     },
     gap: "15px",
     margin: "30px 0 30px ",
