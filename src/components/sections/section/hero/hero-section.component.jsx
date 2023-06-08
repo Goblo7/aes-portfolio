@@ -2,7 +2,7 @@ import { Grid, Typography, SvgIcon } from "@mui/material";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { layoutStyles } from "../../../../styles/layout.styles";
-import AeLogo from "../../../../assets/logo/ae-logo.assets";
+import { AeLogo } from "../../../../assets/icons.assets";
 import { useInView } from "framer-motion";
 
 const heroContainer = {
@@ -128,7 +128,7 @@ export default function HeroSection() {
           display: "flex",
           flexDirection: "column",
           alignItems: { xs: "center", md: "flex-start" },
-          paddingBottom: {xs:"9.5vh", md:"0"},
+          paddingBottom: { xs: "9.5vh", md: "0" },
         }}
         flexGrow={1}
       >
@@ -143,7 +143,7 @@ export default function HeroSection() {
         </Typography>
       </Grid>
       <Grid item>
-        <SvgIcon className="SvgG" sx={aELogo}>
+        <SvgIcon sx={aELogo}>
           <AeLogo />
         </SvgIcon>
       </Grid>

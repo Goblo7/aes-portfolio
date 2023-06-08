@@ -1,4 +1,6 @@
 export { default as Css } from "./icons/css-icon.assets";
+export { default as MainLogo } from "./logo/main-logo.assets";
+export { default as AeLogo } from "./logo/ae-logo.assets";
 export { default as Html } from "./icons/html-icon.assets";
 export { default as Js } from "./icons/js-icon.assets";
 export { default as React } from "./icons/react-icon.assets";
@@ -19,4 +21,3 @@ export { default as Twitter } from "./icons/twitter-icon.assets";
 export { default as Insta } from "./icons/insta-icon.assets";
 export { default as LinkedIn } from "./icons/linkedin-icon.assets";
 export { default as FolderSvg } from "./icons/folder-icon.assets";
-export { default as MainLogo } from "./logo/main-logo.assets";
