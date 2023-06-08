@@ -30,13 +30,13 @@ const projectContainerStyles = {
 const projectContainerDirectionsEven = {
   display: "flex",
   overflow: "hidden",
-  flexDirection: { lg: "row", xs: "column" },
+  flexDirection: { md: "row", xs: "column" },
 };
 
 const projectContainerDirectionsOdd = {
   display: "flex",
   overflow: "hidden",
-  flexDirection: { lg: "row-reverse", xs: "column" },
+  flexDirection: { md: "row-reverse", xs: "column" },
 };
 
 const projectImgContainerBackground = {
@@ -60,7 +60,7 @@ const projectImgStyles = {
     transform: {
       xs: `translateY(-56%)`,
       sm: `translateY(-70%)`,
-      md: `translateY(-80%)`,
+      md: `translateY(-73.5%)`,
       lg: `translateY(-76.9%)`,
     },
     filter: "none",
@@ -73,7 +73,6 @@ const projectDescriptionContainer = {
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
-  margin: "1rem",
   justifyContent: "space-evenly",
   paddingInline: "1%",
   flex: "1 0 40%",
@@ -82,13 +81,14 @@ const projectDescriptionContainer = {
 const projectDescriptionHeader = {
   color: layoutStyles.mainFontColor,
   textTransform: "uppercase",
-  marginBottom: { lg: "1rem", xs: "0.5rem" },
-  fontSize: `clamp(19px, 5vw, 24px)`,
+  marginBottom: { lg: "1.5%", xs: "1%" },
+  marginTop:"2%",
+  fontSize: `clamp(19px, 5vw, 21px)`,
 };
 
 const projectDescription = {
   color: layoutStyles.secandryFontColor,
-  fontSize: `clamp(15px, 4vw, 18px)`,
+  fontSize: `clamp(16px, 5vw, 19px)`,
 };
 
 const projectDescriptionUsedToolsContainer = {
@@ -101,6 +101,7 @@ const projectDescriptionUsedToolsContainer = {
 const projectDescriptionToolsItems = {
   color: layoutStyles.mainFontColor,
   fontFamily: layoutStyles.secandryFontFamily,
+  fontSize: "15px",
 };
 
 const projectIconsContainer = {
