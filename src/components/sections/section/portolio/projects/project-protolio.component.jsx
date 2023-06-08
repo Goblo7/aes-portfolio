@@ -82,7 +82,7 @@ const projectDescriptionHeader = {
   color: layoutStyles.mainFontColor,
   textTransform: "uppercase",
   marginBottom: { lg: "1.5%", xs: "1%" },
-  marginTop:"2%",
+  marginTop: "2%",
   fontSize: `clamp(19px, 5vw, 21px)`,
 };
 
