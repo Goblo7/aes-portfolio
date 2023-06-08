@@ -147,7 +147,9 @@ const isShownBtn = {
 
 // End Styles
 
-const demoProject = demoProjectsData.map((demoProjects) => {
+// start of maps
+
+const demoProjectLive = demoProjectsData[0].map((demoProjects) => {
   return (
     <ListItem key={demoProjects.title} item sx={demoBox}>
       <Grid sx={itemHeader}>
@@ -198,8 +200,57 @@ const demoProject = demoProjectsData.map((demoProjects) => {
   );
 });
 
+const demoProjectNoLive = demoProjectsData[1].map((demoProjects) => {
+  return (
+    <ListItem key={demoProjects.title} item sx={demoBox}>
+      <Grid sx={itemHeader}>
+        <Box>
+          <SvgIcon sx={fileSvg}>
+            <FolderSvg />
+          </SvgIcon>
+        </Box>
+        <Box>
+          <Link target="_blank" sx={svgLinkStyles} href={demoProjects.codeLink}>
+            <SvgIcon sx={SvgStyles}>
+              <GitHub />
+            </SvgIcon>
+          </Link>
+        </Box>
+      </Grid>
+      <Typography
+        variant="body1"
+        className="project-title"
+        sx={DemoProjectTitle}
+      >
+        {demoProjects.title}
+      </Typography>
+      <Typography variant="p" sx={DemoProjectDiscription}>
+        {demoProjects.description}
+      </Typography>
+
+      <List sx={DemoProjectsToolsList}>
+        <ListItemText
+          primaryTypographyProps={DemoProjectToolStyle}
+          primary={demoProjects.tools[0]}
+        />
+        <ListItemText
+          primaryTypographyProps={DemoProjectToolStyle}
+          primary={demoProjects.tools[1]}
+        />
+        <ListItemText
+          primaryTypographyProps={DemoProjectToolStyle}
+          primary={demoProjects.tools[2]}
+        />
+      </List>
+    </ListItem>
+  );
+});
+
+const demoProject = [...demoProjectLive, ...demoProjectNoLive];
 const constDemo = demoProject.slice(0, 3);
 const hiddenDemo = demoProject.slice(3);
+
+// end of maps
 
 const ProjectDemo = () => {
   const ref = useRef(null);
