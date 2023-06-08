@@ -1,4 +1,4 @@
-import SectionIdEnum from "../../../data/section-id";
+import SectionIdEnum from "../../../data/section-id.data";
 import {
   Button,
   IconButton,

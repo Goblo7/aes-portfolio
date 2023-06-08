@@ -17,7 +17,7 @@ import {
   headerSectionStyle,
 } from "../../../../styles/layout.styles";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import techData from "../../../../data/tech-data.script";
+import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 

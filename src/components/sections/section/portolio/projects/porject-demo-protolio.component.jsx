@@ -15,7 +15,7 @@ import {
   FolderSvg,
   GitHub,
 } from "../../../../../assets/icons.assets";
-import projectsData from "../../../../../data/projects-data.script";
+import projectsData from "../../../../../data/projects.data";
 import { useState } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";

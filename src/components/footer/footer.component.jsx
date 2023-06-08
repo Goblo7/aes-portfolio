@@ -4,7 +4,7 @@ import { layoutStyles } from "../../styles/layout.styles";
 import { MainLogo } from "../../assets/icons.assets";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import contactsFooter from "../../data/contacts-footer.scripts";
+import contactsFooter from "../../data/contacts-footer.data";
 
 //start styles
 

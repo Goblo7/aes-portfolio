@@ -11,7 +11,7 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
 import { restaurant } from "../../../../../assets/img";
 import { ExternalLink, GitHub } from "../../../../../assets/icons.assets";
-import projectsData from "../../../../../data/projects-data.script";
+import projectsData from "../../../../../data/projects.data";
 
 /* styles start*/
 
