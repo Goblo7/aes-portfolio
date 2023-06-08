@@ -1,9 +1,9 @@
 import { Box, SvgIcon } from "@mui/material";
-import { PreloaderLogo } from "../../assets/icons.assets";
-import "./preloader-style.component.css";
+import { MainLogo } from "../../assets/icons.assets";
+import styles from "./preloader-style.component.module.css";
 
 const gobloLogoStyles = {
-  stroke: "#6633ff",
+  stroke: "#6633ff ",
   strokeWidth: "2px",
   fill: "#020c1b",
   width: "100px",
@@ -44,9 +44,9 @@ const gobloLogoStyles = {
 
 export default function Preloader() {
   return (
-    <Box className="_hidden">
+    <Box className={styles._hidden}>
       <SvgIcon sx={gobloLogoStyles}>
-        <PreloaderLogo />
+        <MainLogo className={styles.preloaderAE} className1={styles.preloaderBorder} className2={styles.preloaderBorderDiffColor}/>
       </SvgIcon>
     </Box>
   );

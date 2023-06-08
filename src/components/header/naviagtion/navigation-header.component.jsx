@@ -1,4 +1,4 @@
-import SectionIdEnum from "../../../scripts/section-id";
+import SectionIdEnum from "../../../data/section-id";
 import {
   Button,
   IconButton,

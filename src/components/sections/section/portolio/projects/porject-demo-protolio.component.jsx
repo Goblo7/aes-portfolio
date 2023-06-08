@@ -15,7 +15,7 @@ import {
   FolderSvg,
   GitHub,
 } from "../../../../../assets/icons.assets";
-import demoProjectsData from "../../../../../scripts/projects-data/demo-projects-data.script";
+import projectsData from "../../../../../data/projects-data.script";
 import { useState } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
@@ -149,7 +149,7 @@ const isShownBtn = {
 
 // start of maps
 
-const demoProjectLive = demoProjectsData[0].map((demoProjects) => {
+const demoProjectLive = projectsData[1].map((demoProjects) => {
   return (
     <ListItem key={demoProjects.title} item sx={demoBox}>
       <Grid sx={itemHeader}>
@@ -200,7 +200,7 @@ const demoProjectLive = demoProjectsData[0].map((demoProjects) => {
   );
 });
 
-const demoProjectNoLive = demoProjectsData[1].map((demoProjects) => {
+const demoProjectNoLive = projectsData[2].map((demoProjects) => {
   return (
     <ListItem key={demoProjects.title} item sx={demoBox}>
       <Grid sx={itemHeader}>

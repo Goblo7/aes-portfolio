@@ -9,17 +9,17 @@
   -webkit-box-pack: center;
 }
 
-#preloader-border-diffColor {
+.preloaderBorderDiffColor {
   animation: dash2 2s linear forwards;
 }
 
-#preloader-border {
+.preloaderBorder {
   animation: dash1 2s linear forwards, rotate-border 1s ease-in-out 1.5s;
   transform-origin: center;
   transform-box: fill-box;
 }
 
-#preloader-AE {
+.preloaderAE {
   animation: fadingIn 1s linear forwards 2s;
 }
 

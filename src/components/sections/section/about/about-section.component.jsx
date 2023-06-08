@@ -17,7 +17,7 @@ import {
   headerSectionStyle,
 } from "../../../../styles/layout.styles";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import { techLanguges, techDevTools } from "../../../../scripts/tech.scripts";
+import techData from "../../../../data/tech-data.script";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -189,7 +189,7 @@ export default function AboutSection() {
 
   // end styles
 
-  const TechLanguges = techLanguges.map(({ langugeName, langugeLogo }) => {
+  const TechLanguges = techData[0].map(({ langugeName, langugeLogo }) => {
     return (
       <ListItem key={langugeName}>
         <ListItemIcon sx={techLangugesAndSkillsStyle[0]}>
@@ -203,7 +203,7 @@ export default function AboutSection() {
     );
   });
 
-  const TechDevTools = techDevTools.map(({ devToolName, devToolLogo }) => {
+  const TechDevTools = techData[1].map(({ devToolName, devToolLogo }) => {
     return (
       <ListItem key={devToolName}>
         <ListItemIcon sx={techLangugesAndSkillsStyle[0]}>

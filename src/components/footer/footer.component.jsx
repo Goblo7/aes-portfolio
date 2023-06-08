@@ -1,10 +1,10 @@
 import { Container, SvgIcon, Typography, Link } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../styles/layout.styles";
-import Logo from "../../assets/logo/main-logo.assets";
+import { MainLogo } from "../../assets/icons.assets";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import contactsFooter from "../../scripts/contacts-footer.scripts";
+import contactsFooter from "../../data/contacts-footer.scripts";
 
 //start styles
 
@@ -118,7 +118,7 @@ export default function Footer() {
           </Grid>
           <Grid item sx={tradeMarkLogoStyle}>
             <SvgIcon sx={LogoStyle}>
-              <Logo />
+              <MainLogo />
             </SvgIcon>
             <Typography variant="subtitle1" sx={tradeMarkDescrpitonStyle}>
               Designed & Build by me

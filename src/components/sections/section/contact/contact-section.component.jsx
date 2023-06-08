@@ -2,7 +2,7 @@ import { Button, SvgIcon, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Dish, Satellite } from "../../../../assets/icons.assets";
 import { layoutStyles } from "../../../../styles/layout.styles";
-import "./contact-styles-section.component.css";
+import styles from "./contact-styles-section.component.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 
@@ -48,6 +48,9 @@ const ButtonStyles = {
   fontSize: "1.1rem",
   position: "relative",
   borderRadius: "1rem",
+  "&:hover":{
+    background: "#14233d"
+  }
 };
 
 const contactDescriptionHelloWord = {
@@ -160,8 +163,13 @@ export default function ContactSection() {
   return (
     <Grid container sx={contactContainerStyles}>
       <Grid item marginTop="10vh">
-        <SvgIcon ref={refStat} id="satellite" sx={satelliteStyles}>
-          <Satellite />
+        <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
+          <Satellite
+            wave1={styles.wave1}
+            wave2={styles.wave2}
+            wave3={styles.wave3}
+            wave4={styles.wave4}
+          />
         </SvgIcon>
       </Grid>
       <Grid item display="grid" sm={8} ref={contactView} sx={sayHelloContainer}>
@@ -180,7 +188,7 @@ export default function ContactSection() {
           .
         </Typography>
         <Button
-          id="contact-button"
+          className={styles.contactButton}
           href={contactMe}
           disableElevation
           sx={ButtonStyles}
@@ -189,8 +197,14 @@ export default function ContactSection() {
         </Button>
       </Grid>
       <Grid item marginTop="7vh" paddingBottom="1vh">
-        <SvgIcon id="dish" ref={refDish} sx={dishStyle}>
-          <Dish />
+        <SvgIcon id={styles.dishColor} ref={refDish} sx={dishStyle}>
+          <Dish
+            dish={styles.dish}
+            dishWaves={styles.dishWaves}
+            wave1={styles.wave1}
+            wave2={styles.wave2}
+            wave3={styles.wave3}
+          />
         </SvgIcon>
       </Grid>
     </Grid>

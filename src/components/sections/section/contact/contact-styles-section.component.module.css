@@ -12,12 +12,12 @@
 
 /* svg styles */
 
-#dish {
+.dish {
   -webkit-transform-origin-x: 7%;
   transform-box: fill-box;
 }
 
-#dishWaves {
+.dishWaves {
   animation: dishMoving 15s ease-in-out infinite;
 }
 
@@ -36,19 +36,19 @@
   }
 }
 
-#wave1 {
+.wave1 {
   animation: wave 4s linear infinite 1.5s;
 }
 
-#wave2 {
+.wave2 {
   animation: wave 4s linear infinite 2.5s;
 }
 
-#wave3 {
+.wave3 {
   animation: wave 4s linear infinite 3.5s;
 }
 
-#wave4 {
+.wave4 {
   animation: wave 4s linear infinite 4.5s;
 }
 
@@ -64,10 +64,10 @@
   }
 }
 
-#satellite {
+#satelliteColor {
   fill: url(#linear-gradient-stata);
 }
-#dish {
+#dishColor {
   fill: url(#linear-gradient-dish);
 }
 
@@ -75,8 +75,8 @@
 
 /* button styles */
 
-#contact-button::after,
-#contact-button::before {
+.contactButton::after,
+.contactButton::before {
   content: "";
   position: absolute;
   inset: -0.2rem;
@@ -93,12 +93,8 @@
   z-index: -1;
 }
 
-#contact-button::after {
+.contactButton::after {
   filter: blur(0.2rem);
-}
-
-#contact-button:hover {
-  background: #14233d;
 }
 
 @keyframes spin {

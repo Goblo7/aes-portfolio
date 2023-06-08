@@ -5,8 +5,8 @@ import {
   ContactSection,
 } from "./section/section.component";
 import SectionContainer from "./sections-container/sections-container.component";
-import SectionWidthHeight from "../../scripts/section-width-height.scripts";
-import SectionIdEnum from "../../scripts/section-id";
+import SectionWidthHeight from "../../data/section-width-height.scripts";
+import SectionIdEnum from "../../data/section-id";
 
 const sections = [
   {

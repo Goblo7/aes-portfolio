@@ -1,0 +1,19 @@
+.border {
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 1.5s;
+  stroke: #6633ff;
+  stroke-width: 2px;
+}
+
+.AE {
+  stroke: #8633fc;
+  stroke-width: 1px;
+}
+
+.borderDiffColor {
+  color: #6666cc;
+}
+.logo:hover .border {
+  transform: rotate(-360deg);
+}

@@ -11,7 +11,7 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
 import { restaurant } from "../../../../../assets/img";
 import { ExternalLink, GitHub } from "../../../../../assets/icons.assets";
-import projectsData from "../../../../../scripts/projects-data/projects-data.script";
+import projectsData from "../../../../../data/projects-data.script";
 
 /* styles start*/
 
@@ -113,13 +113,13 @@ const projectIconStyles = {
 /* styles end*/
 
 const projectElement = [];
-for (let i = 0; i < projectsData.length; i += 1) {
+for (let i = 0; i < projectsData[0].length; i += 1) {
   if (i % 2 === 0) {
     projectElement.push(
-      <Grid key={projectsData[i].title} item sx={projectContainerStyles}>
+      <Grid key={projectsData[0][i].title} item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsEven}>
           <Grid item sx={projectImgContainerBackground}>
-            <Link href={projectsData[i].liveLink} target="_blank">
+            <Link href={projectsData[0][i].liveLink} target="_blank">
               <ImageListItem sx={projectImgStyles}>
                 <img src={restaurant} alt="" />
               </ImageListItem>
@@ -128,34 +128,34 @@ for (let i = 0; i < projectsData.length; i += 1) {
 
           <Grid item sx={projectDescriptionContainer}>
             <Typography variant="h6" sx={projectDescriptionHeader}>
-              {projectsData[i].title}
+              {projectsData[0][i].title}
             </Typography>
             <Box>
               <Typography variant="p" sx={projectDescription}>
-                {projectsData[i].description}
+                {projectsData[0][i].description}
               </Typography>
             </Box>
             <List sx={projectDescriptionUsedToolsContainer}>
               <ListItemText
                 primaryTypographyProps={projectDescriptionToolsItems}
-                primary={projectsData[i].tools[0]}
+                primary={projectsData[0][i].tools[0]}
               />
               <ListItemText
                 primaryTypographyProps={projectDescriptionToolsItems}
-                primary={projectsData[i].tools[1]}
+                primary={projectsData[0][i].tools[1]}
               />
               <ListItemText
                 primaryTypographyProps={projectDescriptionToolsItems}
-                primary={projectsData[i].tools[2]}
+                primary={projectsData[0][i].tools[2]}
               />
             </List>
             <Box sx={projectIconsContainer}>
-              <Link href={projectsData[i].codeLink} target="_blank">
+              <Link href={projectsData[0][i].codeLink} target="_blank">
                 <SvgIcon sx={projectIconStyles}>
                   <GitHub />
                 </SvgIcon>
               </Link>
-              <Link href={projectsData[i].liveLink} target="_blank">
+              <Link href={projectsData[0][i].liveLink} target="_blank">
                 <SvgIcon sx={projectIconStyles}>
                   <ExternalLink />
                 </SvgIcon>
@@ -167,10 +167,10 @@ for (let i = 0; i < projectsData.length; i += 1) {
     );
   } else {
     projectElement.push(
-      <Grid key={projectsData[i].title} item sx={projectContainerStyles}>
+      <Grid key={projectsData[0][i].title} item sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsOdd}>
           <Grid item sx={projectImgContainerBackground}>
-            <Link href={projectsData[i].liveLink} target="_blank">
+            <Link href={projectsData[0][i].liveLink} target="_blank">
               <ImageListItem sx={projectImgStyles}>
                 <img src={restaurant} alt="" />
               </ImageListItem>
@@ -179,34 +179,34 @@ for (let i = 0; i < projectsData.length; i += 1) {
 
           <Grid item sx={projectDescriptionContainer}>
             <Typography variant="h6" sx={projectDescriptionHeader}>
-              {projectsData[i].title}
+              {projectsData[0][i].title}
             </Typography>
             <Box>
               <Typography variant="p" sx={projectDescription}>
-                {projectsData[i].description}
+                {projectsData[0][i].description}
               </Typography>
             </Box>
             <List sx={projectDescriptionUsedToolsContainer}>
               <ListItemText
                 primaryTypographyProps={projectDescriptionToolsItems}
-                primary={projectsData[i].tools[0]}
+                primary={projectsData[0][i].tools[0]}
               />
               <ListItemText
                 primaryTypographyProps={projectDescriptionToolsItems}
-                primary={projectsData[i].tools[1]}
+                primary={projectsData[0][i].tools[1]}
               />
               <ListItemText
                 primaryTypographyProps={projectDescriptionToolsItems}
-                primary={projectsData[i].tools[2]}
+                primary={projectsData[0][i].tools[2]}
               />
             </List>
             <Box sx={projectIconsContainer}>
-              <Link href={projectsData[i].codeLink} target="_blank">
+              <Link href={projectsData[0][i].codeLink} target="_blank">
                 <SvgIcon sx={projectIconStyles}>
                   <GitHub />
                 </SvgIcon>
               </Link>
-              <Link href={projectsData[i].liveLink} target="_blank">
+              <Link href={projectsData[0][i].liveLink} target="_blank">
                 <SvgIcon sx={projectIconStyles}>
                   <ExternalLink />
                 </SvgIcon>

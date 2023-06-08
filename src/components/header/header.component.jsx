@@ -2,11 +2,11 @@ import { AppBar, Link, Toolbar, SvgIcon } from "@mui/material";
 import Navigation from "./naviagtion/navigation-header.component";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
-import Logo from "../../assets/logo/main-logo.assets";
 import layoutStyles from "../../styles/layout-styles/main-layout.styles";
-import "./header-styles.component.css";
+import styles from "./header-styles.component.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { MainLogo } from "../../assets/icons.assets";
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -58,9 +58,9 @@ export const Header = () => {
       <HideOnScroll>
         <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Link id="logo" href="#" sx={linkLogoStyles}>
+            <Link className={styles.logo} href="#" sx={linkLogoStyles}>
               <SvgIcon sx={LogoStyle}>
-                <Logo />
+                <MainLogo className={styles.AE} className1={styles.border} className2={styles.borderDiffColor}/>
               </SvgIcon>
             </Link>
             <Navigation />
