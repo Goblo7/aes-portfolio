@@ -46,7 +46,11 @@ export default function Preloader() {
   return (
     <Box className={styles._hidden}>
       <SvgIcon sx={gobloLogoStyles}>
-        <MainLogo className={styles.preloaderAE} className1={styles.preloaderBorder} className2={styles.preloaderBorderDiffColor}/>
+        <MainLogo
+          ae={styles.preloaderAE}
+          border={styles.preloaderBorder}
+          subBorder={styles.preloaderBorderDiffColor}
+        />
       </SvgIcon>
     </Box>
   );

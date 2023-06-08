@@ -60,7 +60,7 @@ export const Header = () => {
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Link className={styles.logo} href="#" sx={linkLogoStyles}>
               <SvgIcon sx={LogoStyle}>
-                <MainLogo className={styles.AE} className1={styles.border} className2={styles.borderDiffColor}/>
+                <MainLogo ae={styles.AE} border={styles.border} subBorder={styles.borderDiffColor}/>
               </SvgIcon>
             </Link>
             <Navigation />
