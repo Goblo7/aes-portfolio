@@ -16,7 +16,7 @@ export const headerSectionStyle = {
     top: "5px",
     width: {
       xs: "6rem",
-      sm: "24rem",
+      sm: "23rem",
       md: "40rem",
       lg: "53rem",
     },

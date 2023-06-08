@@ -109,11 +109,11 @@ export default function HeroSection() {
   useEffect(() => {
     const typed = new Typed(typer.current, {
       strings: [
+        "Software Engineer.",
         "Front-End Developer.",
         "UI/UX Designer.",
-        "Software Engineer.",
       ],
-      typeSpeed: 60,
+      typeSpeed: 65,
       loop: true,
       backSpeed: 70,
       backDelay: 2000,
