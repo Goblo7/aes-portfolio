@@ -113,7 +113,7 @@ export default function HeroSection() {
         "Front-End Developer.",
         "UI/UX Designer.",
       ],
-      typeSpeed: 65,
+      typeSpeed: 63,
       loop: true,
       backSpeed: 70,
       backDelay: 2000,

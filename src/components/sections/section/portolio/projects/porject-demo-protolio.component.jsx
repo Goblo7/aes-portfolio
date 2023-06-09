@@ -171,13 +171,19 @@ const demoProjectLive = projectsData[1].map((demoProjects) => {
           </Link>
         </Box>
       </Grid>
-      <Typography
-        variant="body1"
-        className="project-title"
-        sx={DemoProjectTitle}
+      <Link
+        sx={{ textDecoration: "none" }}
+        target="_blank"
+        href={demoProjects.liveLink}
       >
-        {demoProjects.title}
-      </Typography>
+        <Typography
+          variant="body1"
+          className="project-title"
+          sx={DemoProjectTitle}
+        >
+          {demoProjects.title}
+        </Typography>
+      </Link>
       <Typography variant="p" sx={DemoProjectDiscription}>
         {demoProjects.description}
       </Typography>
@@ -217,13 +223,19 @@ const demoProjectNoLive = projectsData[2].map((demoProjects) => {
           </Link>
         </Box>
       </Grid>
-      <Typography
-        variant="body1"
-        className="project-title"
-        sx={DemoProjectTitle}
+      <Link
+        sx={{ textDecoration: "none" }}
+        target="_blank"
+        href={demoProjects.codeLink}
       >
-        {demoProjects.title}
-      </Typography>
+        <Typography
+          variant="body1"
+          className="project-title"
+          sx={DemoProjectTitle}
+        >
+          {demoProjects.title}
+        </Typography>
+      </Link>
       <Typography variant="p" sx={DemoProjectDiscription}>
         {demoProjects.description}
       </Typography>
