@@ -1,0 +1,152 @@
+.leftTab {
+  animation: tableft 3s ease infinite 4.5s;
+  opacity: 0;
+}
+.middleTab {
+  animation: tableft 3s ease infinite;
+}
+.rightTitle {
+  animation: tabright 3s ease infinite;
+}
+
+@keyframes tableft {
+  0% {
+    opacity: 0;
+    transform: translateX(2%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+}
+@keyframes tabright {
+  0% {
+    opacity: 0;
+    transform: translateY(-2%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+}
+
+.phone1 {
+  animation: drop 3s ease infinite;
+}
+.phone2 {
+  animation: moveLeft 3s ease infinite 3.8s;
+  opacity: 0;
+}
+.phone3 {
+  animation: moveUp 3s ease infinite 4.5s;
+  opacity: 0;
+}
+.phone4 {
+  animation: moveRight 3s ease infinite 4.5s;
+  opacity: 0;
+}
+.homePhone,
+.AE,
+.pcPower,
+.upperTab,
+.fristHours {
+  animation: fade 6s ease infinite;
+}
+.secHours {
+  animation: fade 6s ease infinite 9s;
+  opacity: 0;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(4%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(2%);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-2%);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4%);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeSec {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.clockArrows {
+  transform-origin: 0% 100%;
+  animation: rotate 6s infinite linear;
+  transform-box: fill-box;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

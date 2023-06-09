@@ -279,7 +279,6 @@ const ProjectDemo = () => {
 
   const demoTitle = {
     fontSize: `clamp(20px,5vw,30px)`,
-    margin: "0 auto 10px",
     color: layoutStyles.mainFontColor,
     fontWeight: "600",
     opacity: isViewDemos ? 1 : 0,
@@ -315,12 +314,14 @@ const ProjectDemo = () => {
   //end styles
   return (
     <Wrapper>
-      <Typography ref={demosTitle} variant="h2" sx={demoTitle}>
-        Other Noteworthy Demos.
+      <Grid sx={{ margin: "0 auto 10px" }}>
+        <Typography ref={demosTitle} variant="h2" sx={demoTitle}>
+          Other Noteworthy Demos.
+        </Typography>
         <Typography variant="h4" sx={demoSubTitle}>
           Archive
         </Typography>
-      </Typography>
+      </Grid>
       <List ref={ref} sx={projectListContainer}>
         {constDemo}
         {isShown && hiddenDemo}

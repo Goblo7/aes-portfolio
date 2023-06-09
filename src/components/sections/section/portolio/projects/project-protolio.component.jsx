@@ -179,7 +179,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
               <ImageListItem sx={projectImgStyles}>
-                <img src={restaurant} alt="" />
+                <img src={restaurant} alt="" style={projectImgStyles} />
               </ImageListItem>
             </Link>
           </Grid>

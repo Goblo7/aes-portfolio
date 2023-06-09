@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { useInView } from "framer-motion";
 import Project from "./projects/project-protolio.component";
 import ProjectDemo from "./projects/porject-demo-protolio.component";
+import styles from "./portolio-section.component.module.css";
 
 /* styles start*/
 
@@ -21,7 +22,7 @@ const aboutProjectTitle = [
     fontSize: `clamp(19px,6vw,27px)`,
   },
   {
-    fontSize: "8rem",
+    fontSize: "10rem",
     color: layoutStyles.mainStyleColor,
   },
 ];
@@ -54,7 +55,23 @@ export default function PortofiloSection() {
           Some Things I've Built.
         </Typography>
         <SvgIcon sx={aboutProjectTitle[1]}>
-          <WebBuild />
+          <WebBuild
+            upperTab={styles.upperTab}
+            leftTab={styles.leftTab}
+            middleTab={styles.middleTab}
+            rightTitle={styles.rightTitle}
+            phone1={styles.phone1}
+            phone2={styles.phone2}
+            phone3={styles.phone3}
+            phone4={styles.phone4}
+            homePhone={styles.homePhone}
+            pcPower={styles.pcPower}
+            clockBorder={styles.clockBorder}
+            clockArrows={styles.clockArrows}
+            fristHours={styles.fristHours}
+            secHours={styles.secHours}
+            AE={styles.AE}
+          />
         </SvgIcon>
       </Box>
       <Project />
