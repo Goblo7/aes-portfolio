@@ -10,7 +10,6 @@ export { default as Mui } from "./icons/mui-icon.assets";
 export { default as VsCode } from "./icons/vscode-icon.assets";
 export { default as Vs } from "./icons/vs-icon.assets";
 export { default as Dish } from "./icons/dish-icon.assets";
-export { default as WebBuildColored } from "./icons/build-colored-web.icon";
 export { default as WebBuild } from "./icons/build-web.icon.assets";
 export { default as Satellite } from "./icons/satellite-icon.assets";
 export { default as GitHubColord } from "./icons/github-icon.assets";
