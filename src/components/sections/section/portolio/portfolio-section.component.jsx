@@ -21,7 +21,7 @@ const aboutProjectTitle = [
     fontSize: `clamp(19px,6vw,27px)`,
   },
   {
-    fontSize: "10rem",
+    fontSize: {lg:"10.5rem", md:"9rem",sm:"8rem", xs:"7.5rem"},
     color: layoutStyles.mainStyleColor,
   },
 ];
