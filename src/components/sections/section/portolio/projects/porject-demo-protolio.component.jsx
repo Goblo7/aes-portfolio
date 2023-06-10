@@ -7,8 +7,8 @@ import {
   ListItemText,
   Button,
   ListItem,
+  Grid,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
 import {
   ExternalLink,
@@ -151,7 +151,7 @@ const isShownBtn = {
 
 const demoProjectLive = projectsData[1].map((demoProjects) => {
   return (
-    <ListItem key={demoProjects.title} item sx={demoBox}>
+    <ListItem key={demoProjects.title} sx={demoBox}>
       <Grid sx={itemHeader}>
         <Box>
           <SvgIcon sx={fileSvg}>
@@ -208,7 +208,7 @@ const demoProjectLive = projectsData[1].map((demoProjects) => {
 
 const demoProjectNoLive = projectsData[2].map((demoProjects) => {
   return (
-    <ListItem key={demoProjects.title} item sx={demoBox}>
+    <ListItem key={demoProjects.title} sx={demoBox}>
       <Grid sx={itemHeader}>
         <Box>
           <SvgIcon sx={fileSvg}>

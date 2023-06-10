@@ -1,5 +1,4 @@
-import { SvgIcon, Typography, Box } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import { SvgIcon, Typography, Box, Grid } from "@mui/material";
 import {
   layoutStyles,
   headerSectionStyle,
@@ -35,7 +34,7 @@ export default function PortofiloSection() {
 
   const aboutProject = {
     display: "flex",
-    margin: "1.5rem auto",
+    margin: "0 auto",
     alignItems: "center",
     gap: "1rem",
     justifyContent: "center",
@@ -71,6 +70,7 @@ export default function PortofiloSection() {
             fristHours={styles.fristHours}
             secHours={styles.secHours}
             AE={styles.AE}
+            wheel={styles.wheel}
           />
         </SvgIcon>
       </Box>

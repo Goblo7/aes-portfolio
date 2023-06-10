@@ -1,6 +1,5 @@
 import {
   Typography,
-  ImageListItem,
   Box,
   ListItem,
   ListItemIcon,
@@ -9,8 +8,8 @@ import {
   Divider,
   useMediaQuery,
   useTheme,
+  Grid
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
 import HeroPfp from "../../../../assets/pfp/main-hero-pfp.assets.jpg";
 import {
   layoutStyles,
@@ -41,10 +40,11 @@ const heroPfpStyle = {
   backgroundRepeat: "no-repeat",
   border: `3px solid ${layoutStyles.lineMainColor}`,
   borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
+  borderWidth: "6px",
   position: "relative",
   transition: "all 1s ease-in-out",
   animation: `gobloPfp 8s ease-in-out infinite`,
-  maxWidth:{sm:"fit-content",xs:"68%"},
+  maxWidth: { sm: "100%", xs: "68%" },
   "@keyframes gobloPfp": {
     "0%": {
       borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
@@ -127,7 +127,6 @@ const heroPfpContainer = {
   justifyItems: "center",
   flexGrow: 1,
   width: "10%",
-
 };
 
 const DevAndlangListContianer = {
@@ -251,7 +250,7 @@ export default function AboutSection() {
                   </Typography>
                   <List sx={DevAndlangListContianer}>{TechLanguges}</List>
                 </Grid>
-                {isSamll ? <Divider sx={verticalDivider} /> : undefined}
+                {isSamll && <Divider sx={verticalDivider} />}
                 <Grid item>
                   <Typography variant="h5" sx={languagesAndDevTitle}>
                     Dev Tools
@@ -263,9 +262,7 @@ export default function AboutSection() {
           </Box>
         </Grid>
         <Grid item sx={heroPfpContainer}>
-          <ImageListItem sx={heroPfpStyle}>
-            <img src={HeroPfp} alt="" style={heroPfpStyle} />
-          </ImageListItem>
+          <Box component="img" src={HeroPfp} alt="" sx={heroPfpStyle} />
         </Grid>
       </Grid>
     </Grid>

@@ -1,5 +1,4 @@
-import { Button, SvgIcon, Typography } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import { Button, SvgIcon, Typography, Grid } from "@mui/material";
 import { Dish, Satellite } from "../../../../assets/icons.assets";
 import { layoutStyles } from "../../../../styles/layout.styles";
 import styles from "./contact-styles-section.component.module.css";

@@ -3,12 +3,11 @@ import {
   SvgIcon,
   Typography,
   ListItemText,
-  ImageListItem,
   Box,
   Link,
   ListItem,
+  Grid,
 } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
 import { restaurant } from "../../../../../assets/img";
 import { ExternalLink, GitHub } from "../../../../../assets/icons.assets";
@@ -49,7 +48,6 @@ const projectImgContainerBackground = {
 };
 
 const projectImgStyles = {
-  height: "100%",
   width: "100%",
   transition: `transform 10s ,filter 0.8s , WebkitFilter 0.8s, opacity 1s ease-in-out 0s`,
   overflow: "hidden",
@@ -123,13 +121,16 @@ const projectElement = [];
 for (let i = 0; i < projectsData[0].length; i += 1) {
   if (i % 2 === 0) {
     projectElement.push(
-      <ListItem key={projectsData[0][i].title} item sx={projectContainerStyles}>
+      <ListItem key={projectsData[0][i].title} sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsEven}>
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
-              <ImageListItem sx={projectImgStyles}>
-                <img src={restaurant} alt="" />
-              </ImageListItem>
+              <Box
+                component="img"
+                sx={projectImgStyles}
+                src={restaurant}
+                alt=""
+              />
             </Link>
           </Grid>
 
@@ -174,13 +175,16 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
     );
   } else {
     projectElement.push(
-      <ListItem key={projectsData[0][i].title} item sx={projectContainerStyles}>
+      <ListItem key={projectsData[0][i].title} sx={projectContainerStyles}>
         <Grid item sx={projectContainerDirectionsOdd}>
           <Grid item sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
-              <ImageListItem sx={projectImgStyles}>
-                <img src={restaurant} alt="" style={projectImgStyles} />
-              </ImageListItem>
+              <Box
+                component="img"
+                sx={projectImgStyles}
+                src={restaurant}
+                alt=""
+              />
             </Link>
           </Grid>
 
