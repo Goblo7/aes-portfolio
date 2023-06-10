@@ -16,6 +16,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import SectionWrapper from "../../sections-container/section-wrapper.component";
 
 // start styles
 
@@ -240,7 +241,7 @@ export default function AboutSection() {
   });
 
   return (
-    <Grid container sx={aboutContianer}>
+    <SectionWrapper style={aboutContianer}>
       <Box sx={aboutTitleContainer}>
         <Typography variant="h2" sx={headerSectionStyle}>
           About Me
@@ -288,6 +289,6 @@ export default function AboutSection() {
           <Box component="img" src={HeroPfp} alt="" sx={heroPfpStyle} />
         </Grid>
       </Grid>
-    </Grid>
+    </SectionWrapper>
   );
 }

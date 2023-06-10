@@ -4,6 +4,7 @@ import { layoutStyles } from "../../../../styles/layout.styles";
 import styles from "./contact-styles-section.component.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import SectionWrapper from "../../sections-container/section-wrapper.component";
 
 // start styles
 
@@ -47,9 +48,9 @@ const ButtonStyles = {
   fontSize: "1.1rem",
   position: "relative",
   borderRadius: "1rem",
-  "&:hover":{
-    background: "#14233d"
-  }
+  "&:hover": {
+    background: "#14233d",
+  },
 };
 
 const contactDescriptionHelloWord = {
@@ -160,7 +161,7 @@ export default function ContactSection() {
   //end styles
 
   return (
-    <Grid container sx={contactContainerStyles}>
+    <SectionWrapper style={contactContainerStyles}>
       <Grid item marginTop="10vh">
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
@@ -206,6 +207,6 @@ export default function ContactSection() {
           />
         </SvgIcon>
       </Grid>
-    </Grid>
+    </SectionWrapper>
   );
 }

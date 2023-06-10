@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { layoutStyles } from "../../../../styles/layout.styles";
 import { AeLogo } from "../../../../assets/icons.assets";
 import { useInView } from "framer-motion";
+import SectionWrapper from "../../sections-container/section-wrapper.component";
 
 const heroContainer = {
   paddingTop: {
@@ -19,6 +20,13 @@ const heroContainer = {
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
+};
+
+const heroSubContainer = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: { xs: "center", md: "flex-start" },
+  paddingBottom: { xs: "9.5vh", md: "0" },
 };
 
 const aELogo = {
@@ -125,18 +133,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <Grid ref={ref} sx={heroContainer}>
-      <Grid
-        item
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: { xs: "center", md: "flex-start" },
-          paddingBottom: { xs: "9.5vh", md: "0" },
-        }}
-        flexGrow={1}
-      >
-        <Typography variant="inherit" sx={greetingStyle}>
+    <SectionWrapper style={heroContainer}>
+      <Grid item sx={heroSubContainer} flexGrow={1}>
+        <Typography variant="inherit" ref={ref} sx={greetingStyle}>
           Hello, my name is
         </Typography>
         <Typography variant="h2" sx={heroNameStyle}>
@@ -151,6 +150,6 @@ export default function HeroSection() {
           <AeLogo />
         </SvgIcon>
       </Grid>
-    </Grid>
+    </SectionWrapper>
   );
 }

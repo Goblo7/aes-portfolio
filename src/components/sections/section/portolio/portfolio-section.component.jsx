@@ -1,4 +1,4 @@
-import { SvgIcon, Typography, Box, Grid } from "@mui/material";
+import { SvgIcon, Typography, Box } from "@mui/material";
 import { layoutStyles } from "../../../../styles/layout.styles";
 import { WebBuild } from "../../../../assets/icons.assets";
 import { useRef } from "react";
@@ -6,8 +6,15 @@ import { useInView } from "framer-motion";
 import Project from "./projects/project-protolio.component";
 import ProjectDemo from "./projects/porject-demo-protolio.component";
 import styles from "./portolio-section.component.module.css";
+import SectionWrapper from "../../sections-container/section-wrapper.component";
 
 /* styles start*/
+
+const portolioContainer = {
+  margin: "0 auto",
+  paddingTop: "13vh",
+  maxWidth: "68rem",
+};
 
 const headerSectionStyle = {
   display: "flex",
@@ -68,7 +75,7 @@ export default function PortofiloSection() {
   };
 
   return (
-    <Grid margin="0 auto" paddingTop="13vh" container maxWidth="68rem">
+    <SectionWrapper style={portolioContainer}>
       <Typography variant="h2" sx={headerSectionStyle}>
         Portofilo
       </Typography>
@@ -99,6 +106,6 @@ export default function PortofiloSection() {
       </Box>
       <Project />
       <ProjectDemo />
-    </Grid>
+    </SectionWrapper>
   );
 }
