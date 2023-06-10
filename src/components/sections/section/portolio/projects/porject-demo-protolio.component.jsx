@@ -7,8 +7,8 @@ import {
   ListItemText,
   Button,
   ListItem,
-  Grid,
 } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
 import {
   ExternalLink,

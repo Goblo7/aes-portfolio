@@ -1,10 +1,10 @@
-import { Button, SvgIcon, Typography, Grid } from "@mui/material";
+import { Button, SvgIcon, Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Dish, Satellite } from "../../../../assets/icons.assets";
 import { layoutStyles } from "../../../../styles/layout.styles";
 import styles from "./contact-styles-section.component.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import SectionWrapper from "../../sections-container/section-wrapper.component";
 
 // start styles
 
@@ -161,8 +161,8 @@ export default function ContactSection() {
   //end styles
 
   return (
-    <SectionWrapper style={contactContainerStyles}>
-      <Grid item marginTop="10vh">
+    <Grid container sx={contactContainerStyles}>
+      <Grid marginTop="10vh">
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
             wave1={styles.wave1}
@@ -172,7 +172,7 @@ export default function ContactSection() {
           />
         </SvgIcon>
       </Grid>
-      <Grid item display="grid" sm={8} ref={contactView} sx={sayHelloContainer}>
+      <Grid display="grid" sm={8} ref={contactView} sx={sayHelloContainer}>
         <Typography variant="h2" sx={contactTitle}>
           Contact Me
         </Typography>
@@ -196,7 +196,7 @@ export default function ContactSection() {
           Say Hello
         </Button>
       </Grid>
-      <Grid item marginTop="7vh" paddingBottom="1vh">
+      <Grid marginTop="7vh" paddingBottom="1vh">
         <SvgIcon id={styles.dishColor} ref={refDish} sx={dishStyle}>
           <Dish
             dish={styles.dish}
@@ -207,6 +207,6 @@ export default function ContactSection() {
           />
         </SvgIcon>
       </Grid>
-    </SectionWrapper>
+    </Grid>
   );
 }

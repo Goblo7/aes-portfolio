@@ -6,8 +6,8 @@ import {
   Box,
   Link,
   ListItem,
-  Grid,
 } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
 import { restaurant } from "../../../../../assets/img";
 import { ExternalLink, GitHub } from "../../../../../assets/icons.assets";
@@ -122,8 +122,8 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
   if (i % 2 === 0) {
     projectElement.push(
       <ListItem key={projectsData[0][i].title} sx={projectContainerStyles}>
-        <Grid item sx={projectContainerDirectionsEven}>
-          <Grid item sx={projectImgContainerBackground}>
+        <Grid sx={projectContainerDirectionsEven}>
+          <Grid sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
               <Box
                 component="img"
@@ -134,7 +134,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
             </Link>
           </Grid>
 
-          <Grid item sx={projectDescriptionContainer}>
+          <Grid sx={projectDescriptionContainer}>
             <Typography variant="h6" sx={projectDescriptionHeader}>
               {projectsData[0][i].title}
             </Typography>
@@ -176,8 +176,8 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
   } else {
     projectElement.push(
       <ListItem key={projectsData[0][i].title} sx={projectContainerStyles}>
-        <Grid item sx={projectContainerDirectionsOdd}>
-          <Grid item sx={projectImgContainerBackground}>
+        <Grid sx={projectContainerDirectionsOdd}>
+          <Grid sx={projectImgContainerBackground}>
             <Link href={projectsData[0][i].liveLink} target="_blank">
               <Box
                 component="img"
@@ -188,7 +188,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
             </Link>
           </Grid>
 
-          <Grid item sx={projectDescriptionContainer}>
+          <Grid sx={projectDescriptionContainer}>
             <Typography variant="h6" sx={projectDescriptionHeader}>
               {projectsData[0][i].title}
             </Typography>

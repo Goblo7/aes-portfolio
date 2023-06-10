@@ -8,15 +8,14 @@ import {
   Divider,
   useMediaQuery,
   useTheme,
-  Grid,
 } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import HeroPfp from "../../../../assets/pfp/main-hero-pfp.assets.jpg";
 import { layoutStyles } from "../../../../styles/layout.styles";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import SectionWrapper from "../../sections-container/section-wrapper.component";
 
 // start styles
 
@@ -35,7 +34,7 @@ const headerSectionStyle = {
     display: "inline",
     top: "5px",
     width: {
-      xs: "6rem",
+      xs: "5.2rem",
       sm: "23rem",
       md: "40rem",
       lg: "53rem",
@@ -190,7 +189,7 @@ export default function AboutSection() {
 
   const techLangugesAndSkillsStyle = [
     {
-      maxHeight: "60%",
+      maxHeight: { sm: "60%", xs: "50%" },
       transform: isInViewLagTool ? "none" : "translateX(-30px)",
       opacity: isInViewLagTool ? 1 : 0,
       transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1s",
@@ -221,6 +220,7 @@ export default function AboutSection() {
         <ListItemText
           sx={techLangugesAndSkillsStyle[1]}
           primary={langugeName}
+          primaryTypographyProps={{ fontSize: { sm: "100%", xs: "80%" } }}
         />
       </ListItem>
     );
@@ -235,20 +235,21 @@ export default function AboutSection() {
         <ListItemText
           sx={techLangugesAndSkillsStyle[1]}
           primary={devToolName}
+          primaryTypographyProps={{ fontSize: { sm: "100%", xs: "80%" } }}
         />
       </ListItem>
     );
   });
 
   return (
-    <SectionWrapper style={aboutContianer}>
+    <Grid container sx={aboutContianer}>
       <Box sx={aboutTitleContainer}>
         <Typography variant="h2" sx={headerSectionStyle}>
           About Me
         </Typography>
       </Box>
       <Grid container spacing={2}>
-        <Grid item sm={8}>
+        <Grid sm={8}>
           <Typography ref={header} variant="h5" sx={aboutHeaderStyles}>
             Hi there! Nice to meet you, I'm a dedicated Front-end Developer
             based in Cairo, Egypt.
@@ -268,14 +269,14 @@ export default function AboutSection() {
                 &lt;TechStack/&gt;
               </Typography>
               <Grid container sx={skillTools}>
-                <Grid item>
+                <Grid>
                   <Typography variant="h5" sx={languagesAndDevTitle}>
                     Languages
                   </Typography>
                   <List sx={DevAndlangListContianer}>{TechLanguges}</List>
                 </Grid>
                 {isSamll && <Divider sx={verticalDivider} />}
-                <Grid item>
+                <Grid>
                   <Typography variant="h5" sx={languagesAndDevTitle}>
                     Dev Tools
                   </Typography>
@@ -285,10 +286,10 @@ export default function AboutSection() {
             </Grid>
           </Box>
         </Grid>
-        <Grid item sx={heroPfpContainer}>
+        <Grid sx={heroPfpContainer}>
           <Box component="img" src={HeroPfp} alt="" sx={heroPfpStyle} />
         </Grid>
       </Grid>
-    </SectionWrapper>
+    </Grid>
   );
 }

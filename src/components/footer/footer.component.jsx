@@ -1,4 +1,5 @@
-import { Container, SvgIcon, Typography, Link, Grid } from "@mui/material";
+import { Container, SvgIcon, Typography, Link } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../styles/layout.styles";
 import { MainLogo } from "../../assets/icons.assets";
 import { useRef } from "react";
@@ -115,7 +116,7 @@ export default function Footer() {
           <Grid container gap={3} sx={contactSvgContainer}>
             {contactsIcons}
           </Grid>
-          <Grid item sx={tradeMarkLogoStyle}>
+          <Grid sx={tradeMarkLogoStyle}>
             <SvgIcon sx={LogoStyle}>
               <MainLogo />
             </SvgIcon>
@@ -123,7 +124,7 @@ export default function Footer() {
               Designed & Build by me
             </Typography>
           </Grid>
-          <Grid sx={copyrightsContainer} item>
+          <Grid sx={copyrightsContainer}>
             <Typography variant="subtitle2" sx={copyrightsEmail}>
               ahmedehab.sg@gmail.com
             </Typography>

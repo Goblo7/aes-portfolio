@@ -6,7 +6,7 @@ import { useInView } from "framer-motion";
 import Project from "./projects/project-protolio.component";
 import ProjectDemo from "./projects/porject-demo-protolio.component";
 import styles from "./portolio-section.component.module.css";
-import SectionWrapper from "../../sections-container/section-wrapper.component";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
 /* styles start*/
 
@@ -75,7 +75,7 @@ export default function PortofiloSection() {
   };
 
   return (
-    <SectionWrapper style={portolioContainer}>
+    <Grid container sx={portolioContainer}>
       <Typography variant="h2" sx={headerSectionStyle}>
         Portofilo
       </Typography>
@@ -106,6 +106,6 @@ export default function PortofiloSection() {
       </Box>
       <Project />
       <ProjectDemo />
-    </SectionWrapper>
+    </Grid>
   );
 }
