@@ -8,19 +8,42 @@ import {
   Divider,
   useMediaQuery,
   useTheme,
-  Grid
+  Grid,
 } from "@mui/material";
 import HeroPfp from "../../../../assets/pfp/main-hero-pfp.assets.jpg";
-import {
-  layoutStyles,
-  headerSectionStyle,
-} from "../../../../styles/layout.styles";
+import { layoutStyles } from "../../../../styles/layout.styles";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 // start styles
+
+const headerSectionStyle = {
+  display: "flex",
+  alignItems: "center",
+  position: "relative",
+  margin: "7px 0px 25px",
+  fontSize: `clamp(30px,5vw,35px)`,
+  whiteSpace: "nowrap",
+  fontFamily: layoutStyles.mainFontFamily,
+  color: layoutStyles.mainStyleColor,
+  fontWeight: "669",
+  "&:after": {
+    content: `""`,
+    display: "inline",
+    top: "5px",
+    width: {
+      xs: "6rem",
+      sm: "23rem",
+      md: "40rem",
+      lg: "53rem",
+    },
+    height: "1px",
+    marginLeft: "20px",
+    backgroundColor: layoutStyles.lineMainColor,
+  },
+};
 
 const aboutContianer = {
   margin: "0 auto",

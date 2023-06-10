@@ -1,8 +1,5 @@
 import { SvgIcon, Typography, Box, Grid } from "@mui/material";
-import {
-  layoutStyles,
-  headerSectionStyle,
-} from "../../../../styles/layout.styles";
+import { layoutStyles } from "../../../../styles/layout.styles";
 import { WebBuild } from "../../../../assets/icons.assets";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
@@ -11,6 +8,32 @@ import ProjectDemo from "./projects/porject-demo-protolio.component";
 import styles from "./portolio-section.component.module.css";
 
 /* styles start*/
+
+const headerSectionStyle = {
+  display: "flex",
+  alignItems: "center",
+  position: "relative",
+  margin: { sm: "7px 0px 0px", xs: "7px 0px 25px" },
+  fontSize: `clamp(30px,5vw,35px)`,
+  whiteSpace: "nowrap",
+  fontFamily: layoutStyles.mainFontFamily,
+  color: layoutStyles.mainStyleColor,
+  fontWeight: "669",
+  "&:after": {
+    content: `""`,
+    display: "inline",
+    top: "5px",
+    width: {
+      xs: "6rem",
+      sm: "23rem",
+      md: "40rem",
+      lg: "53rem",
+    },
+    height: "1px",
+    marginLeft: "20px",
+    backgroundColor: layoutStyles.lineMainColor,
+  },
+};
 
 const aboutProjectTitle = [
   {
