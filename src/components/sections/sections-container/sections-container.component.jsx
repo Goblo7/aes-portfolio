@@ -3,7 +3,7 @@ import { Container} from "@mui/system";
 export const SectionContainer = (props) => {
   return (
       <Container
-        id={props.children}
+        id={props.sectionId}
         key={props.sectionId}
         sx={{
           minWidth: props.width,
