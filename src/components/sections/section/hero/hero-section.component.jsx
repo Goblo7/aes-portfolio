@@ -6,9 +6,9 @@ import { AeLogo } from "../../../../assets/icons.assets";
 import { useInView } from "framer-motion";
 import SectionWrapper from "../sections-wrapper.component";
 
-const controller = {
+const heroContainerController = {
   display: "flex",
-  minHeight: "100vh",
+  minHeight: "inherit",
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
@@ -153,7 +153,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <SectionWrapper className={controller}>
+    <SectionWrapper className={heroContainerController}>
       <Grid container sx={heroContainer}>
         <Grid ref={ref} item sx={heroSubContainer} flexGrow={1}>
           <Typography variant="inherit" sx={greetingStyle}>
