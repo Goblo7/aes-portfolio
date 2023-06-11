@@ -8,12 +8,12 @@ import SectionWrapper from "../sections-wrapper.component";
 
 const heroContainer = {
   marginTop: {
-    xs: "32dvh",
-    sm: "29dvh",
-    md: "32dvh",
-    lg: "30dvh",
-    xl: "29dvh",
-    overSize: "22dvh",
+    xs: "31vh",
+    sm: "28vh",
+    md: "32vh",
+    lg: "30vh",
+    xl: "29vh",
+    overSize: "22vh",
   },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
@@ -26,7 +26,7 @@ const heroSubContainer = {
   display: "flex",
   flexDirection: "column",
   alignItems: { xs: "center", md: "flex-start" },
-  paddingBottom: { xs: "9.5dvh", md: "0" },
+  paddingBottom: { xs: "9.5vh", md: "0" },
 };
 
 const aELogo = {
