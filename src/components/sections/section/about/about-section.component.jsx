@@ -20,8 +20,8 @@ import SectionWrapper from "../sections-wrapper.component";
 // start styles
 
 const aboutContianer = {
-  margin: "0 auto 8vh",
-  paddingTop: "18vh",
+  margin: "0 auto 5rem",
+  paddingTop: "10rem",
   maxWidth: "68rem",
 };
 const headerSectionStyle = {

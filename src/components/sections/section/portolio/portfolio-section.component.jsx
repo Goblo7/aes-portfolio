@@ -10,8 +10,8 @@ import SectionWrapper from "../sections-wrapper.component";
 /* styles start*/
 
 const portolioContainer = {
-  margin: "10vh auto",
-  paddingTop: "5vh",
+  margin: "0 auto",
+  paddingTop: "5rem",
   maxWidth: "68rem",
 };
 
