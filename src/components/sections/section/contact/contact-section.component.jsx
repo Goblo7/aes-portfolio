@@ -15,6 +15,11 @@ const contactContainerStyles = {
   textAlign: "center",
 };
 
+const satelliteContainer = {
+  marginTop: "4rem",
+  marginBottom: { md: "7.5rem", sm: "5rem", xs: "4rem" },
+};
+
 const contactTitle = {
   display: "flex",
   alignItems: "center",
@@ -56,6 +61,11 @@ const ButtonStyles = {
 const contactDescriptionHelloWord = {
   fontSize: `clamp(15px, 4vw, 18px)`,
   color: layoutStyles.mainStyleColor,
+};
+
+const dishContainer = {
+  marginTop: { md: "5rem", sm: "2rem", xs: "1.5" },
+  paddingBottom: "1rem",
 };
 
 // end styles
@@ -162,12 +172,7 @@ export default function ContactSection() {
 
   return (
     <SectionWrapper className={contactContainerStyles}>
-      <Grid
-        sx={{
-          marginTop: "4rem",
-          marginBottom: { md: "7.5rem", sm: "5rem", xs: "4rem" },
-        }}
-      >
+      <Grid sx={satelliteContainer}>
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
             wave1={styles.wave1}
@@ -201,7 +206,7 @@ export default function ContactSection() {
           Say Hello
         </Button>
       </Grid>
-      <Grid sx={{ marginTop: {md: "5rem", sm:"2rem", xs:"1.5"}, paddingBottom: "1rem" }}>
+      <Grid sx={dishContainer}>
         <SvgIcon id={styles.dishColor} ref={refDish} sx={dishStyle}>
           <Dish
             dish={styles.dish}
