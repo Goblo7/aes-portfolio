@@ -8,7 +8,7 @@ import SectionWrapper from "../sections-wrapper.component";
 
 const heroContainer = {
   marginTop: {
-    xs: "31dvh",
+    xs: "32dvh",
     sm: "29dvh",
     md: "32dvh",
     lg: "30dvh",
@@ -26,7 +26,7 @@ const heroSubContainer = {
   display: "flex",
   flexDirection: "column",
   alignItems: { xs: "center", md: "flex-start" },
-  paddingBottom: { xs: "8dvh", md: "0" },
+  paddingBottom: { xs: "9.5dvh", md: "0" },
 };
 
 const aELogo = {
