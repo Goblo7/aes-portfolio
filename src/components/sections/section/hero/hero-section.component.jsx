@@ -6,20 +6,21 @@ import { AeLogo } from "../../../../assets/icons.assets";
 import { useInView } from "framer-motion";
 import SectionWrapper from "../sections-wrapper.component";
 
+const controller = {
+  display: "flex",
+  minHeight: "100vh",
+  justifyContent: "center",
+  alignItems: "center",
+  alignContent: "center",
+};
+
 const heroContainer = {
-  marginTop: {
-    xs: "31vh",
-    sm: "28vh",
-    md: "32vh",
-    lg: "30vh",
-    xl: "29vh",
-    overSize: "22vh",
-  },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
+  height: "100%",
 };
 
 const heroSubContainer = {
@@ -152,22 +153,24 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <SectionWrapper className={heroContainer}>
-      <Grid ref={ref} item sx={heroSubContainer} flexGrow={1}>
-        <Typography variant="inherit" sx={greetingStyle}>
-          Hello, my name is
-        </Typography>
-        <Typography variant="h2" sx={heroNameStyle}>
-          Ahmed Ehab.
-        </Typography>
-        <Typography variant="string" sx={heroTitleStyle}>
-          I'm a <span ref={typer}></span>
-        </Typography>
-      </Grid>
-      <Grid item>
-        <SvgIcon sx={aELogo}>
-          <AeLogo />
-        </SvgIcon>
+    <SectionWrapper className={controller}>
+      <Grid container sx={heroContainer}>
+        <Grid ref={ref} item sx={heroSubContainer} flexGrow={1}>
+          <Typography variant="inherit" sx={greetingStyle}>
+            Hello, my name is
+          </Typography>
+          <Typography variant="h2" sx={heroNameStyle}>
+            Ahmed Ehab.
+          </Typography>
+          <Typography variant="string" sx={heroTitleStyle}>
+            I'm a <span ref={typer}></span>
+          </Typography>
+        </Grid>
+        <Grid item>
+          <SvgIcon sx={aELogo}>
+            <AeLogo />
+          </SvgIcon>
+        </Grid>
       </Grid>
     </SectionWrapper>
   );
