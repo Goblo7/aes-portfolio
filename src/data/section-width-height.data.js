@@ -11,6 +11,12 @@ export const sectionWidthHeight = [
     portofilo: "100vh",
     contacts: "87vh",
   },
+  {
+    hero:"hidden",
+    about: "hidden",
+    portofilo: "hidden",
+    contacts: "inherit",
+  },
 ];
 
 export default sectionWidthHeight;

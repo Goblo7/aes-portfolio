@@ -8,7 +8,7 @@ export const SectionContainer = (props) => {
         sx={{
           minWidth: props.width,
           minHeight: props.height,
-          overflow: "hidden",
+          overflow: props.overFlow,
           marginTop:"2rem"
         }}
       >
