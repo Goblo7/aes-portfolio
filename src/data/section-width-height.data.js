@@ -7,9 +7,9 @@ export const sectionWidthHeight = [
   },
   {
     hero: "100vh",
-    about: "100vh",
-    portofilo: "100vh",
-    contacts: "87vh",
+    about: "auto",
+    portofilo: "auto",
+    contacts: "auto",
   },
   {
     hero:"hidden",

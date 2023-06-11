@@ -154,15 +154,15 @@ export default function ContactSection() {
     transform: isInViewContact ? "none" : "translateY(20px)",
     opacity: isInViewContact ? 1 : 0,
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
-    marginTop: "14vh",
-    marginBottom: "4vh",
+    marginTop: "11vh",
+    marginBottom: "7vh",
   };
 
   //end styles
 
   return (
     <SectionWrapper className={contactContainerStyles}>
-      <Grid marginTop="10vh">
+      <Grid marginTop="10vh" marginBottom="4vh">
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
             wave1={styles.wave1}
@@ -196,7 +196,7 @@ export default function ContactSection() {
           Say Hello
         </Button>
       </Grid>
-      <Grid marginTop="7vh" paddingBottom="1vh">
+      <Grid marginTop="5vh" paddingBottom="2vh">
         <SvgIcon id={styles.dishColor} ref={refDish} sx={dishStyle}>
           <Dish
             dish={styles.dish}

@@ -19,6 +19,11 @@ import { useRef } from "react";
 import SectionWrapper from "../sections-wrapper.component";
 // start styles
 
+const aboutContianer = {
+  margin: "0 auto 8vh",
+  paddingTop: "18vh",
+  maxWidth: "68rem",
+};
 const headerSectionStyle = {
   display: "flex",
   alignItems: "center",
@@ -43,12 +48,6 @@ const headerSectionStyle = {
     marginLeft: "20px",
     backgroundColor: layoutStyles.lineMainColor,
   },
-};
-
-const aboutContianer = {
-  margin: "0 auto",
-  paddingTop: "18vh",
-  maxWidth: "68rem",
 };
 
 const aboutTitleContainer = {
