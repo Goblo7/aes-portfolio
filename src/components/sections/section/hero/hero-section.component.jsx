@@ -8,12 +8,12 @@ import SectionWrapper from "../sections-wrapper.component";
 
 const heroContainer = {
   marginTop: {
-    xs: "32vh",
-    sm: "29vh",
-    md: "32vh",
-    lg: "30vh",
-    xl: "29vh",
-    overSize: "22vh",
+    xs: "29.5dvh",
+    sm: "27dvh",
+    md: "32dvh",
+    lg: "30dvh",
+    xl: "29dvh",
+    overSize: "22dvh",
   },
   display: "flex",
   flexDirection: { xs: "column", md: "row" },
@@ -40,12 +40,14 @@ const aELogo = {
     xl: "22.9rem",
     overSize: "31.8rem",
   },
-
   color: layoutStyles.paperColor,
   strokeWidth: "0.3%",
   strokeDashoffset: "0",
   strokeDasharray: "0",
-  animation: `dashNeon 5s ease-in-out infinite alternate 2.2s, show 2.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s`,
+  animation: {
+    md: `dashNeon 5s ease-in-out infinite alternate 2.2s, showMd 2.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s`,
+    xs: `dashNeon 5s ease-in-out infinite alternate 2.2s, showXs 2.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.8s`,
+  },
   "@keyframes dashNeon": {
     "0%": {
       stroke: layoutStyles.paperColor,
@@ -56,15 +58,32 @@ const aELogo = {
       color: layoutStyles.paperColor,
     },
   },
-  "@keyframes show": {
+  "@keyframes showMd": {
     "0%": {
       opacity: "0",
+      transform: `translateX(25%)`,
     },
     "70%": {
       opacity: "0",
+      transform: `translateX(7.5%)`,
     },
     "100%": {
       opacity: "1",
+      transform: `translateX(0%)`,
+    },
+  },
+  "@keyframes showXs": {
+    "0%": {
+      opacity: "0",
+      transform: `translateX(40%)`,
+    },
+    "70%": {
+      opacity: "0",
+      transform: `translateX(18%)`,
+    },
+    "100%": {
+      opacity: "1",
+      transform: `translateX(0%)`,
     },
   },
 };
