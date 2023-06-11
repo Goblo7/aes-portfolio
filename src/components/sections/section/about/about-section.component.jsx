@@ -16,7 +16,7 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+import SectionWrapper from "../sections-wrapper.component";
 // start styles
 
 const headerSectionStyle = {
@@ -189,7 +189,7 @@ export default function AboutSection() {
 
   const techLangugesAndSkillsStyle = [
     {
-      maxHeight: { sm: "60%", xs: "50%" },
+      maxHeight: "60%",
       transform: isInViewLagTool ? "none" : "translateX(-30px)",
       opacity: isInViewLagTool ? 1 : 0,
       transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1s",
@@ -220,7 +220,6 @@ export default function AboutSection() {
         <ListItemText
           sx={techLangugesAndSkillsStyle[1]}
           primary={langugeName}
-          primaryTypographyProps={{ fontSize: { sm: "100%", xs: "80%" } }}
         />
       </ListItem>
     );
@@ -235,14 +234,13 @@ export default function AboutSection() {
         <ListItemText
           sx={techLangugesAndSkillsStyle[1]}
           primary={devToolName}
-          primaryTypographyProps={{ fontSize: { sm: "100%", xs: "80%" } }}
         />
       </ListItem>
     );
   });
 
   return (
-    <Grid container sx={aboutContianer}>
+    <SectionWrapper className={aboutContianer}>
       <Box sx={aboutTitleContainer}>
         <Typography variant="h2" sx={headerSectionStyle}>
           About Me
@@ -290,6 +288,6 @@ export default function AboutSection() {
           <Box component="img" src={HeroPfp} alt="" sx={heroPfpStyle} />
         </Grid>
       </Grid>
-    </Grid>
+    </SectionWrapper>
   );
 }

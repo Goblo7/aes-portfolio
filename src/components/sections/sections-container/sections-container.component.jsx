@@ -1,32 +1,19 @@
-import { Container } from "@mui/system";
-import { useRef } from "react";
-import { useInView } from "framer-motion";
+import { Container} from "@mui/system";
 
-export const SectionContainer = ({
-  children: Children,
-  sectionId: SectionIdEnum,
-  width: SectionWidth,
-  height: SectionHeight,
-}) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
+export const SectionContainer = (props) => {
   return (
-    <Container
-      id={SectionIdEnum}
-      key={SectionIdEnum}
-      ref={ref}
-      sx={{
-        minWidth: SectionWidth,
-        minHeight: SectionHeight,
-        transform: isInView ? "none" : "translateY(75px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)0.3s",
-        marginTop: "2rem",
-      }}
-    >
-      {Children}
-    </Container>
+      <Container
+        id={props.children}
+        key={props.sectionId}
+        sx={{
+          minWidth: props.width,
+          minHeight: props.height,
+          overflow: "hidden",
+          marginTop:"2rem"
+        }}
+      >
+          {props.children}
+      </Container>
   );
 };
 

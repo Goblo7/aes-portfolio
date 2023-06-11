@@ -5,7 +5,7 @@ import { layoutStyles } from "../../../../styles/layout.styles";
 import styles from "./contact-styles-section.component.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
+import SectionWrapper from "../sections-wrapper.component";
 // start styles
 
 const contactContainerStyles = {
@@ -161,7 +161,7 @@ export default function ContactSection() {
   //end styles
 
   return (
-    <Grid container sx={contactContainerStyles}>
+    <SectionWrapper className={contactContainerStyles}>
       <Grid marginTop="10vh">
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
@@ -207,6 +207,6 @@ export default function ContactSection() {
           />
         </SvgIcon>
       </Grid>
-    </Grid>
+    </SectionWrapper>
   );
 }

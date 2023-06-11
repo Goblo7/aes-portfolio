@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { layoutStyles } from "../../../../styles/layout.styles";
 import { AeLogo } from "../../../../assets/icons.assets";
 import { useInView } from "framer-motion";
+import SectionWrapper from "../sections-wrapper.component";
 
 const heroContainer = {
   paddingTop: {
@@ -132,8 +133,8 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <Grid ref={ref} sx={heroContainer}>
-      <Grid item sx={heroSubContainer} flexGrow={1}>
+    <SectionWrapper className={heroContainer}>
+      <Grid ref={ref} item sx={heroSubContainer} flexGrow={1}>
         <Typography variant="inherit" sx={greetingStyle}>
           Hello, my name is
         </Typography>
@@ -149,6 +150,6 @@ export default function HeroSection() {
           <AeLogo />
         </SvgIcon>
       </Grid>
-    </Grid>
+    </SectionWrapper>
   );
 }
