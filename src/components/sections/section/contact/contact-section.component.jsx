@@ -73,7 +73,7 @@ export default function ContactSection() {
   // start styles
 
   const satelliteStyles = {
-    width: { lg: "5.5rem", md: "5rem", sm: "4.5rem", xs: "3.5rem" },
+    width: { lg: "5.5rem", md: "5rem", sm: "4.5rem", xs: "3.8rem" },
     height: "100%",
     animation: {
       xl: "xlMovingSatellite 90s ease-in-out infinite 0s",
@@ -142,7 +142,7 @@ export default function ContactSection() {
   };
 
   const dishStyle = {
-    fontSize: { lg: "5rem", sm: "4rem", xs: "3.5rem" },
+    fontSize: { lg: "5rem", sm: "4rem", xs: "3.8rem" },
     color: layoutStyles.mainStyleColor,
     paddingTop: "",
     opacity: isInViewDish ? 1 : 0,
@@ -162,7 +162,12 @@ export default function ContactSection() {
 
   return (
     <SectionWrapper className={contactContainerStyles}>
-      <Grid marginTop="4rem" paddingTop="1vh" marginBottom="7.5rem">
+      <Grid
+        sx={{
+          marginTop: "4rem",
+          marginBottom: { md: "7.5rem", sm: "5rem", xs: "4rem" },
+        }}
+      >
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
             wave1={styles.wave1}
@@ -196,7 +201,7 @@ export default function ContactSection() {
           Say Hello
         </Button>
       </Grid>
-      <Grid marginTop="5rem" paddingBottom="1rem">
+      <Grid sx={{ marginTop: {md: "5rem", sm:"2rem", xs:"1.5"}, paddingBottom: "1rem" }}>
         <SvgIcon id={styles.dishColor} ref={refDish} sx={dishStyle}>
           <Dish
             dish={styles.dish}

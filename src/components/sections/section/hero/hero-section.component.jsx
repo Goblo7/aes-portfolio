@@ -7,7 +7,7 @@ import { useInView } from "framer-motion";
 import SectionWrapper from "../sections-wrapper.component";
 
 const heroContainer = {
-  paddingTop: {
+  marginTop: {
     xs: "32vh",
     sm: "29vh",
     md: "32vh",
