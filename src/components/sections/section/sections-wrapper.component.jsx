@@ -1,6 +1,7 @@
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { Box } from "@mui/material";
 
 const SectionWrapper = (props) => {
   const ref = useRef(null);
@@ -13,9 +14,11 @@ const SectionWrapper = (props) => {
   };
 
   return (
-    <Grid container ref={ref} sx={[props.className, inView]}>
-      {props.children}
-    </Grid>
+    <Box ref={ref} sx={inView}>
+      <Grid container sx={props.className}>
+        {props.children}
+      </Grid>
+    </Box>
   );
 };
 
