@@ -42,7 +42,7 @@ const gobloLogoStyles = {
   },
 };
 
-export default function Preloader() {
+const Preloader = () => {
   return (
     <Box className={styles._hidden}>
       <SvgIcon sx={gobloLogoStyles}>
@@ -54,4 +54,6 @@ export default function Preloader() {
       </SvgIcon>
     </Box>
   );
-}
+};
+
+export default Preloader;
