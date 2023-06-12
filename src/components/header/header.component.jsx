@@ -11,7 +11,7 @@ import { MainLogo } from "../../scripts/icons.script";
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
-    target: window ? window() : undefined,
+    target: window && window(),
   });
 
   return (
