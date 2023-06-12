@@ -1,12 +1,12 @@
 import { AppBar, Link, Toolbar, SvgIcon } from "@mui/material";
-import Navigation from "./naviagtion/navigation-header.component";
+import Navigation from "./Naviagtion/Navigation.component";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
-import layoutStyles from "../../styles/layout-styles/main-layout.styles";
-import styles from "./header-styles.component.module.css";
+import {layoutStyles} from "../../styles/layout.styles";
+import styles from "./Header.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { MainLogo } from "../../assets/icons.assets";
+import { MainLogo } from "../../scripts/icons.script";
 
 function HideOnScroll(props) {
   const { children, window } = props;

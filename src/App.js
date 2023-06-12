@@ -1,9 +1,9 @@
 import { useState, useEffect, Fragment } from "react";
-import Layout from "./layout/layout.components";
-import Preloader from "./components/preloader/preloader.component";
-import Header from "./components/header/header.component";
-import Sections from "./components/sections//sections-map.component";
-import Footer from "./components/footer/footer.component";
+import Layout from "./components/Layout/Layout.component";
+import Preloader from "./components/Preloader/Preloader.component";
+import Header from "./components/Header/Header.component";
+import Sections from "./components/Sections//Sections.component";
+import Footer from "./components/Footer/Footer.component";
 
 export default function App() {
   const [preloader, setPreLoader] = useState(false);

@@ -1,7 +1,7 @@
 import { Container, SvgIcon, Typography, Link } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../styles/layout.styles";
-import { MainLogo } from "../../assets/icons.assets";
+import { MainLogo } from "../../scripts/icons.script";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import contactsFooter from "../../data/contacts-footer.data";

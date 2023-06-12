@@ -1,4 +1,4 @@
-import SectionIdEnum from "../../../data/section-id.data";
+import sectionIdEnum from "../../../scripts/section-id.script";
 import {
   Button,
   IconButton,
@@ -13,27 +13,27 @@ import {
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from "react";
-import layoutStyles from "../../../styles/layout-styles/main-layout.styles";
+import { layoutStyles } from "../../../styles/layout.styles";
 
 const naviagtionItems = [
   {
     text: "About",
-    to: SectionIdEnum.about,
+    to: sectionIdEnum.about,
   },
   {
     text: "Projects",
-    to: SectionIdEnum.portofilo,
+    to: sectionIdEnum.portofilo,
   },
   {
     text: "Contact",
-    to: SectionIdEnum.contacts,
+    to: sectionIdEnum.contacts,
   },
 ];
 
 const resumeItems = [
   {
     text: "Resume",
-    to: SectionIdEnum.resume,
+    to: sectionIdEnum.resume,
   },
 ];
 

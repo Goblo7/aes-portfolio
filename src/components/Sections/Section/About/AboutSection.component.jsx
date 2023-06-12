@@ -16,7 +16,8 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import SectionWrapper from "../sections-wrapper.component";
+import SectionWrapper from "../SectionWrapper.component";
+
 // start styles
 
 const aboutContianer = {

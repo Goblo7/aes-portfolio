@@ -1,11 +1,12 @@
 import { Button, SvgIcon, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { Dish, Satellite } from "../../../../assets/icons.assets";
+import { Dish, Satellite } from "../../../../scripts/icons.script";
 import { layoutStyles } from "../../../../styles/layout.styles";
-import styles from "./contact-styles-section.component.module.css";
+import styles from "./ContactSection.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import SectionWrapper from "../sections-wrapper.component";
+import SectionWrapper from "../SectionWrapper.component";
+
 // start styles
 
 const contactContainerStyles = {

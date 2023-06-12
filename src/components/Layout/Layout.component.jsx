@@ -1,5 +1,5 @@
 import { Grid } from "@mui/material";
-import { layoutStyles } from "../styles/layout.styles";
+import { layoutStyles } from "../../styles/layout.styles";
 import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 
 const LayoutTheme = createTheme({

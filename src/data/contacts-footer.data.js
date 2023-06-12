@@ -4,7 +4,7 @@ import {
   GitHub,
   Twitter,
   LinkedIn,
-} from "../assets/icons.assets";
+} from "../scripts/icons.script";
 
 export const contactsFooter = [
   {

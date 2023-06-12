@@ -2,9 +2,11 @@ import { Grid, Typography, SvgIcon } from "@mui/material";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import { layoutStyles } from "../../../../styles/layout.styles";
-import { AeLogo } from "../../../../assets/icons.assets";
+import { AeLogo } from "../../../../scripts/icons.script";
 import { useInView } from "framer-motion";
-import SectionWrapper from "../sections-wrapper.component";
+import SectionWrapper from "../SectionWrapper.component";
+
+// start styles
 
 const heroContainerController = {
   display: "flex",
@@ -90,7 +92,7 @@ const aELogo = {
 };
 
 const heroTitleStyle = {
-  fontSize: `clamp(16px, 3.6vw, 53px)`,
+  fontSize: `clamp(16px, 3.5vw, 53px)`,
   color: layoutStyles.paperColor,
   fontFamily: layoutStyles.secandryFontFamily,
   animation: `showTitle 2s cubic-bezier(0.17, 0.55, 0.55, 1) forwards 0.3s`,
@@ -110,11 +112,15 @@ const heroTitleStyle = {
   },
 };
 
+//end styles
+
 export default function HeroSection() {
   const typer = useRef(null);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  //start styles
 
   const greetingStyle = {
     lineHeight: "1.1",
@@ -133,6 +139,8 @@ export default function HeroSection() {
     opacity: isInView ? 1 : 0,
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)1.2s",
   };
+
+  //end styles
 
   useEffect(() => {
     const typed = new Typed(typer.current, {

@@ -14,12 +14,12 @@ import {
   ExternalLink,
   FolderSvg,
   GitHub,
-} from "../../../../../assets/icons.assets";
+} from "../../../../../scripts/icons.script";
 import projectsData from "../../../../../data/projects.data";
 import { useState } from "react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import Wrapper from "../../../../../helper/wrapper ";
+import Wrapper from "../../../../Helper/Wrapper.component";
 // start Styles
 
 // const DemoContianter = {

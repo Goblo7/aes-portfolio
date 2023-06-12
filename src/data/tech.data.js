@@ -9,7 +9,7 @@ import {
   Js,
   Jsx,
   CPlusPlus,
-} from "../assets/icons.assets";
+} from "../scripts/icons.script";
 
 export const techData = [
   [

@@ -1,12 +1,12 @@
 import { SvgIcon, Typography, Box } from "@mui/material";
 import { layoutStyles } from "../../../../styles/layout.styles";
-import { WebBuild } from "../../../../assets/icons.assets";
+import { WebBuild } from "../../../../scripts/icons.script";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import Project from "./projects/project-protolio.component";
-import ProjectDemo from "./projects/porject-demo-protolio.component";
-import styles from "./portolio-section.component.module.css";
-import SectionWrapper from "../sections-wrapper.component";
+import Project from "./Projects/Project.component";
+import ProjectDemo from "./Projects/ProjectDemo.component";
+import styles from "./PortofiloSection.module.css";
+import SectionWrapper from "../SectionWrapper.component";
 /* styles start*/
 
 const portolioContainer = {
@@ -47,7 +47,7 @@ const aboutProjectTitle = [
     color: layoutStyles.mainFontColor,
     fontWeight: "500",
     margin: "auto",
-    fontSize: `clamp(22px,5vw,30px)`,
+    fontSize: `clamp(22px,5vw,32px)`,
   },
   {
     fontSize: { lg: "10.5rem", md: "9rem", xs: "8rem" },

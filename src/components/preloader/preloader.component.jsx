@@ -1,6 +1,8 @@
 import { Box, SvgIcon } from "@mui/material";
-import { MainLogo } from "../../assets/icons.assets";
-import styles from "./preloader-style.component.module.css";
+import { MainLogo } from "../../scripts/icons.script";
+import styles from "./Preloader.module.css";
+
+// start styles
 
 const gobloLogoStyles = {
   stroke: "#6633ff ",
@@ -41,6 +43,8 @@ const gobloLogoStyles = {
     },
   },
 };
+
+//end styles
 
 const Preloader = () => {
   return (
