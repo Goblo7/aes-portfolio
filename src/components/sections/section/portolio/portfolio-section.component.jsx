@@ -47,7 +47,7 @@ const aboutProjectTitle = [
     color: layoutStyles.mainFontColor,
     fontWeight: "500",
     margin: "auto",
-    fontSize: `clamp(19px,4vw,27px)`,
+    fontSize: `clamp(22px,5vw,30px)`,
   },
   {
     fontSize: { lg: "10.5rem", md: "9rem", xs: "8rem" },
