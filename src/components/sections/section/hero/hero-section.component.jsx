@@ -90,7 +90,7 @@ const aELogo = {
 };
 
 const heroTitleStyle = {
-  fontSize: `clamp(16px, 3.5vw, 54px)`,
+  fontSize: `clamp(16px, 4vw, 53px)`,
   color: layoutStyles.paperColor,
   fontFamily: layoutStyles.secandryFontFamily,
   animation: `showTitle 2s cubic-bezier(0.17, 0.55, 0.55, 1) forwards 0.3s`,
@@ -127,7 +127,7 @@ export default function HeroSection() {
 
   const heroNameStyle = {
     fontWeight: 600,
-    fontSize: `clamp(40px, 8vw, 80px)`,
+    fontSize: `clamp(40px, 9vw, 80px)`,
     color: layoutStyles.mainFontColor,
     fontFamily: layoutStyles.mainFontFamily,
     opacity: isInView ? 1 : 0,
