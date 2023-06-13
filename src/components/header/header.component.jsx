@@ -2,7 +2,7 @@ import { AppBar, Link, Toolbar, SvgIcon } from "@mui/material";
 import Navigation from "./Naviagtion/Navigation.component";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
-import {layoutStyles} from "../../styles/layout.styles";
+import { layoutStyles } from "../../styles/layout.styles";
 import styles from "./Header.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
