@@ -36,7 +36,7 @@ const contactDescriptionHeader = {
   fontFamily: layoutStyles.secandryFontFamily,
   color: layoutStyles.mainFontColor,
   fontWeight: "500",
-  fontSize: `clamp(19px,5vw, 35px)`,
+  fontSize: `clamp(22px, 5vw, 32px)`,
   marginBottom: "1rem",
 };
 
