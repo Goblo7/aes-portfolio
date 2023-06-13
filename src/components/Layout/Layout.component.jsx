@@ -29,11 +29,11 @@ const LayoutTheme = createTheme({
   },
 });
 
-export const Layout = ({ children: Children }) => {
+const Layout = (props) => {
   return (
     <ThemeProvider theme={LayoutTheme}>
       <CssBaseline />
-      <Grid position="relative">{Children}</Grid>
+      <Grid position="relative">{props.children}</Grid>
     </ThemeProvider>
   );
 };

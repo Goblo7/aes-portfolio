@@ -14,7 +14,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from "react";
 import { layoutStyles } from "../../../styles/layout.styles";
-
+import Wrapper from "../../Helper/Wrapper.component";
 
 // start styles
 
@@ -75,21 +75,6 @@ const toolbarStyle = {
 
 // end styles
 
-const naviagtionItems = [
-  {
-    text: "About",
-    to: sectionIdEnum.about,
-  },
-  {
-    text: "Projects",
-    to: sectionIdEnum.portofilo,
-  },
-  {
-    text: "Contact",
-    to: sectionIdEnum.contacts,
-  },
-];
-
 const resumeItems = [
   {
     text: "Resume",
@@ -99,7 +84,6 @@ const resumeItems = [
 
 const heroCV =
   "https://drive.google.com/uc?id=1I4_m4AE5eqNifEhHUi4u8aIYTh8pHwlQ&export=download";
-
 
 const resumeItem = resumeItems.map(({ text, to }) => {
   return (
@@ -116,24 +100,39 @@ const resumeItem = resumeItems.map(({ text, to }) => {
   );
 });
 
-export default function Navigation() {
+const Navigation = (props) => {
   const theme = useTheme();
   const isSamll = useMediaQuery(theme.breakpoints.down("md"));
   const [navDrawer, setNavDrawer] = useState(false);
-  
-  function navDrawerTouggle() {
-    setNavDrawer((prevNabDrawer) => !prevNabDrawer);
-  }
 
-  const naviagtionItem = naviagtionItems.map(({ text, to }) => {
+  const naviagtionItems = [
+    {
+      text: "About",
+      to: sectionIdEnum.about,
+    },
+    {
+      text: "Projects",
+      to: sectionIdEnum.portofilo,
+    },
+    {
+      text: "Contact",
+      to: sectionIdEnum.contacts,
+    },
+  ];
+
+  const navDrawerTouggle = () => {
+    setNavDrawer((prevNabDrawer) => !prevNabDrawer);
+  };
+
+  const naviagtionItem = naviagtionItems.map((nav) => {
     return (
       <Button
-        key={to}
-        href={`#${to}`}
+        key={nav.to}
+        href={`#${nav.to}`}
         sx={buttonStyleHover}
         onClick={navDrawerTouggle}
       >
-        {text}
+        {nav.text}
       </Button>
     );
   });
@@ -146,7 +145,7 @@ export default function Navigation() {
           {resumeItem}
         </Stack>
       ) : (
-        <>
+        <Wrapper>
           <IconButton onClick={navDrawerTouggle}>
             <MenuOpenIcon sx={openMenuIconStyle} />
           </IconButton>
@@ -182,8 +181,10 @@ export default function Navigation() {
               {resumeItem}
             </Stack>
           </SwipeableDrawer>
-        </>
+        </Wrapper>
       )}
     </Box>
   );
-}
+};
+
+export default Navigation;
