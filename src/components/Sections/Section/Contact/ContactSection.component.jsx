@@ -155,7 +155,6 @@ export default function ContactSection() {
   const dishStyle = {
     fontSize: { lg: "5rem", sm: "4rem", xs: "3.8rem" },
     color: layoutStyles.mainStyleColor,
-    paddingTop: "",
     opacity: isInViewDish ? 1 : 0,
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
   };

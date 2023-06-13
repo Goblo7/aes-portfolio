@@ -15,30 +15,6 @@ import MenuOpenIcon from "@mui/icons-material/MenuOpen";
 import { useState } from "react";
 import { layoutStyles } from "../../../styles/layout.styles";
 
-const naviagtionItems = [
-  {
-    text: "About",
-    to: sectionIdEnum.about,
-  },
-  {
-    text: "Projects",
-    to: sectionIdEnum.portofilo,
-  },
-  {
-    text: "Contact",
-    to: sectionIdEnum.contacts,
-  },
-];
-
-const resumeItems = [
-  {
-    text: "Resume",
-    to: sectionIdEnum.resume,
-  },
-];
-
-const heroCV =
-  "https://drive.google.com/uc?id=1I4_m4AE5eqNifEhHUi4u8aIYTh8pHwlQ&export=download";
 
 // start styles
 
@@ -99,6 +75,32 @@ const toolbarStyle = {
 
 // end styles
 
+const naviagtionItems = [
+  {
+    text: "About",
+    to: sectionIdEnum.about,
+  },
+  {
+    text: "Projects",
+    to: sectionIdEnum.portofilo,
+  },
+  {
+    text: "Contact",
+    to: sectionIdEnum.contacts,
+  },
+];
+
+const resumeItems = [
+  {
+    text: "Resume",
+    to: sectionIdEnum.resume,
+  },
+];
+
+const heroCV =
+  "https://drive.google.com/uc?id=1I4_m4AE5eqNifEhHUi4u8aIYTh8pHwlQ&export=download";
+
+
 const resumeItem = resumeItems.map(({ text, to }) => {
   return (
     <Button
@@ -117,8 +119,8 @@ const resumeItem = resumeItems.map(({ text, to }) => {
 export default function Navigation() {
   const theme = useTheme();
   const isSamll = useMediaQuery(theme.breakpoints.down("md"));
-
   const [navDrawer, setNavDrawer] = useState(false);
+  
   function navDrawerTouggle() {
     setNavDrawer((prevNabDrawer) => !prevNabDrawer);
   }
