@@ -11,7 +11,6 @@ export const SectionContainer = (props, ref) => {
         minWidth: props.width,
         minHeight: props.height,
         overflow: props.overFlow,
-
       }}
     >
       {props.children}

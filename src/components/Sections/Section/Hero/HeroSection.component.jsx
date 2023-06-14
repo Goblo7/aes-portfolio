@@ -14,6 +14,7 @@ const heroContainerController = {
   justifyContent: "center",
   alignItems: "center",
   alignContent: "center",
+  paddingTop: "4rem",
 };
 
 const heroContainer = {

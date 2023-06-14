@@ -24,6 +24,7 @@ const aboutContianer = {
   margin: "0 auto 5rem",
   paddingTop: "10rem",
   maxWidth: "68rem",
+  marginTop: "2rem",
 };
 const headerSectionStyle = {
   display: "flex",
