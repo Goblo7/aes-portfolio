@@ -128,9 +128,14 @@ const Navigation = (props) => {
     return (
       <Button
         key={nav.to}
-        href={`#${nav.to}`}
         sx={buttonStyleHover}
-        onClick={navDrawerTouggle}
+        onClick={() => {
+          navDrawerTouggle();
+          setTimeout(() => {
+            props.onScroll(nav.to);
+          }, 3);
+          props.onScroll("hero");
+        }}
       >
         {nav.text}
       </Button>

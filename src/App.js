@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer.component";
 
 export default function App() {
   const [preloader, setPreLoader] = useState(false);
+  const [scroll, setScroll] = useState("hero");
+
   useEffect(() => {
     setPreLoader(true);
     setTimeout(() => {
@@ -14,14 +16,18 @@ export default function App() {
     }, 4400);
   }, []);
 
+  const changeSection = (arg) => {
+    setScroll(arg);
+  };
+
   return (
     <Fragment>
       {preloader ? (
         <Preloader />
       ) : (
         <Layout>
-          <Header />
-          <Sections />
+          <Header onChange={changeSection} />
+          <Sections onNav={scroll} />
           <Footer />
         </Layout>
       )}

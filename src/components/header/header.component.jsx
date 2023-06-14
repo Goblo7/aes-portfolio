@@ -39,11 +39,12 @@ const LogoStyle = {
 const linkLogoStyles = {
   textDecoration: "none",
   color: layoutStyles.mainStyleColor,
+  cursor: "pointer",
 };
 
 // end styles
 
-export const Header = () => {
+export const Header = (props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -53,12 +54,23 @@ export const Header = () => {
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
   };
 
+  const onSetScroll = (arg) => {
+    props.onChange(arg);
+  };
+
+  const fucn = () => {
+    setTimeout(() => {
+      props.onChange("hero");
+    }, 3);
+    props.onChange("about");
+  };
+
   return (
     <header>
       <HideOnScroll>
         <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Link className={styles.logo} href="#" sx={linkLogoStyles}>
+            <Link onClick={fucn} className={styles.logo} sx={linkLogoStyles}>
               <SvgIcon sx={LogoStyle}>
                 <MainLogo
                   ae={styles.AE}
@@ -67,7 +79,7 @@ export const Header = () => {
                 />
               </SvgIcon>
             </Link>
-            <Navigation />
+            <Navigation onScroll={onSetScroll} />
           </Toolbar>
         </AppBar>
       </HideOnScroll>

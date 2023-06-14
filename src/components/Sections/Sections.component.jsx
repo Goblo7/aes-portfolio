@@ -7,6 +7,7 @@ import {
 import SectionContainer from "./SectionsContainer/SectionContainer.component";
 import { sectionWidthHeight } from "../../styles/layout.styles";
 import sectionIdEnum from "../../scripts/section-id.script";
+import { createRef, useEffect } from "react";
 
 const sections = [
   {
@@ -39,20 +40,38 @@ const sections = [
   },
 ];
 
-const section = sections.map((element) => {
-  return (
-    <SectionContainer
-      width={element.width}
-      height={element.height}
-      sectionId={element.sectionId}
-      overFlow={element.overFlow}
-      key={element.sectionId}
-    >
-      {element.component}
-    </SectionContainer>
-  );
+const objectMap = (object, mapFn) => {
+  return Object.keys(object).reduce((result, key) => {
+    result[key] = mapFn(object[key]);
+    return result;
+  }, {});
+};
+
+const refs = objectMap(sectionIdEnum, (value) => {
+  return (value = createRef());
 });
 
-export default function Sections() {
+const Sections = (props) => {
+  useEffect(() => {
+    refs[props.onNav].current.scrollIntoView();
+  }, [props.onNav]);
+
+  const section = sections.map((element, index) => {
+    index = refs;
+    return (
+      <SectionContainer
+        width={element.width}
+        height={element.height}
+        sectionId={element.sectionId}
+        overFlow={element.overFlow}
+        key={element.sectionId}
+        ref={index[element.sectionId]}
+      >
+        {element.component}
+      </SectionContainer>
+    );
+  });
   return <main>{section}</main>;
-}
+};
+
+export default Sections;

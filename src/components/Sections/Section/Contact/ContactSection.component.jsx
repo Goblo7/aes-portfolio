@@ -80,7 +80,6 @@ export default function ContactSection() {
   const isInViewSat = useInView(refStat, { once: true });
   const isInViewDish = useInView(refDish, { once: true });
   const isInViewContact = useInView(contactView, { once: true });
-
   // start styles
 
   const satelliteStyles = {

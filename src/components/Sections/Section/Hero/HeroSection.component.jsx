@@ -116,7 +116,6 @@ const heroTitleStyle = {
 
 export default function HeroSection() {
   const typer = useRef(null);
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
