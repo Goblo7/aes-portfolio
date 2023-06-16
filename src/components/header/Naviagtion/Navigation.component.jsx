@@ -83,7 +83,7 @@ const resumeItems = [
 ];
 
 const heroCV =
-  "https://drive.google.com/uc?id=1I4_m4AE5eqNifEhHUi4u8aIYTh8pHwlQ&export=download";
+  "https://drive.google.com/uc?id=1hbU_RTkq_sV0NoHM9_AT7U2LRJwLyLtu&export=download";
 
 const resumeItem = resumeItems.map(({ text, to }) => {
   return (
