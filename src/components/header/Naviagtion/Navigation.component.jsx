@@ -91,7 +91,7 @@ const resumeItem = resumeItems.map(({ text, to }) => {
       key={to}
       href={heroCV}
       variant="outlined"
-      target="_blank"
+      target="_top"
       color="inherit"
       sx={buttonSpecialStyleHover}
     >
