@@ -121,7 +121,7 @@ export default function Footer() {
               <MainLogo />
             </SvgIcon>
             <Typography variant="subtitle1" sx={tradeMarkDescrpitonStyle}>
-              Designed & Build by me
+              Designed & Built by me
             </Typography>
           </Grid>
           <Grid sx={copyrightsContainer}>
