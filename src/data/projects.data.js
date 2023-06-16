@@ -3,7 +3,7 @@ const projectsData = [
     {
       title: "Restaurant Menu",
       description:
-        " A front-end website made with html, css and vanilla javascript with swipers library.",
+        " A front-end website made with Html, Css and vanilla JavaScript and also swipers library.",
       tools: ["HTML", "CSS", "JavaScript"],
       codeLink: "https://github.com/Goblo7/Krusty-restaurant",
       liveLink: "https://goblo7.github.io/Krusty-restaurant/",
@@ -13,7 +13,7 @@ const projectsData = [
     {
       title: "Interactive Expenses Tracker",
       description:
-        "A Simple Tracker made React to add Expenses and filter expenses depending on input a good use of props and useState.",
+        "A Simple Tracker made with React to add data and filter it depends on the user entered date.",
       tools: ["React.js", "", ""],
       codeLink: "https://github.com/Goblo7/Expenses-Tracker",
       liveLink: "https://goblo7.github.io/Expenses-Tracker",
@@ -21,7 +21,7 @@ const projectsData = [
     {
       title: "Meme Generator",
       description:
-        "A website generate a random meme picture from API and allow the Useer to type context on the top of the picture and the bottom",
+        "A website generate a random meme picture from API and allow the user to type context on the top and bottom of the picture",
       tools: ["React.js", "API", ""],
       codeLink: "https://github.com/Goblo7/meme-generator",
       liveLink: "http://goblo7.github.io/meme-generator",
@@ -29,7 +29,7 @@ const projectsData = [
     {
       title: "Travel jouranl",
       description:
-        "A journal static website has a good use of props to easy add new element from database.",
+        "A static website has a good use of props to easily add new element from database.",
       tools: ["React.js", "", ""],
       codeLink: "https://github.com/Goblo7/travel-journal",
       liveLink: "https://goblo7.github.io/travel-journal",
