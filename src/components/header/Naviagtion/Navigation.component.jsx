@@ -78,49 +78,45 @@ const toolbarStyle = {
 const resumeItems = [
   {
     text: "Resume",
-    to: sectionIdEnum.resume,
+    id: sectionIdEnum.resume,
   },
 ];
 
 const heroCV =
   "https://drive.google.com/uc?id=1hbU_RTkq_sV0NoHM9_AT7U2LRJwLyLtu&export=download";
 
-const resumeItem = resumeItems.map(({ text, to }) => {
+const resumeItem = resumeItems.map((resume) => {
   return (
     <Button
-      key={to}
+      key={resume.id}
       href={heroCV}
       variant="outlined"
       target="_top"
       color="inherit"
       sx={buttonSpecialStyleHover}
     >
-      {text}
+      {resume.text}
     </Button>
   );
 });
 
-const Navigation = (props) => {
+const Navigation = () => {
   const theme = useTheme();
   const isSamll = useMediaQuery(theme.breakpoints.down("md"));
   const [navDrawer, setNavDrawer] = useState(false);
 
-  //const {ref, scrollIntoView} = useContext(ScrollContext);
-
-
   const naviagtionItems = [
     {
       text: "About",
-
-      to: sectionIdEnum.about,
+      id: sectionIdEnum.about,
     },
     {
       text: "Projects",
-      to: sectionIdEnum.portofilo,
+      id: sectionIdEnum.portofilo,
     },
     {
       text: "Contact",
-      to: sectionIdEnum.contacts,
+      id: sectionIdEnum.contacts,
     },
   ];
 
@@ -131,15 +127,16 @@ const Navigation = (props) => {
   const naviagtionItem = naviagtionItems.map((nav) => {
     return (
       <Button
-        key={nav.to}
-        sx={buttonStyleHover}
+        key={nav.id}
         onClick={() => {
+          setTimeout(() => {
+            document
+              .querySelector(`#${nav.id}`)
+              .scrollIntoView({ behavior: "smooth" });
+          }, 3);
           navDrawerTouggle();
-          //scrollIntoView(ref[sectionId.to])
-          document
-          .querySelector(`#${nav.to}`)
-          .scrollIntoView({ behavior: "smooth" });
         }}
+        sx={buttonStyleHover}
       >
         {nav.text}
       </Button>

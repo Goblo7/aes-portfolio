@@ -7,7 +7,7 @@ import styles from "./Header.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { MainLogo } from "../../scripts/icons.script";
-console.log("header getting rendered")
+
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -44,7 +44,7 @@ const linkLogoStyles = {
 
 // end styles
 
-export const Header = (props) => {
+export const Header = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -53,17 +53,6 @@ export const Header = (props) => {
     opacity: isInView ? 1 : 0,
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
   };
-
-  // const onSetScroll = (arg) => {
-  //   props.onChange(arg);
-  // };
-
-  // const fucn = () => {
-  //   setTimeout(() => {
-  //     props.onChange("hero");
-  //   }, 3);
-  //   props.onChange("about");
-  // };
 
   const bookBtn = () => {
     document.querySelector("#hero").scrollIntoView({ behavior: "smooth" });

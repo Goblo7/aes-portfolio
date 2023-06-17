@@ -7,7 +7,6 @@ import {
 import SectionContainer from "./SectionsContainer/SectionContainer.component";
 import { sectionWidthHeight } from "../../styles/layout.styles";
 import sectionIdEnum from "../../scripts/section-id.script";
-//import { createRef, useEffect } from "react";
 
 const sections = [
   {
@@ -40,22 +39,8 @@ const sections = [
   },
 ];
 
-// const objectMap = (object, mapFn) => {
-//   return Object.keys(object).reduce((result, key) => {
-//     result[key] = mapFn(object[key]);
-//     return result;
-//   }, {});
-// };
-
-// const refs = objectMap(sectionIdEnum, (value) => {
-//   return (value = createRef());
-// });
-
-const Sections = (props) => {
-  //   const { ref } = useContext(ScrollContext);
-console.log("section gettint rendered")
-  const section = sections.map((element, index) => {
-    //index = refs;
+const Sections = () => {
+  const section = sections.map((element) => {
     return (
       <SectionContainer
         width={element.width}
@@ -63,7 +48,6 @@ console.log("section gettint rendered")
         sectionId={element.sectionId}
         overFlow={element.overFlow}
         key={element.sectionId}
-        //ref={ref.current[element.sectionId]}
       >
         {element.component}
       </SectionContainer>

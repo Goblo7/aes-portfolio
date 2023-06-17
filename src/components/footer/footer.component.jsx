@@ -5,7 +5,7 @@ import { MainLogo } from "../../scripts/icons.script";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import contactsFooter from "../../data/contacts-footer.data";
-console.log("footer getting rendered");
+
 //start styles
 
 const footerContainer = {
