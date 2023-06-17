@@ -105,9 +105,13 @@ const Navigation = (props) => {
   const isSamll = useMediaQuery(theme.breakpoints.down("md"));
   const [navDrawer, setNavDrawer] = useState(false);
 
+  //const {ref, scrollIntoView} = useContext(ScrollContext);
+
+
   const naviagtionItems = [
     {
       text: "About",
+
       to: sectionIdEnum.about,
     },
     {
@@ -131,10 +135,10 @@ const Navigation = (props) => {
         sx={buttonStyleHover}
         onClick={() => {
           navDrawerTouggle();
-          setTimeout(() => {
-            props.onScroll(nav.to);
-          }, 3);
-          props.onScroll("hero");
+          //scrollIntoView(ref[sectionId.to])
+          document
+          .querySelector(`#${nav.to}`)
+          .scrollIntoView({ behavior: "smooth" });
         }}
       >
         {nav.text}

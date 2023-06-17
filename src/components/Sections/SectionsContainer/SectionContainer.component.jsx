@@ -1,12 +1,12 @@
 import { Container } from "@mui/system";
-import { forwardRef } from "react";
+//import { forwardRef } from "react";
 
-export const SectionContainer = (props, ref) => {
+export const SectionContainer = (props) => {
   return (
     <Container
       id={props.sectionId}
       key={props.sectionId}
-      ref={ref}
+      //ref={ref}
       sx={{
         minWidth: props.width,
         minHeight: props.height,
@@ -18,4 +18,4 @@ export const SectionContainer = (props, ref) => {
   );
 };
 
-export default forwardRef(SectionContainer);
+export default (SectionContainer);

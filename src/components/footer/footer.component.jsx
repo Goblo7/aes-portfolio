@@ -5,7 +5,7 @@ import { MainLogo } from "../../scripts/icons.script";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import contactsFooter from "../../data/contacts-footer.data";
-
+console.log("footer getting rendered");
 //start styles
 
 const footerContainer = {
@@ -91,7 +91,7 @@ const contactsIcons = contactsFooter.map((contactIcon) => {
   );
 });
 
-export default function Footer() {
+const Footer = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -136,4 +136,6 @@ export default function Footer() {
       </Container>
     </footer>
   );
-}
+};
+
+export default Footer;

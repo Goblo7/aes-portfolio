@@ -7,7 +7,7 @@ import styles from "./Header.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { MainLogo } from "../../scripts/icons.script";
-
+console.log("header getting rendered")
 function HideOnScroll(props) {
   const { children, window } = props;
   const trigger = useScrollTrigger({
@@ -54,15 +54,19 @@ export const Header = (props) => {
     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1)",
   };
 
-  const onSetScroll = (arg) => {
-    props.onChange(arg);
-  };
+  // const onSetScroll = (arg) => {
+  //   props.onChange(arg);
+  // };
 
-  const fucn = () => {
-    setTimeout(() => {
-      props.onChange("hero");
-    }, 3);
-    props.onChange("about");
+  // const fucn = () => {
+  //   setTimeout(() => {
+  //     props.onChange("hero");
+  //   }, 3);
+  //   props.onChange("about");
+  // };
+
+  const bookBtn = () => {
+    document.querySelector("#hero").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -70,7 +74,7 @@ export const Header = (props) => {
       <HideOnScroll>
         <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Link onClick={fucn} className={styles.logo} sx={linkLogoStyles}>
+            <Link onClick={bookBtn} className={styles.logo} sx={linkLogoStyles}>
               <SvgIcon sx={LogoStyle}>
                 <MainLogo
                   ae={styles.AE}
@@ -79,7 +83,7 @@ export const Header = (props) => {
                 />
               </SvgIcon>
             </Link>
-            <Navigation onScroll={onSetScroll} />
+            <Navigation />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
