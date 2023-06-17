@@ -22,7 +22,7 @@ import SectionWrapper from "../SectionWrapper.component";
 
 const aboutContianer = {
   margin: "0 auto 5rem",
-  paddingTop: "10rem",
+  paddingTop: {sm:"10rem", xs:"5rem"},
   maxWidth: "68rem",
   marginTop: "2rem",
 };
