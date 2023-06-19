@@ -128,7 +128,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
                 component="img"
                 sx={projectImgStyles}
                 src={projectsData[0][i].img}
-                alt=""
+                alt="project-img"
               />
             </Link>
           </Grid>
@@ -182,7 +182,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
                 component="img"
                 sx={projectImgStyles}
                 src={projectsData[0][i].img}
-                alt=""
+                alt="project-img"
               />
             </Link>
           </Grid>
