@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { layoutStyles } from "../../../../../styles/layout.styles";
-import { restaurant } from "../../../../../scripts/imges.script";
 import { ExternalLink, GitHub } from "../../../../../scripts/icons.script";
 import projectsData from "../../../../../data/projects.data";
 
@@ -128,7 +127,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
               <Box
                 component="img"
                 sx={projectImgStyles}
-                src={restaurant}
+                src={projectsData[0][i].img}
                 alt=""
               />
             </Link>
@@ -182,7 +181,7 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
               <Box
                 component="img"
                 sx={projectImgStyles}
-                src={restaurant}
+                src={projectsData[0][i].img}
                 alt=""
               />
             </Link>

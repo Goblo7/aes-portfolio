@@ -1,5 +1,16 @@
+import { restaurant, carShop } from "../scripts/imges.script";
+
 const projectsData = [
   [
+    {
+      title: "Car Shop",
+      description:
+        " A real life interactive demo website made with React.JS and some libraries, utilizing react routes, module and hooks. ",
+      tools: ["HTML", "CSS", "JSX"],
+      codeLink: "https://github.com/Goblo7/car-shop",
+      liveLink: "https://goblo7.github.io/car-shop/",
+      img: carShop,
+    },
     {
       title: "Restaurant Menu",
       description:
@@ -7,6 +18,7 @@ const projectsData = [
       tools: ["HTML", "CSS", "JavaScript"],
       codeLink: "https://github.com/Goblo7/Krusty-restaurant",
       liveLink: "https://goblo7.github.io/Krusty-restaurant/",
+      img: restaurant,
     },
   ],
   [
