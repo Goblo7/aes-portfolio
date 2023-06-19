@@ -5,8 +5,8 @@ const projectsData = [
     {
       title: "Car Shop",
       description:
-        " A real life interactive demo website made with React.JS and some libraries, utilizing react routes, module and hooks. ",
-      tools: ["HTML", "CSS", "JSX"],
+        "A real-life interactive demo website made with React and some libraries, utilizing react routes, module and hooks.",
+      tools: ["React.JS", "CSS3", "JSX"],
       codeLink: "https://github.com/Goblo7/car-shop",
       liveLink: "https://goblo7.github.io/car-shop/",
       img: carShop,
@@ -15,7 +15,7 @@ const projectsData = [
       title: "Restaurant Menu",
       description:
         " A front-end website made with Html, Css and vanilla JavaScript and also swipers library.",
-      tools: ["HTML", "CSS", "JavaScript"],
+      tools: ["HTML5", "CSS3", "JavaScript"],
       codeLink: "https://github.com/Goblo7/Krusty-restaurant",
       liveLink: "https://goblo7.github.io/Krusty-restaurant/",
       img: restaurant,
