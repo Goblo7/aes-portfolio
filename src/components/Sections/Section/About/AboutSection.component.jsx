@@ -11,159 +11,12 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import HeroPfp from "../../../../assets/pfp/main-hero-pfp.assets.jpg";
-import { layoutStyles } from "../../../../styles/layout.styles";
+import { layoutStyles, aboutStyles } from "../../../../scripts/styles.script";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import techData from "../../../../data/tech.data";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionWrapper from "../SectionWrapper.component";
-
-// start styles
-
-const aboutContianer = {
-  margin: "0 auto 5rem",
-  paddingTop: {sm:"10rem", xs:"5rem"},
-  maxWidth: "68rem",
-  marginTop: "2rem",
-};
-const headerSectionStyle = {
-  display: "flex",
-  alignItems: "center",
-  position: "relative",
-  margin: "7px 0px 25px",
-  fontSize: `clamp(30px,5vw,35px)`,
-  whiteSpace: "nowrap",
-  fontFamily: layoutStyles.mainFontFamily,
-  color: layoutStyles.mainStyleColor,
-  fontWeight: "669",
-  "&:after": {
-    content: `""`,
-    display: "inline",
-    top: "5px",
-    width: {
-      xs: "5.2rem",
-      sm: "23rem",
-      md: "40rem",
-      lg: "53rem",
-    },
-    height: "1px",
-    marginLeft: "20px",
-    backgroundColor: layoutStyles.lineMainColor,
-  },
-};
-
-const aboutTitleContainer = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
-const heroPfpStyle = {
-  backgroundSize: "cover",
-  backgroundPosition: "center center",
-  backgroundRepeat: "no-repeat",
-  border: `3px solid ${layoutStyles.lineMainColor}`,
-  borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
-  borderWidth: "6px",
-  position: "relative",
-  transition: "all 1s ease-in-out",
-  animation: `gobloPfp 8s ease-in-out infinite`,
-  maxWidth: { sm: "100%", xs: "68%" },
-  "@keyframes gobloPfp": {
-    "0%": {
-      borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
-    },
-    "50%": {
-      borderRadius: "5% 30% 50% 10% / 20% 30% 5% 30%",
-    },
-    "100%": {
-      borderRadius: "30% 10% 5% 40% / 30% 5% 40% 10%",
-    },
-  },
-};
-
-const skillsContainer = {
-  display: "grid",
-  alignItems: "center",
-  justifyItems: "center",
-  alignContent: "center",
-  justifyContent: "center",
-  boxSizing: "border-box",
-  boxShadow: { xs: "none", sm: "0 10px 30px -15px rgba(2,12,27,0.9)" },
-  marginTop: "2rem",
-  padding: "15px",
-  borderRadius: "1.7rem",
-  backgroundColor: { xs: "none", sm: layoutStyles.lightPaperColor },
-};
-
-const tecContainer = {
-  width: "100%",
-  display: "grid",
-  justifyItems: "center",
-};
-
-const skillTitle = {
-  textAlign: "center",
-  color: layoutStyles.mainFontColor,
-  fontFamily: layoutStyles.secandryFontFamily,
-  fontSize: `clamp(25px,5vw,30px)`,
-};
-
-const skillTools = {
-  gridTemplateColumns: `repeat (2 ,1fr)`,
-  alignContent: "center",
-  justifyContent: "center",
-  alignItems: "center",
-  justifyItems: "center",
-};
-
-const languagesAndDevTitle = {
-  textAlign: "center",
-  marginTop: "1rem",
-  fontFamily: layoutStyles.secandryFontFamily,
-  color: layoutStyles.mainFontColor,
-  fontSize: `clamp(20px,5vw,23px)`,
-  "&:after": {
-    content: `""`,
-    display: "block",
-    width: "4rem",
-    height: "0.3rem",
-    margin: "auto",
-    marginTop: "0.3rem",
-    backgroundColor: layoutStyles.lineMainColor,
-  },
-};
-
-const verticalDivider = {
-  borderWidth: "0px 4px 0px 0px",
-  borderStyle: "solid",
-  alignSelf: "stretch",
-  borderColor: layoutStyles.lineMainColor,
-  right: "50%",
-  left: "50%",
-  margin: "20px 0px 0px;",
-};
-
-const heroPfpContainer = {
-  display: "grid",
-  alignItems: "center",
-  justifyContent: "center",
-  justifyItems: "center",
-  flexGrow: 1,
-  width: "10%",
-};
-
-const DevAndlangListContianer = {
-  display: "grid",
-  gridTemplateColumns: `repeat(2, 1fr)`,
-};
-
-const pinLocationIconStyles = {
-  marginLeft: "0.5rem",
-  color: layoutStyles.mainStyleColor,
-};
-
-// end styles
 
 export default function AboutSection() {
   const theme = useTheme();
@@ -241,9 +94,9 @@ export default function AboutSection() {
   });
 
   return (
-    <SectionWrapper className={aboutContianer}>
-      <Box sx={aboutTitleContainer}>
-        <Typography variant="h2" sx={headerSectionStyle}>
+    <SectionWrapper className={aboutStyles.aboutContianer}>
+      <Box sx={aboutStyles.aboutTitleContainer}>
+        <Typography variant="h2" sx={aboutStyles.headerSectionStyle}>
           About Me
         </Typography>
       </Box>
@@ -252,7 +105,7 @@ export default function AboutSection() {
           <Typography ref={header} variant="h5" sx={aboutHeaderStyles}>
             Hi there! Nice to meet you, I'm a dedicated Front-end Developer
             based in Cairo, Egypt.
-            <LocationOnOutlinedIcon sx={pinLocationIconStyles} />
+            <LocationOnOutlinedIcon sx={aboutStyles.pinLocationIconStyles} />
           </Typography>
           <Typography ref={Para} variant="p" sx={aboutMeDiscripStyles}>
             I am a self-learner, self-motivated, diligent and persevering Junior
@@ -262,31 +115,46 @@ export default function AboutSection() {
             identify key resources to execute an effective plan to produce
             outstanding web applications.
           </Typography>
-          <Box sx={tecContainer}>
-            <Grid ref={langTool} sx={skillsContainer}>
-              <Typography variant="h4" sx={skillTitle}>
+          <Box sx={aboutStyles.tecContainer}>
+            <Grid ref={langTool} sx={aboutStyles.skillsContainer}>
+              <Typography variant="h4" sx={aboutStyles.skillTitle}>
                 &lt;TechStack/&gt;
               </Typography>
-              <Grid container sx={skillTools}>
+              <Grid container sx={aboutStyles.skillTools}>
                 <Grid>
-                  <Typography variant="h5" sx={languagesAndDevTitle}>
+                  <Typography
+                    variant="h5"
+                    sx={aboutStyles.languagesAndDevTitle}
+                  >
                     Languages
                   </Typography>
-                  <List sx={DevAndlangListContianer}>{TechLanguges}</List>
+                  <List sx={aboutStyles.DevAndlangListContianer}>
+                    {TechLanguges}
+                  </List>
                 </Grid>
-                {isSamll && <Divider sx={verticalDivider} />}
+                {isSamll && <Divider sx={aboutStyles.verticalDivider} />}
                 <Grid>
-                  <Typography variant="h5" sx={languagesAndDevTitle}>
+                  <Typography
+                    variant="h5"
+                    sx={aboutStyles.languagesAndDevTitle}
+                  >
                     Dev Tools
                   </Typography>
-                  <List sx={DevAndlangListContianer}>{TechDevTools}</List>
+                  <List sx={aboutStyles.DevAndlangListContianer}>
+                    {TechDevTools}
+                  </List>
                 </Grid>
               </Grid>
             </Grid>
           </Box>
         </Grid>
-        <Grid sx={heroPfpContainer}>
-          <Box component="img" src={HeroPfp} alt="" sx={heroPfpStyle} />
+        <Grid sx={aboutStyles.heroPfpContainer}>
+          <Box
+            component="img"
+            src={HeroPfp}
+            alt=""
+            sx={aboutStyles.heroPfpStyle}
+          />
         </Grid>
       </Grid>
     </SectionWrapper>

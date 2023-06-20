@@ -2,8 +2,8 @@ import { AppBar, Link, Toolbar, SvgIcon } from "@mui/material";
 import Navigation from "./Naviagtion/Navigation.component";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
-import { layoutStyles } from "../../styles/layout.styles";
-import styles from "./Header.module.css";
+import { headerStyles } from "../../scripts/styles.script";
+import styles from "../../styles/header-styles/header.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { MainLogo } from "../../scripts/icons.script";
@@ -26,24 +26,6 @@ function HideOnScroll(props) {
   );
 }
 
-// start styles
-
-const LogoStyle = {
-  display: "flex",
-  alignItems: "center",
-  marginTop: "0.5rem",
-  fontSize: "420%",
-  strokeLinecap: "round",
-};
-
-const linkLogoStyles = {
-  textDecoration: "none",
-  color: layoutStyles.mainStyleColor,
-  cursor: "pointer",
-};
-
-// end styles
-
 export const Header = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -63,8 +45,12 @@ export const Header = () => {
       <HideOnScroll>
         <AppBar ref={ref} elevation={0} sx={headerContianerstyles}>
           <Toolbar sx={{ justifyContent: "space-between" }}>
-            <Link onClick={bookBtn} className={styles.logo} sx={linkLogoStyles}>
-              <SvgIcon sx={LogoStyle}>
+            <Link
+              onClick={bookBtn}
+              className={styles.logo}
+              sx={headerStyles.linkLogoStyles}
+            >
+              <SvgIcon sx={headerStyles.LogoStyle}>
                 <MainLogo
                   ae={styles.AE}
                   border={styles.border}

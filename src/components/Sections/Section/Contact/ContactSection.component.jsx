@@ -1,75 +1,11 @@
 import { Button, SvgIcon, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Dish, Satellite } from "../../../../scripts/icons.script";
-import { layoutStyles } from "../../../../styles/layout.styles";
-import styles from "./ContactSection.module.css";
+import { layoutStyles, contactStyles } from "../../../../scripts/styles.script";
+import styles from "../../../../styles/sections-styles/contactSection-styles/contactSection.module.css";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import SectionWrapper from "../SectionWrapper.component";
-
-// start styles
-
-const contactContainerStyles = {
-  display: "grid",
-  justifyItems: "center",
-  alignItems: "center",
-  textAlign: "center",
-};
-
-const satelliteContainer = {
-  marginTop: "4rem",
-  marginBottom: { md: "7.5rem", sm: "5rem", xs: "4rem" },
-};
-
-const contactTitle = {
-  display: "flex",
-  alignItems: "center",
-  position: "relative",
-  margin: "0 auto 25px",
-  fontSize: `clamp(30px,5vw,35px)`,
-  whiteSpace: "nowrap",
-  color: layoutStyles.mainStyleColor,
-  fontWeight: "669",
-};
-
-const contactDescriptionHeader = {
-  fontFamily: layoutStyles.secandryFontFamily,
-  color: layoutStyles.mainFontColor,
-  fontWeight: "500",
-  fontSize: `clamp(22px, 5vw, 32px)`,
-  marginBottom: "1rem",
-};
-
-const contactDescriptionPraragraph = {
-  color: layoutStyles.secandryFontColor,
-  fontSize: `clamp(15px, 4vw, 18px)`,
-};
-
-const ButtonStyles = {
-  width: { md: "11rem", sm: "10rem", xs: "9rem" },
-  marginTop: "3rem",
-  padding: "1rem 1rem",
-  background: layoutStyles.paperColor,
-  color: layoutStyles.mainStyleColor,
-  fontSize: "1.1rem",
-  position: "relative",
-  borderRadius: "1rem",
-  "&:hover": {
-    background: "#14233d",
-  },
-};
-
-const contactDescriptionHelloWord = {
-  fontSize: `clamp(15px, 4vw, 18px)`,
-  color: layoutStyles.mainStyleColor,
-};
-
-const dishContainer = {
-  marginTop: { md: "5rem", sm: "2rem", xs: "1.5" },
-  paddingBottom: "1rem",
-};
-
-// end styles
 
 const contactMe = "mailto:ahmedehab.sg@gmail.com";
 
@@ -170,8 +106,8 @@ export default function ContactSection() {
   //end styles
 
   return (
-    <SectionWrapper className={contactContainerStyles}>
-      <Grid sx={satelliteContainer}>
+    <SectionWrapper className={contactStyles.contactContainerStyles}>
+      <Grid sx={contactStyles.satelliteContainer}>
         <SvgIcon ref={refStat} id={styles.satelliteColor} sx={satelliteStyles}>
           <Satellite
             wave1={styles.wave1}
@@ -182,16 +118,19 @@ export default function ContactSection() {
         </SvgIcon>
       </Grid>
       <Grid display="grid" sm={8} ref={contactView} sx={sayHelloContainer}>
-        <Typography variant="h2" sx={contactTitle}>
+        <Typography variant="h2" sx={contactStyles.contactTitle}>
           Contact Me
         </Typography>
-        <Typography variant="h5" sx={contactDescriptionHeader}>
+        <Typography variant="h5" sx={contactStyles.contactDescriptionHeader}>
           Please Don't Hesitate To Reach Out
         </Typography>
-        <Typography variant="p" sx={contactDescriptionPraragraph}>
+        <Typography variant="p" sx={contactStyles.contactDescriptionPraragraph}>
           It is always a most delightful moment for me when meeting new people,
           Every great network starts with a simple {""}
-          <Typography variant="caption" sx={contactDescriptionHelloWord}>
+          <Typography
+            variant="caption"
+            sx={contactStyles.contactDescriptionHelloWord}
+          >
             Hello
           </Typography>
           .
@@ -200,12 +139,12 @@ export default function ContactSection() {
           className={styles.contactButton}
           href={contactMe}
           disableElevation
-          sx={ButtonStyles}
+          sx={contactStyles.ButtonStyles}
         >
           Say Hello
         </Button>
       </Grid>
-      <Grid sx={dishContainer}>
+      <Grid sx={contactStyles.dishContainer}>
         <SvgIcon id={styles.dishColor} ref={refDish} sx={dishStyle}>
           <Dish
             dish={styles.dish}

@@ -1,0 +1,12 @@
+export { default as layoutStyles } from "../styles/layout-styles/main-layout.styles";
+export { default as sectionWidthHeight } from "../styles/layout-styles/section-width-height.styles";
+export { default as footerStyles } from "../styles/footer-styles/footer.style";
+export { default as headerStyles } from "../styles/header-styles/header.styles";
+export { default as navigationStyles } from "../styles/header-styles/navigation-styles/navigation.styles";
+export { default as preloaderStyles } from "../styles/preloader-styles/preloader.styles";
+export { default as aboutStyles } from "../styles/sections-styles/aboutSection-styles/aboutSection.styles";
+export { default as contactStyles } from "../styles/sections-styles/contactSection-styles/contactSection.styles";
+export { default as heroStyles } from "../styles/sections-styles/heroSection-styles/heroSection.styles";
+export { default as portolioStyles } from "../styles/sections-styles/portofiloSection-styles/portofiloSection.styles";
+export { default as mainProjectsStyles } from "../styles/sections-styles/portofiloSection-styles/project-styles/mainProjects.styles";
+export { default as demoProjectsStyles } from "../styles/sections-styles/portofiloSection-styles/project-styles/demoProjects.styles";
