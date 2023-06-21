@@ -51,6 +51,10 @@ const Navigation = () => {
   const isSamll = useMediaQuery(theme.breakpoints.down("md"));
   const [navDrawer, setNavDrawer] = useState(false);
 
+  const navTo = (id) => {
+    document.querySelector(`#${id}`).scrollIntoView({ behavior: "smooth" });
+  };
+
   const navDrawerTouggle = () => {
     setNavDrawer((prevNabDrawer) => !prevNabDrawer);
   };
@@ -61,9 +65,7 @@ const Navigation = () => {
         key={nav.id}
         onClick={() => {
           setTimeout(() => {
-            document
-              .querySelector(`#${nav.id}`)
-              .scrollIntoView({ behavior: "smooth" });
+            navTo(nav.id);
           }, 3);
           navDrawerTouggle();
         }}
