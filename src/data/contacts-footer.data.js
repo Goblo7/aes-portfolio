@@ -29,7 +29,7 @@ export const contactsFooter = [
   },
   {
     id: "5",
-    link: "https://github.com/Goblo7/",
+    link: "https://github.com/AhmedEhab-SG/",
     components: <GitHub />,
   },
 ];

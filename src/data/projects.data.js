@@ -7,8 +7,8 @@ const projectsData = [
       description:
         "A real-life interactive demo website made with React and some libraries, utilizing react routes, module and hooks.",
       tools: ["React.JS", "CSS3", "JSX"],
-      codeLink: "https://github.com/Goblo7/car-shop",
-      liveLink: "https://goblo7.github.io/car-shop/",
+      codeLink: "https://github.com/AhmedEhab-SG/car-shop",
+      liveLink: "https://ahmedehab-sg.github.io/car-shop/",
       img: carShop,
     },
     {
@@ -16,8 +16,8 @@ const projectsData = [
       description:
         " A front-end website made with Html, Css and vanilla JavaScript and also swipers library.",
       tools: ["HTML5", "CSS3", "JavaScript"],
-      codeLink: "https://github.com/Goblo7/Krusty-restaurant",
-      liveLink: "https://goblo7.github.io/Krusty-restaurant/",
+      codeLink: "https://github.com/AhmedEhab-SG/Krusty-restaurant",
+      liveLink: "https://ahmedehab-sg.github.io/Krusty-restaurant/",
       img: restaurant,
     },
   ],
@@ -27,24 +27,24 @@ const projectsData = [
       description:
         "A Simple Tracker made with React to add data and filter it depends on the user entered date.",
       tools: ["React.js", "", ""],
-      codeLink: "https://github.com/Goblo7/Expenses-Tracker",
-      liveLink: "https://goblo7.github.io/Expenses-Tracker",
+      codeLink: "https://github.com/AhmedEhab-SG/Expenses-Tracker",
+      liveLink: "https://ahmedehab-sg.github.io/Expenses-Tracker",
     },
     {
       title: "Meme Generator",
       description:
         "A website generate a random meme picture from API and allow the user to type context on the top and bottom of the picture",
       tools: ["React.js", "API", ""],
-      codeLink: "https://github.com/Goblo7/meme-generator",
-      liveLink: "http://goblo7.github.io/meme-generator",
+      codeLink: "https://github.com/AhmedEhab-SG/meme-generator",
+      liveLink: "http://ahmedehab-sg.github.io/meme-generator",
     },
     {
       title: "Travel jouranl",
       description:
         "A static website has a good use of props to easily add new element from database.",
       tools: ["React.js", "", ""],
-      codeLink: "https://github.com/Goblo7/travel-journal",
-      liveLink: "https://goblo7.github.io/travel-journal",
+      codeLink: "https://github.com/AhmedEhab-SG/travel-journal",
+      liveLink: "https://ahmedehab-sg.github.io/travel-journal",
     },
   ],
   [
@@ -53,7 +53,7 @@ const projectsData = [
       description:
         "A simple snake game using C++ a good use of OOP and Classes.",
       tools: ["C++", "", ""],
-      codeLink: "https://github.com/Goblo7/Snake-Game-v1.3",
+      codeLink: "https://github.com/AhmedEhab-SG/Snake-Game-v1.3",
     },
   ],
 ];
