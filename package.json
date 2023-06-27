@@ -1,6 +1,6 @@
 {
-  "homepage": "http://ahmedehab-sg.github.io/aes-portfolio",
-  "name": "aes-portfolio",
+  "homepage": "http://ahmedehab-sg.github.io/portfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
