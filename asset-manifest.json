@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/aes-portfolio/static/css/main.fd6a33aa.css",
-    "main.js": "/aes-portfolio/static/js/main.a3959257.js",
-    "static/media/restaurant-img.assets.png": "/aes-portfolio/static/media/restaurant-img.assets.6f24a726bda6a8067f15.png",
-    "static/media/car-shop.assets.png": "/aes-portfolio/static/media/car-shop.assets.ef514837110a10dc115f.png",
-    "static/media/main-hero-pfp.assets.jpg": "/aes-portfolio/static/media/main-hero-pfp.assets.9149840cb512ec021c24.jpg",
-    "index.html": "/aes-portfolio/index.html",
-    "main.fd6a33aa.css.map": "/aes-portfolio/static/css/main.fd6a33aa.css.map",
-    "main.a3959257.js.map": "/aes-portfolio/static/js/main.a3959257.js.map"
+    "main.css": "/portfolio/static/css/main.87e111f2.css",
+    "main.js": "/portfolio/static/js/main.9dcd0c42.js",
+    "static/media/car-shop.assets.png": "/portfolio/static/media/car-shop.assets.40f1c7be1f56db5b4b94.png",
+    "static/media/rate-watch.assets.png": "/portfolio/static/media/rate-watch.assets.bf6d7c29deb011b96d8d.png",
+    "static/media/main-hero-pfp.assets.jpg": "/portfolio/static/media/main-hero-pfp.assets.9149840cb512ec021c24.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.87e111f2.css.map": "/portfolio/static/css/main.87e111f2.css.map",
+    "main.9dcd0c42.js.map": "/portfolio/static/js/main.9dcd0c42.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd6a33aa.css",
-    "static/js/main.a3959257.js"
+    "static/css/main.87e111f2.css",
+    "static/js/main.9dcd0c42.js"
   ]
 }
