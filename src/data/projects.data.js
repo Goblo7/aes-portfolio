@@ -25,7 +25,7 @@ const projectsData = [
     {
       title: "Expenses Tracker",
       description:
-        "A Simple Interactive Tracker made with React to add data and filter it depends on the user entered date.",
+        "A simple interactive tracker made with React to add data and filter it depends on the user entered date.",
       tools: ["React.js", "CSS3", ""],
       codeLink: "https://github.com/AhmedEhab-SG/Expenses-Tracker",
       liveLink: "https://ahmedehab-sg.github.io/Expenses-Tracker",
