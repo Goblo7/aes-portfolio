@@ -39,7 +39,7 @@ const portolioStyles = {
       color: layoutStyles.mainFontColor,
       fontWeight: "500",
       margin: "auto",
-      fontSize: `clamp(22px,5vw,32px)`,
+      fontSize: `clamp(22px,5vw,30px)`,
     },
     {
       fontSize: { lg: "14.5rem", md: "12rem", xs: "10rem" },
