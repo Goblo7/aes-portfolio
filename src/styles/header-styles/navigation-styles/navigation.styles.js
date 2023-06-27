@@ -57,7 +57,9 @@ const navigationStyles = {
   },
   stackStyles:{
     width:"100%",
+    height:"70%",
     alignItems:"center",
+    justifyContent: "center",
   }
 
 };
