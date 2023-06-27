@@ -5,7 +5,7 @@ const projectsData = [
     {
       title: "Rate Watch",
       description:
-        "It's designed to provide you with up-to-date information on currnecies and Gold-Silver rates by receiving data from APIs using React Query and Axios.",
+        "It's designed to provide you with up-to-date information on currnecies and gold-silver rates by receiving data from APIs using React Query and Axios.",
       tools: ["React.JS", "Material-UI", "API"],
       codeLink: "https://github.com/AhmedEhab-SG/rate-watch",
       liveLink: "https://ahmedehab-sg.github.io/rate-watch/",
