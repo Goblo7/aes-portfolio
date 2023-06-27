@@ -9,7 +9,7 @@ import {
 export const contactsFooter = [
   {
     id: "1",
-    link: "https://www.linkedin.com/in/ahmedehab632/",
+    link: "https://www.linkedin.com/in/ahmedehab.sg/",
     components: <LinkedIn />,
   },
   {
