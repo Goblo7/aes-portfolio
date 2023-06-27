@@ -3,7 +3,7 @@ import { layoutStyles } from "../../../scripts/styles.script";
 const portolioStyles = {
   portolioContainer: {
     margin: "0 auto",
-    paddingTop: "5rem",
+    paddingTop: "4rem",
     maxWidth: "68rem",
   },
 
