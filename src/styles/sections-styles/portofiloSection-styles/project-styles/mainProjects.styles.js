@@ -33,24 +33,31 @@ const mainProjectsStyles = {
     flex: "1 0 60%",
   },
 
-  projectImgStyles: {
+  projectImgStylesConst: {
     width: "100%",
     transition: `transform 10s ,filter 0.8s , WebkitFilter 0.8s, opacity 1s ease-in-out 0s`,
     overflow: "hidden",
     filter: "gray",
-    opacity: "0.5",
     WebkitFilter: `grayscale(1)`,
     "&:hover": {
       transform: {
-        xs: `translateY(-58%)`,
-        sm: `translateY(-71.3%)`,
-        md: `translateY(-69%)`,
-        lg: `translateY(-76.9%)`,
+        xs: `translateY(-51%)`,
+        sm: `translateY(-67.3%)`,
+        md: `translateY(-64.3%)`,
+        lg: `translateY(-73.3%)`,
       },
       filter: "none",
       WebkitFilter: `grayscale(0)`,
       opacity: "1",
     },
+  },
+
+  projectImgStylesWhite: {
+    opacity: "0.5",
+  },
+
+  projectImgStylesBlack: {
+    opacity: "0.72",
   },
 
   projectDescriptionContainer: {

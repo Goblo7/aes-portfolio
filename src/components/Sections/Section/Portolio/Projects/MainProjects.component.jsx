@@ -25,7 +25,10 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
             <Link href={projectsData[0][i].liveLink} target="_blank">
               <Box
                 component="img"
-                sx={mainProjectsStyles.projectImgStyles}
+                sx={[
+                  mainProjectsStyles.projectImgStylesConst,
+                  mainProjectsStyles.projectImgStylesBlack,
+                ]}
                 src={projectsData[0][i].img}
                 alt="project-img"
               />
@@ -94,7 +97,10 @@ for (let i = 0; i < projectsData[0].length; i += 1) {
             <Link href={projectsData[0][i].liveLink} target="_blank">
               <Box
                 component="img"
-                sx={mainProjectsStyles.projectImgStyles}
+                sx={[
+                  mainProjectsStyles.projectImgStylesConst,
+                  mainProjectsStyles.projectImgStylesWhite,
+                ]}
                 src={projectsData[0][i].img}
                 alt="project-img"
               />

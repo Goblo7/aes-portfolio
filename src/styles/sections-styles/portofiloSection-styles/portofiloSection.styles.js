@@ -42,7 +42,7 @@ const portolioStyles = {
       fontSize: `clamp(22px,5vw,32px)`,
     },
     {
-      fontSize: { lg: "10.5rem", md: "9rem", xs: "8rem" },
+      fontSize: { lg: "14.5rem", md: "12rem", xs: "10rem" },
       color: layoutStyles.mainStyleColor,
     },
   ],
