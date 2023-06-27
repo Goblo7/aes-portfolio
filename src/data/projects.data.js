@@ -5,7 +5,7 @@ const projectsData = [
     {
       title: "Rate Watch",
       description:
-        "Its designed to provide you with up-to-date information on currnecies and Gold-Silver rates by receiving data from APIs using React Query and Axios.",
+        "It's designed to provide you with up-to-date information on currnecies and Gold-Silver rates by receiving data from APIs using React Query and Axios.",
       tools: ["React.JS", "Material-UI", "API"],
       codeLink: "https://github.com/AhmedEhab-SG/rate-watch",
       liveLink: "https://ahmedehab-sg.github.io/rate-watch/",
@@ -23,9 +23,9 @@ const projectsData = [
   ],
   [
     {
-      title: "Interactive Expenses Tracker",
+      title: "Expenses Tracker",
       description:
-        "A Simple Tracker made with React to add data and filter it depends on the user entered date.",
+        "A Simple Interactive Tracker made with React to add data and filter it depends on the user entered date.",
       tools: ["React.js", "CSS3", ""],
       codeLink: "https://github.com/AhmedEhab-SG/Expenses-Tracker",
       liveLink: "https://ahmedehab-sg.github.io/Expenses-Tracker",
@@ -33,7 +33,7 @@ const projectsData = [
     {
       title: "Meme Generator",
       description:
-        "A website generate a random meme picture from API and allow the user to type context on the top and bottom of the picture",
+        "A website generate a random meme picture from API and allow the user to type context on the top and bottom of the picture.",
       tools: ["React.js", "CSS3", "API"],
       codeLink: "https://github.com/AhmedEhab-SG/meme-generator",
       liveLink: "http://ahmedehab-sg.github.io/meme-generator",
@@ -41,7 +41,7 @@ const projectsData = [
     {
       title: "Travel jouranl",
       description:
-        "A static website has a good use of props to easily add new element from database.",
+        "A static website has a good use of props to easily add new element from database, testing react data sharing.",
       tools: ["React.js", "CSS3", ""],
       codeLink: "https://github.com/AhmedEhab-SG/travel-journal",
       liveLink: "https://ahmedehab-sg.github.io/travel-journal",
@@ -49,7 +49,7 @@ const projectsData = [
     {
       title: "Restaurant Menu",
       description:
-        "A static website of with vanilla JavaScript and swipers library testing plain HTML.",
+        "A static basic website made with vanilla JavaScript and Swipers library testing plain HTML.",
       tools: ["HTML5", "CSS3", "JavaScript"],
       codeLink: "https://github.com/AhmedEhab-SG/Krusty-restaurant",
       liveLink: "https://ahmedehab-sg.github.io/Krusty-restaurant/",

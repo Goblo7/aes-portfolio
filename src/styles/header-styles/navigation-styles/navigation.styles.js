@@ -45,7 +45,7 @@ const navigationStyles = {
 
   swapDrawerStyle: {
     sx: {
-      width: "75%",
+      width: "65%",
       backgroundColor: layoutStyles.lightMainColor,
       backgroundImage: "none",
     },
@@ -57,7 +57,7 @@ const navigationStyles = {
   },
   stackStyles:{
     width:"100%",
-    height:"70%",
+    height:"65%",
     alignItems:"center",
     justifyContent: "space-evenly",
   }
