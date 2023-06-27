@@ -49,7 +49,7 @@ const projectsData = [
     {
       title: "Restaurant Menu",
       description:
-        "A static basic website made with vanilla JavaScript and Swipers library testing plain HTML.",
+        "A static basic website made with vanilla JavaScript and Swipers library, testing plain HTML.",
       tools: ["HTML5", "CSS3", "JavaScript"],
       codeLink: "https://github.com/AhmedEhab-SG/Krusty-restaurant",
       liveLink: "https://ahmedehab-sg.github.io/Krusty-restaurant/",
