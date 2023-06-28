@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.87e111f2.css",
-    "main.js": "/portfolio/static/js/main.64206607.js",
+    "main.js": "/portfolio/static/js/main.c68d60c2.js",
     "static/media/car-shop.assets.png": "/portfolio/static/media/car-shop.assets.40f1c7be1f56db5b4b94.png",
     "static/media/rate-watch.assets.png": "/portfolio/static/media/rate-watch.assets.bf6d7c29deb011b96d8d.png",
     "static/media/main-hero-pfp.assets.jpg": "/portfolio/static/media/main-hero-pfp.assets.9149840cb512ec021c24.jpg",
     "index.html": "/portfolio/index.html",
     "main.87e111f2.css.map": "/portfolio/static/css/main.87e111f2.css.map",
-    "main.64206607.js.map": "/portfolio/static/js/main.64206607.js.map"
+    "main.c68d60c2.js.map": "/portfolio/static/js/main.c68d60c2.js.map"
   },
   "entrypoints": [
     "static/css/main.87e111f2.css",
-    "static/js/main.64206607.js"
+    "static/js/main.c68d60c2.js"
   ]
 }
