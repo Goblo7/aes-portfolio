@@ -14,7 +14,7 @@ const projectsData = [
     {
       title: "Car Shop",
       description:
-        "An interactive car shop demo is a digital platform that allows users to explore and interact with various car models, utilizing react routes, module and hooks.",
+        "An interactive car shop demo is a digital platform that allows users to explore and interact with various car models, utilizing React routes, module and hooks.",
       tools: ["React.JS", "CSS3", "JSX"],
       codeLink: "https://github.com/AhmedEhab-SG/car-shop",
       liveLink: "https://ahmedehab-sg.github.io/car-shop/",

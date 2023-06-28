@@ -3,7 +3,7 @@ import { layoutStyles } from "../../../scripts/styles.script";
 const portolioStyles = {
   portolioContainer: {
     margin: "0 auto",
-    paddingTop: {sm:"6rem", xs:"4.5rem"},
+    paddingTop: { sm: "6rem", xs: "4.5rem" },
     maxWidth: "68rem",
   },
 
@@ -42,7 +42,7 @@ const portolioStyles = {
       fontSize: `clamp(22px,5vw,30px)`,
     },
     {
-      fontSize: { lg: "14.5rem", md: "12rem", xs: "10rem" },
+      fontSize: { lg: "14.5rem", md: "12rem", xs: "10.5rem" },
       color: layoutStyles.mainStyleColor,
     },
   ],
