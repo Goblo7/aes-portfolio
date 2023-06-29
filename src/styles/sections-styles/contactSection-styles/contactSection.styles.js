@@ -10,7 +10,7 @@ const contactStyles = {
 
   satelliteContainer: {
     marginTop: "4rem",
-    marginBottom: { md: "7.5rem", sm: "5rem", xs: "3rem" },
+    marginBottom: { md: "7.5rem", sm: "5rem", xs: "3.7rem" },
   },
 
   contactTitle: {
@@ -58,7 +58,7 @@ const contactStyles = {
 
   dishContainer: {
     marginTop: { md: "5rem", sm: "2rem", xs: "1.5" },
-    paddingBottom: "0.7rem",
+    paddingBottom: "0.6rem",
   },
 };
 
