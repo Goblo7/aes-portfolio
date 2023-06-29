@@ -4,7 +4,7 @@ import { layoutStyles } from "../../../scripts/styles.script";
 const aboutStyles = {
   aboutContianer: {
     margin: "0 auto 5rem",
-    paddingTop: { sm: "10rem", xs: "4.5rem" },
+    paddingTop: { md: "10rem", xs: "4rem" },
     maxWidth: "68rem",
     marginTop: "2rem",
   },
