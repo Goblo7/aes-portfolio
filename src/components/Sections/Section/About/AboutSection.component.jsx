@@ -111,7 +111,7 @@ export default function AboutSection() {
             I am a self-learner, self-motivated, diligent and persevering Junior
             Front-End Developer, I'm perpetually working on improving and
             educating myself to achieve efficacy and effectiveness in whatever i
-            craft, I possese the ability to analyze, gather informations and
+            craft, I possess the ability to analyze, gather informations and
             identify key resources to execute an effective plan to produce
             outstanding web applications.
           </Typography>

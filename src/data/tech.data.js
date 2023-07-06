@@ -9,6 +9,7 @@ import {
   Js,
   Jsx,
   CPlusPlus,
+  Java,
 } from "../scripts/icons.script";
 
 export const techData = [
@@ -16,6 +17,10 @@ export const techData = [
     {
       langugeName: "C++",
       langugeLogo: <CPlusPlus />,
+    },
+    {
+      langugeName: "Java",
+      langugeLogo: <Java />,
     },
     {
       langugeName: "HTML5",

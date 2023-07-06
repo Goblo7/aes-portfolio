@@ -6,6 +6,7 @@ export { default as Js } from "../assets/icons/js-icon.assets";
 export { default as React } from "../assets/icons/react-icon.assets";
 export { default as Jsx } from "../assets/icons/jsx-icon.assets";
 export { default as CPlusPlus } from "../assets/icons/c++-icon.assets";
+export { default as Java } from "../assets/icons/java-icon.assets";
 export { default as Mui } from "../assets/icons/mui-icon.assets";
 export { default as VsCode } from "../assets/icons/vscode-icon.assets";
 export { default as Vs } from "../assets/icons/vs-icon.assets";
