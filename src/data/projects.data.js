@@ -6,7 +6,7 @@ const projectsData = [
       title: "Rate Watch",
       description:
         "It's designed to provide you with up-to-date information on currnecies and gold-silver rates by receiving data from APIs using React Query and Axios.",
-      tools: ["React.JS", "Material-UI", "API"],
+      tools: ["React.js", "Material-UI", "API"],
       codeLink: "https://github.com/AhmedEhab-SG/rate-watch",
       liveLink: "https://ahmedehab-sg.github.io/rate-watch/",
       img: rateWatch,
@@ -15,7 +15,7 @@ const projectsData = [
       title: "Car Shop",
       description:
         "An interactive car shop demo is a digital platform that allows users to explore and interact with various car models, utilizing React routes, module and hooks.",
-      tools: ["React.JS", "CSS3", "JSX"],
+      tools: ["React.js", "CSS3", "JSX"],
       codeLink: "https://github.com/AhmedEhab-SG/car-shop",
       liveLink: "https://ahmedehab-sg.github.io/car-shop/",
       img: carShop,

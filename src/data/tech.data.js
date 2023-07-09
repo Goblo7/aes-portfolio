@@ -49,7 +49,7 @@ export const techData = [
       devToolLogo: <VsCode />,
     },
     {
-      devToolName: "ReactJs",
+      devToolName: "ReactJS",
       devToolLogo: <React />,
     },
     {
