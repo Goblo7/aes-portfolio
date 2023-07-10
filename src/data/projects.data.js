@@ -39,14 +39,6 @@ const projectsData = [
       liveLink: "http://ahmedehab-sg.github.io/meme-generator",
     },
     {
-      title: "Travel jouranl",
-      description:
-        "A static website has a good use of props to easily add new element from database, testing react data sharing.",
-      tools: ["React.js", "CSS3", ""],
-      codeLink: "https://github.com/AhmedEhab-SG/travel-journal",
-      liveLink: "https://ahmedehab-sg.github.io/travel-journal",
-    },
-    {
       title: "Restaurant Menu",
       description:
         "A static basic website made with vanilla JavaScript and Swipers library, testing plain HTML.",
