@@ -41,10 +41,10 @@ const mainProjectsStyles = {
     WebkitFilter: `grayscale(1)`,
     "&:hover": {
       transform: {
-        xs: `translateY(-51%)`,
-        sm: `translateY(-67.3%)`,
-        md: `translateY(-64.3%)`,
-        lg: `translateY(-73.3%)`,
+        xs: `translateY(-59.1%)`,
+        sm: `translateY(-72.4%)`,
+        md: `translateY(-70%)`,
+        lg: `translateY(-77.5%)`,
       },
       filter: "none",
       WebkitFilter: `grayscale(0)`,
