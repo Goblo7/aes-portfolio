@@ -19,7 +19,7 @@ export const contactsFooter = [
   },
   {
     id: "3",
-    link: "https://www.instagram.com/goblo.7/",
+    link: "https://www.instagram.com/ahmedehab.sg/",
     components: <Insta />,
   },
   {
